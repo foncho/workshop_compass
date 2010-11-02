@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html class='no-js' dir='ltr' lang='en'>
+<head>
+<meta charset='utf-8' />
+<meta content='chrome=1' http-equiv='X-UA-Compatible' />
+<link href='../../../../images/compass_icon.png' rel='shortcut icon' type='image/png' />
+<title>
+Compass Reset Utilities | Compass Documentation
+</title>
+<!--[if !IE 6]><!-->
+<link charset='utf-8' href='../../../../stylesheets/screen.css' rel='stylesheet' type='text/css' />
+<!--<![endif]-->
+<!--[if gte IE 7]>
+<link charset='utf-8' href='../../../../stylesheets/ie.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+<!--[if IE 6]>
+<link charset='utf-8' href='http://universal-ie6-css.googlecode.com/files/ie6.0.3.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+</head>
+<body class='docs reference core utilities' id='reference-compass-reset-utilities'><div id='wrap'>
+<nav id='skip-links'>
+<a href='#content'>skip to content</a>
+</nav>
+<header id='banner' role='banner'>
+<div>
+<h1 class='vcard'>
+<a class='fn org url uid' href='../../../../../index.html' rel='home'>Compass</a>
+</h1>
+</div>
+</header>
+<nav id='docs-nav' role='navigation'>
+<div class='container'>
+<ul>
+<li>
+<a href='../../../../index.html'>introduction</a>
+</li>
+<li>
+<a href='../../index.html'>core</a>
+</li>
+<li>
+<a href='../../../blueprint/index.html'>blueprint</a>
+</li>
+<li>
+<a href='../../../../tutorials/index.html'>tutorials</a>
+</li>
+<!--
+<li>
+<a href='/docs/plugins/'>plugins</a>
+</li>
+-->
+</ul>
+<div id='version'>
+Current Version:
+<a class='number' href='../../../../CHANGELOG/index.html'>0.10.6.</a>
+</div>
+<div id='search-docs'>
+<form action='/docs/search/' method='GET'>
+<p>
+<label for='search'>search</label>
+<input id='search' name='q' type='text' value='' />
+</p>
+</form>
+</div>
+</div>
+</nav>
+<nav id='module-nav'><ul><ul><li>
+<a href='../../support/index.html'>Browser Support</a>
+</li>
+<li>
+<a href='../../css3/index.html'>CSS3</a>
+</li>
+<li>
+<a href='../../helpers/index.html'>Helpers</a>
+</li>
+<li>
+<a href='../../layout/index.html'>Layout</a>
+</li>
+<li>
+<a href='../index.html'>Reset</a>
+</li>
+<li>
+<a href='../../utilities/index.html'>Utilities</a>
+</li>
+</ul>
+</ul>
+</nav>
+<div id='page'><aside role='sidebar'><nav id='local-nav'>
+<ul><li>
+<h2>
+<a href='../../support/index.html'>Browser Support</a>
+</h2>
+</li>
+<li>
+<h2>
+<a href='../../css3/index.html'>CSS3</a>
+</h2>
+</li>
+<ul><li>
+<a href='../../css3/background_clip/index.html'>Background Clip</a>
+</li>
+<li>
+<a href='../../css3/background_origin/index.html'>Background Origin</a>
+</li>
+<li>
+<a href='../../css3/background_size/index.html'>Background Size</a>
+</li>
+<li>
+<a href='../../css3/border_radius/index.html'>Border Radius</a>
+</li>
+<li>
+<a href='../../css3/box/index.html'>Box</a>
+</li>
+<li>
+<a href='../../css3/box_shadow/index.html'>Box Shadow</a>
+</li>
+<li>
+<a href='../../css3/box_sizing/index.html'>Box Sizing</a>
+</li>
+<li>
+<a href='../../css3/shared/index.html'>CSS3 Utilities</a>
+</li>
+<li>
+<a href='../../css3/columns/index.html'>Columns</a>
+</li>
+<li>
+<a href='../../css3/font_face/index.html'>Font Face</a>
+</li>
+<li>
+<a href='../../css3/gradient/index.html'>Gradient</a>
+</li>
+<li>
+<a href='../../css3/inline_block/index.html'>Inline Block</a>
+</li>
+<li>
+<a href='../../css3/opacity/index.html'>Opacity</a>
+</li>
+<li>
+<a href='../../css3/text_shadow/index.html'>Text Shadow</a>
+</li>
+<li>
+<a href='../../css3/transform/index.html'>Transform</a>
+</li>
+<li>
+<a href='../../css3/transition/index.html'>Transition</a>
+</li>
+</ul>
+<li>
+<h2>
+<a href='../../helpers/index.html'>Helpers</a>
+</h2>
+</li>
+<ul><li>
+<a href='../../helpers/color-stops/index.html'>Color Stops</a>
+</li>
+<li>
+<a href='../../helpers/constants/index.html'>Constants</a>
+</li>
+<li>
+<a href='../../helpers/display/index.html'>Display Helpers</a>
+</li>
+<li>
+<a href='../../helpers/font-files/index.html'>Font Files</a>
+</li>
+<li>
+<a href='../../helpers/image-dimensions/index.html'>Image Dimensions</a>
+</li>
+<li>
+<a href='../../helpers/inline-data/index.html'>Inline Data</a>
+</li>
+<li>
+<a href='../../helpers/selectors/index.html'>Selectors</a>
+</li>
+<li>
+<a href='../../helpers/urls/index.html'>URLs</a>
+</li>
+</ul>
+<li>
+<h2>
+<a href='../../layout/index.html'>Layout</a>
+</h2>
+</li>
+<ul><li>
+<a href='../../layout/sticky_footer/index.html'>Sticky Footer</a>
+</li>
+</ul>
+<li>
+<h2>
+<a href='../index.html'>Reset</a>
+</h2>
+</li>
+<ul><li class='selected'>
+<a class='selected' href='index.html'>Reset Utilities</a>
+</li>
+</ul>
+<li>
+<h2>
+<a href='../../utilities/index.html'>Utilities</a>
+</h2>
+</li>
+<ul><li>
+<a href='../../utilities/general/index.html'>General</a>
+</li>
+<li>
+<a href='../../utilities/links/index.html'>Links</a>
+</li>
+<li>
+<a href='../../utilities/lists/index.html'>Lists</a>
+</li>
+<li>
+<a href='../../utilities/print/index.html'>Print</a>
+</li>
+<li>
+<a href='../../utilities/sprites/index.html'>Sprites</a>
+</li>
+<li>
+<a href='../../utilities/tables/index.html'>Tables</a>
+</li>
+<li>
+<a href='../../utilities/text/index.html'>Text</a>
+</li>
+</ul>
+</ul>
+
+</nav>
+</aside>
+<article><h1>Compass Reset Utilities</h1>
+<p>These utilities are used to reset your document. The easiest way to use them
+is to simply <code>@import "compass/reset"</code> which will import this module and apply
+the appropriate mixins for you.</p>
+
+<p>
+This file can be imported using:
+<code>@import "compass/reset/utilities"</code>
+</p>
+<p>
+View the
+<a href="http://github.com/chriseppstein/compass/blob/stable/frameworks/compass/stylesheets/compass/reset/_utilities.scss">Source for this module on Github.</a>
+</p>
+
+
+
+<h2>Mixins</h2>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-global-reset-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-global-reset-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-global-reset">
+<a class="permalink" href="#mixin-global-reset">global-reset</a>
+</h3>
+<div class="mixin-source" id="mixin-global-reset-source">
+<div class="highlight source-code sass elided-code" id="mixin-global-reset-sass"><pre><span class="nf">=global-reset</span>
+  <span class="nt">html</span><span class="o">,</span> <span class="nt">body</span><span class="o">,</span> <span class="nt">div</span><span class="o">,</span> <span class="nt">span</span><span class="o">,</span> <span class="nt">applet</span><span class="o">,</span> <span class="nt">object</span><span class="o">,</span> <span class="nt">iframe</span><span class="o">,</span>
+  <span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span><span class="o">,</span> <span class="nt">h3</span><span class="o">,</span> <span class="nt">h4</span><span class="o">,</span> <span class="nt">h5</span><span class="o">,</span> <span class="nt">h6</span><span class="o">,</span> <span class="nt">p</span><span class="o">,</span> <span class="nt">blockquote</span><span class="o">,</span> <span class="nt">pre</span><span class="o">,</span>
+  <span class="nt">a</span><span class="o">,</span> <span class="nt">abbr</span><span class="o">,</span> <span class="nt">acronym</span><span class="o">,</span> <span class="nt">address</span><span class="o">,</span> <span class="nt">big</span><span class="o">,</span> <span class="nt">cite</span><span class="o">,</span> <span class="nt">code</span><span class="o">,</span>
+  <span class="nt">del</span><span class="o">,</span> <span class="nt">dfn</span><span class="o">,</span> <span class="nt">em</span><span class="o">,</span> <span class="nt">font</span><span class="o">,</span> <span class="nt">img</span><span class="o">,</span> <span class="nt">ins</span><span class="o">,</span> <span class="nt">kbd</span><span class="o">,</span> <span class="nt">q</span><span class="o">,</span> <span class="nt">s</span><span class="o">,</span> <span class="nt">samp</span><span class="o">,</span>
+  <span class="nt">small</span><span class="o">,</span> <span class="nt">strike</span><span class="o">,</span> <span class="nt">strong</span><span class="o">,</span> <span class="nt">sub</span><span class="o">,</span> <span class="nt">sup</span><span class="o">,</span> <span class="nt">tt</span><span class="o">,</span> <span class="nt">var</span><span class="o">,</span>
+  <span class="nt">dl</span><span class="o">,</span> <span class="nt">dt</span><span class="o">,</span> <span class="nt">dd</span><span class="o">,</span> <span class="nt">ol</span><span class="o">,</span> <span class="nt">ul</span><span class="o">,</span> <span class="nt">li</span><span class="o">,</span>
+  <span class="nt">fieldset</span><span class="o">,</span> <span class="nt">form</span><span class="o">,</span> <span class="nt">label</span><span class="o">,</span> <span class="nt">legend</span><span class="o">,</span>
+  <span class="nt">table</span><span class="o">,</span> <span class="nt">caption</span><span class="o">,</span> <span class="nt">tbody</span><span class="o">,</span> <span class="nt">tfoot</span><span class="o">,</span> <span class="nt">thead</span><span class="o">,</span> <span class="nt">tr</span><span class="o">,</span> <span class="nt">th</span><span class="o">,</span> <span class="nt">td</span>
+    <span class="nd">+reset-box-model</span>
+    <span class="nd">+reset-font</span>
+  <span class="nt">body</span>
+    <span class="nd">+reset-body</span>
+  <span class="nt">ol</span><span class="o">,</span> <span class="nt">ul</span>
+    <span class="nd">+reset-list-style</span>
+  <span class="nt">table</span>
+    <span class="nd">+reset-table</span>
+  <span class="nt">caption</span><span class="o">,</span> <span class="nt">th</span><span class="o">,</span> <span class="nt">td</span>
+    <span class="nd">+reset-table-cell</span>
+  <span class="nt">q</span><span class="o">,</span> <span class="nt">blockquote</span>
+    <span class="nd">+reset-quotation</span>
+  <span class="nt">a</span> <span class="nt">img</span>
+    <span class="nd">+reset-image-anchor-border</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-global-reset-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">global-reset</span> {
+  <span class="ke">html</span>, <span class="ke">body</span>, <span class="ke">div</span>, <span class="ke">span</span>, <span class="ke">applet</span>, <span class="ke">object</span>, <span class="ke">iframe</span>,
+  <span class="ke">h1</span>, <span class="ke">h2</span>, <span class="ke">h3</span>, <span class="ke">h4</span>, <span class="ke">h5</span>, <span class="ke">h6</span>, <span class="ke">p</span>, <span class="ke">blockquote</span>, <span class="ke">pre</span>,
+  <span class="ke">a</span>, <span class="ke">abbr</span>, <span class="ke">acronym</span>, <span class="ke">address</span>, <span class="ke">big</span>, <span class="ke">cite</span>, <span class="ke">code</span>,
+  <span class="ke">del</span>, <span class="ke">dfn</span>, <span class="ke">em</span>, <span class="ke">font</span>, <span class="ke">img</span>, <span class="ke">ins</span>, <span class="ke">kbd</span>, <span class="ke">q</span>, <span class="ke">s</span>, <span class="ke">samp</span>,
+  <span class="ke">small</span>, <span class="ke">strike</span>, <span class="ke">strong</span>, <span class="ke">sub</span>, <span class="ke">sup</span>, <span class="ke">tt</span>, <span class="ke">var</span>,
+  <span class="ke">dl</span>, <span class="ke">dt</span>, <span class="ke">dd</span>, <span class="ke">ol</span>, <span class="ke">ul</span>, <span class="ke">li</span>,
+  <span class="ke">fieldset</span>, <span class="ke">form</span>, <span class="ke">label</span>, <span class="ke">legend</span>,
+  <span class="ke">table</span>, <span class="ke">caption</span>, <span class="ke">tbody</span>, <span class="ke">tfoot</span>, <span class="ke">thead</span>, <span class="ke">tr</span>, <span class="ke">th</span>, <span class="ke">td</span> {
+    <span class="di">@include</span> <span class="ke">reset-box-model</span>;
+    <span class="di">@include</span> <span class="ke">reset-font</span>; }
+  <span class="ke">body</span> {
+    <span class="di">@include</span> <span class="ke">reset-body</span>; }
+  <span class="ke">ol</span>, <span class="ke">ul</span> {
+    <span class="di">@include</span> <span class="ke">reset-list-style</span>; }
+  <span class="ke">table</span> {
+    <span class="di">@include</span> <span class="ke">reset-table</span>; }
+  <span class="ke">caption</span>, <span class="ke">th</span>, <span class="ke">td</span> {
+    <span class="di">@include</span> <span class="ke">reset-table-cell</span>; }
+  <span class="ke">q</span>, <span class="ke">blockquote</span> {
+    <span class="di">@include</span> <span class="ke">reset-quotation</span>; }
+  <span class="ke">a</span> <span class="ke">img</span> {
+    <span class="di">@include</span> <span class="ke">reset-image-anchor-border</span>; } }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>Based on <a href="http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/">Eric Meyer's reset</a>
+Global reset rules.
+For more specific resets, use the reset mixins provided below</p>
+
+<p><em>Please Note</em>: tables still need <code>cellspacing="0"</code> in the markup.</p>
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-nested-reset-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-nested-reset-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-nested-reset">
+<a class="permalink" href="#mixin-nested-reset">nested-reset</a>
+</h3>
+<div class="mixin-source" id="mixin-nested-reset-source">
+<div class="highlight source-code sass elided-code" id="mixin-nested-reset-sass"><pre><span class="nf">=nested-reset</span>
+  <span class="nt">div</span><span class="o">,</span> <span class="nt">span</span><span class="o">,</span> <span class="nt">object</span><span class="o">,</span> <span class="nt">iframe</span><span class="o">,</span> <span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span><span class="o">,</span> <span class="nt">h3</span><span class="o">,</span> <span class="nt">h4</span><span class="o">,</span> <span class="nt">h5</span><span class="o">,</span> <span class="nt">h6</span><span class="o">,</span> <span class="nt">p</span><span class="o">,</span>
+  <span class="nt">pre</span><span class="o">,</span> <span class="nt">a</span><span class="o">,</span> <span class="nt">abbr</span><span class="o">,</span> <span class="nt">acronym</span><span class="o">,</span> <span class="nt">address</span><span class="o">,</span> <span class="nt">code</span><span class="o">,</span> <span class="nt">del</span><span class="o">,</span> <span class="nt">dfn</span><span class="o">,</span> <span class="nt">em</span><span class="o">,</span> <span class="nt">img</span><span class="o">,</span>
+  <span class="nt">dl</span><span class="o">,</span> <span class="nt">dt</span><span class="o">,</span> <span class="nt">dd</span><span class="o">,</span> <span class="nt">ol</span><span class="o">,</span> <span class="nt">ul</span><span class="o">,</span> <span class="nt">li</span><span class="o">,</span> <span class="nt">fieldset</span><span class="o">,</span> <span class="nt">form</span><span class="o">,</span> <span class="nt">label</span><span class="o">,</span> <span class="nt">legend</span><span class="o">,</span> <span class="nt">caption</span><span class="o">,</span> <span class="nt">tbody</span><span class="o">,</span> <span class="nt">tfoot</span><span class="o">,</span> <span class="nt">thead</span><span class="o">,</span> <span class="nt">tr</span>
+    <span class="nd">+reset-box-model</span>
+    <span class="nd">+reset-font</span>
+  <span class="nt">table</span>
+    <span class="nd">+reset-table</span>
+  <span class="nt">caption</span><span class="o">,</span> <span class="nt">th</span><span class="o">,</span> <span class="nt">td</span>
+    <span class="nd">+reset-table-cell</span>
+  <span class="nt">q</span><span class="o">,</span> <span class="nt">blockquote</span>
+    <span class="nd">+reset-quotation</span>
+  <span class="nt">a</span> <span class="nt">img</span>
+    <span class="nd">+reset-image-anchor-border</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-nested-reset-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">nested-reset</span> {
+  <span class="ke">div</span>, <span class="ke">span</span>, <span class="ke">object</span>, <span class="ke">iframe</span>, <span class="ke">h1</span>, <span class="ke">h2</span>, <span class="ke">h3</span>, <span class="ke">h4</span>, <span class="ke">h5</span>, <span class="ke">h6</span>, <span class="ke">p</span>,
+  <span class="ke">pre</span>, <span class="ke">a</span>, <span class="ke">abbr</span>, <span class="ke">acronym</span>, <span class="ke">address</span>, <span class="ke">code</span>, <span class="ke">del</span>, <span class="ke">dfn</span>, <span class="ke">em</span>, <span class="ke">img</span>,
+  <span class="ke">dl</span>, <span class="ke">dt</span>, <span class="ke">dd</span>, <span class="ke">ol</span>, <span class="ke">ul</span>, <span class="ke">li</span>, <span class="ke">fieldset</span>, <span class="ke">form</span>, <span class="ke">label</span>, <span class="ke">legend</span>, <span class="ke">caption</span>, <span class="ke">tbody</span>, <span class="ke">tfoot</span>, <span class="ke">thead</span>, <span class="ke">tr</span> {
+    <span class="di">@include</span> <span class="ke">reset-box-model</span>;
+    <span class="di">@include</span> <span class="ke">reset-font</span>; }
+  <span class="ke">table</span> {
+    <span class="di">@include</span> <span class="ke">reset-table</span>; }
+  <span class="ke">caption</span>, <span class="ke">th</span>, <span class="ke">td</span> {
+    <span class="di">@include</span> <span class="ke">reset-table-cell</span>; }
+  <span class="ke">q</span>, <span class="ke">blockquote</span> {
+    <span class="di">@include</span> <span class="ke">reset-quotation</span>; }
+  <span class="ke">a</span> <span class="ke">img</span> {
+    <span class="di">@include</span> <span class="ke">reset-image-anchor-border</span>; } }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>Reset all elements within some selector scope. To reset the selector itself,
+mixin the appropriate reset mixin for that element type as well. This could be
+useful if you want to style a part of your page in a dramatically different way.</p>
+
+<p><em>Please Note</em>: tables still need <code>cellspacing="0"</code> in the markup.</p>
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-reset-box-model-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-reset-box-model-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-reset-box-model">
+<a class="permalink" href="#mixin-reset-box-model">reset-box-model</a>
+</h3>
+<div class="mixin-source" id="mixin-reset-box-model-source">
+<div class="highlight source-code sass elided-code" id="mixin-reset-box-model-sass"><pre><span class="nf">=reset-box-model</span>
+  <span class="na">margin:</span> <span class="mi">0</span>
+  <span class="na">padding:</span> <span class="mi">0</span>
+  <span class="na">border:</span> <span class="mi">0</span>
+  <span class="na">outline:</span> <span class="mi">0</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-reset-box-model-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">reset-box-model</span> {
+  <span class="ke">margin</span>: <span class="fl">0</span>;
+  <span class="ke">padding</span>: <span class="fl">0</span>;
+  <span class="ke">border</span>: <span class="fl">0</span>;
+  <span class="ke">outline</span>: <span class="fl">0</span>; }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>Reset the box model measurements.</p>
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-reset-font-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-reset-font-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-reset-font">
+<a class="permalink" href="#mixin-reset-font">reset-font</a>
+</h3>
+<div class="mixin-source" id="mixin-reset-font-source">
+<div class="highlight source-code sass elided-code" id="mixin-reset-font-sass"><pre><span class="nf">=reset-font</span>
+  <span class="nt">font</span><span class="nd">:</span>
+    <span class="na">weight:</span> <span class="no">inherit</span>
+    <span class="na">style:</span> <span class="no">inherit</span>
+    <span class="na">size:</span> <span class="mi">100</span><span class="kt">%</span>
+    <span class="na">family:</span> <span class="no">inherit</span>
+  <span class="na">vertical-align:</span> <span class="no">baseline</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-reset-font-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">reset-font</span> {
+  <span class="ke">font</span>: {
+    <span class="ke">weight</span>: <span class="vl">inherit</span>;
+    <span class="ke">style</span>: <span class="vl">inherit</span>;
+    <span class="ke">size</span>: <span class="fl">100%</span>;
+    <span class="ke">family</span>: <span class="vl">inherit</span>; };
+  <span class="ke">vertical-align</span>: <span class="vl">baseline</span>; }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>Reset the font and vertical alignment.</p>
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-reset-focus-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-reset-focus-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-reset-focus">
+<a class="permalink" href="#mixin-reset-focus">reset-focus</a>
+</h3>
+<div class="mixin-source" id="mixin-reset-focus-source">
+<div class="highlight source-code sass elided-code" id="mixin-reset-focus-sass"><pre><span class="nf">=reset-focus</span>
+  <span class="na">outline:</span> <span class="mi">0</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-reset-focus-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">reset-focus</span> {
+  <span class="ke">outline</span>: <span class="fl">0</span>; }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>Resets the outline when focus.
+For accessibility you need to apply some styling in its place.</p>
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-reset-body-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-reset-body-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-reset-body">
+<a class="permalink" href="#mixin-reset-body">reset-body</a>
+</h3>
+<div class="mixin-source" id="mixin-reset-body-source">
+<div class="highlight source-code sass elided-code" id="mixin-reset-body-sass"><pre><span class="nf">=reset-body</span>
+  <span class="na">line-height:</span> <span class="mi">1</span>
+  <span class="na">color:</span> <span class="ni">black</span>
+  <span class="na">background:</span> <span class="ni">white</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-reset-body-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">reset-body</span> {
+  <span class="ke">line-height</span>: <span class="fl">1</span>;
+  <span class="ke">color</span>: <span class="vl">black</span>;
+  <span class="ke">background</span>: <span class="vl">white</span>; }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>Reset a body element.</p>
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-reset-list-style-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-reset-list-style-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-reset-list-style">
+<a class="permalink" href="#mixin-reset-list-style">reset-list-style</a>
+</h3>
+<div class="mixin-source" id="mixin-reset-list-style-source">
+<div class="highlight source-code sass elided-code" id="mixin-reset-list-style-sass"><pre><span class="nf">=reset-list-style</span>
+  <span class="na">list-style:</span> <span class="no">none</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-reset-list-style-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">reset-list-style</span> {
+  <span class="ke">list-style</span>: <span class="vl">none</span>; }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>Reset the list style of an element.</p>
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-reset-table-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-reset-table-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-reset-table">
+<a class="permalink" href="#mixin-reset-table">reset-table</a>
+</h3>
+<div class="mixin-source" id="mixin-reset-table-source">
+<div class="highlight source-code sass elided-code" id="mixin-reset-table-sass"><pre><span class="nf">=reset-table</span>
+  <span class="na">border-collapse:</span> <span class="no">separate</span>
+  <span class="na">border-spacing:</span> <span class="mi">0</span>
+  <span class="na">vertical-align:</span> <span class="no">middle</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-reset-table-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">reset-table</span> {
+  <span class="ke">border-collapse</span>: <span class="vl">separate</span>;
+  <span class="ke">border-spacing</span>: <span class="fl">0</span>;
+  <span class="ke">vertical-align</span>: <span class="vl">middle</span>; }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>Reset a table</p>
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-reset-table-cell-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-reset-table-cell-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-reset-table-cell">
+<a class="permalink" href="#mixin-reset-table-cell">reset-table-cell</a>
+</h3>
+<div class="mixin-source" id="mixin-reset-table-cell-source">
+<div class="highlight source-code sass elided-code" id="mixin-reset-table-cell-sass"><pre><span class="nf">=reset-table-cell</span>
+  <span class="na">text-align:</span> <span class="no">left</span>
+  <span class="na">font-weight:</span> <span class="no">normal</span>
+  <span class="na">vertical-align:</span> <span class="no">middle</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-reset-table-cell-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">reset-table-cell</span> {
+  <span class="ke">text-align</span>: <span class="vl">left</span>;
+  <span class="ke">font-weight</span>: <span class="vl">normal</span>;
+  <span class="ke">vertical-align</span>: <span class="vl">middle</span>; }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>Reset a table cell (<code>th</code>, <code>td</code>)</p>
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-reset-quotation-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-reset-quotation-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-reset-quotation">
+<a class="permalink" href="#mixin-reset-quotation">reset-quotation</a>
+</h3>
+<div class="mixin-source" id="mixin-reset-quotation-source">
+<div class="highlight source-code sass elided-code" id="mixin-reset-quotation-sass"><pre><span class="nf">=reset-quotation</span>
+  <span class="na">quotes:</span> <span class="s2">""</span> <span class="s2">""</span>
+  <span class="k">&amp;</span><span class="nd">:before</span><span class="o">,</span> <span class="k">&amp;</span><span class="nd">:after</span>
+    <span class="na">content:</span> <span class="s2">""</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-reset-quotation-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">reset-quotation</span> {
+  <span class="ke">quotes</span>: <span class="s"><span class="dl">"</span><span class="dl">"</span></span> <span class="s"><span class="dl">"</span><span class="dl">"</span></span>;
+  <span class="er">&amp;</span>:<span class="vl">before</span>, <span class="er">&amp;</span>:<span class="vl">after</span> {
+    <span class="ke">content</span>: <span class="s"><span class="dl">"</span><span class="dl">"</span></span>; } }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>Reset a quotation (<code>q</code>, <code>blockquote</code>)</p>
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-reset-image-anchor-border-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-reset-image-anchor-border-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-reset-image-anchor-border">
+<a class="permalink" href="#mixin-reset-image-anchor-border">reset-image-anchor-border</a>
+</h3>
+<div class="mixin-source" id="mixin-reset-image-anchor-border-source">
+<div class="highlight source-code sass elided-code" id="mixin-reset-image-anchor-border-sass"><pre><span class="nf">=reset-image-anchor-border</span>
+  <span class="na">border:</span> <span class="no">none</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-reset-image-anchor-border-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">reset-image-anchor-border</span> {
+  <span class="ke">border</span>: <span class="vl">none</span>; }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>Resets the border.</p>
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-reset-html5-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-reset-html5-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-reset-html5">
+<a class="permalink" href="#mixin-reset-html5">reset-html5</a>
+</h3>
+<div class="mixin-source" id="mixin-reset-html5-source">
+<div class="highlight source-code sass elided-code" id="mixin-reset-html5-sass"><pre><span class="nf">=reset-html5</span>
+  <span class="nt">article</span><span class="o">,</span> <span class="nt">aside</span><span class="o">,</span> <span class="nt">canvas</span><span class="o">,</span> <span class="nt">details</span><span class="o">,</span> <span class="nt">figcaption</span><span class="o">,</span> <span class="nt">figure</span><span class="o">,</span> <span class="nt">footer</span><span class="o">,</span> <span class="nt">header</span><span class="o">,</span> <span class="nt">hgroup</span><span class="o">,</span> <span class="nt">menu</span><span class="o">,</span> <span class="nt">nav</span><span class="o">,</span> <span class="nt">section</span><span class="o">,</span> <span class="nt">summary</span>
+    <span class="nd">+reset-box-model</span>
+    <span class="na">display:</span> <span class="no">block</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-reset-html5-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">reset-html5</span> {
+  <span class="ke">article</span>, <span class="ke">aside</span>, <span class="ke">canvas</span>, <span class="ke">details</span>, <span class="ke">figcaption</span>, <span class="ke">figure</span>, <span class="ke">footer</span>, <span class="ke">header</span>, <span class="ke">hgroup</span>, <span class="ke">menu</span>, <span class="ke">nav</span>, <span class="ke">section</span>, <span class="ke">summary</span> {
+    <span class="di">@include</span> <span class="ke">reset-box-model</span>;
+    <span class="ke">display</span>: <span class="vl">block</span>; } }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>Unrecognized elements are displayed inline.
+This reset provides a basic reset for html5 elements
+so they are rendered correctly in browsers that don't recognize them
+and reset in browsers that have default styles for them.</p>
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-reset-display-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-reset-display-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-reset-display">
+<a class="permalink" href="#mixin-reset-display">reset-display(<span class="arg" data-default-value='""'>$selector</span>, <span class="arg" data-default-value="false">!important</span>)</a>
+</h3>
+<div class="mixin-source" id="mixin-reset-display-source">
+<div class="highlight source-code sass elided-code" id="mixin-reset-display-sass"><pre><span class="nf">=reset-display</span><span class="o">(</span><span class="n">$selector:</span> <span class="s2">""</span><span class="o">,</span> <span class="nv">!important</span><span class="n">:</span> <span class="n-Pseudo">false</span><span class="o">)</span>
+  <span class="nn">#</span><span class="err">{</span><span class="nt">append-selector</span><span class="o">(</span><span class="nt">elements-of-type</span><span class="o">(</span><span class="s2">"inline"</span><span class="o">),</span> <span class="err">$</span><span class="nt">selector</span><span class="o">)</span><span class="err">}</span>
+    <span class="k">@if</span> <span class="nv">!important</span>
+      <span class="na">display:</span> <span class="no">inline</span> <span class="ne">!important</span>
+    <span class="k">@else</span>
+      <span class="na">display:</span> <span class="no">inline</span>
+  <span class="nn">#</span><span class="err">{</span><span class="nt">append-selector</span><span class="o">(</span><span class="nt">elements-of-type</span><span class="o">(</span><span class="s2">"block"</span><span class="o">),</span> <span class="err">$</span><span class="nt">selector</span><span class="o">)</span><span class="err">}</span>
+    <span class="k">@if</span> <span class="nv">!important</span>
+      <span class="na">display:</span> <span class="no">block</span> <span class="ne">!important</span>
+    <span class="k">@else</span>
+      <span class="na">display:</span> <span class="no">block</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-reset-display-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="er">r</span><span class="er">e</span><span class="er">s</span><span class="er">e</span><span class="er">t</span><span class="er">-</span><span class="er">d</span><span class="er">i</span><span class="er">s</span><span class="er">p</span><span class="er">l</span><span class="er">a</span><span class="er">y</span>(<span class="er">$</span><span class="ty">selector</span>: <span class="s"><span class="dl">"</span><span class="dl">"</span></span>, <span class="im">!important</span>: <span class="ty">false</span>) {
+  <span class="er">#</span>{<span class="er">a</span><span class="er">p</span><span class="er">p</span><span class="er">e</span><span class="er">n</span><span class="er">d</span><span class="er">-</span><span class="er">s</span><span class="er">e</span><span class="er">l</span><span class="er">e</span><span class="er">c</span><span class="er">t</span><span class="er">o</span><span class="er">r</span>(<span class="er">e</span><span class="er">l</span><span class="er">e</span><span class="er">m</span><span class="er">e</span><span class="er">n</span><span class="er">t</span><span class="er">s</span><span class="er">-</span><span class="er">o</span><span class="er">f</span><span class="er">-</span><span class="er">t</span><span class="er">y</span><span class="er">p</span><span class="er">e</span>(<span class="s"><span class="dl">"</span><span class="k">inline</span><span class="dl">"</span></span>), <span class="er">$</span><span class="ke">selector</span>)} {
+    <span class="di">@if</span> <span class="im">!important</span> {
+      <span class="ke">display</span>: <span class="vl">inline</span> <span class="im">!important</span>; }
+    <span class="di">@else</span> {
+      <span class="ke">display</span>: <span class="vl">inline</span>; } }
+  <span class="er">#</span>{<span class="er">a</span><span class="er">p</span><span class="er">p</span><span class="er">e</span><span class="er">n</span><span class="er">d</span><span class="er">-</span><span class="er">s</span><span class="er">e</span><span class="er">l</span><span class="er">e</span><span class="er">c</span><span class="er">t</span><span class="er">o</span><span class="er">r</span>(<span class="er">e</span><span class="er">l</span><span class="er">e</span><span class="er">m</span><span class="er">e</span><span class="er">n</span><span class="er">t</span><span class="er">s</span><span class="er">-</span><span class="er">o</span><span class="er">f</span><span class="er">-</span><span class="er">t</span><span class="er">y</span><span class="er">p</span><span class="er">e</span>(<span class="s"><span class="dl">"</span><span class="k">block</span><span class="dl">"</span></span>), <span class="er">$</span><span class="ke">selector</span>)} {
+    <span class="di">@if</span> <span class="im">!important</span> {
+      <span class="ke">display</span>: <span class="vl">block</span> <span class="im">!important</span>; }
+    <span class="di">@else</span> {
+      <span class="ke">display</span>: <span class="vl">block</span>; } } }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>Resets the display of inline and block elements to their default display
+according to their tag type. Elements that have a default display that varies across
+versions of html or browser are not handled here, but this covers the 90% use case.
+Usage Example:</p>
+
+<pre><code>// Turn off the display for both of these classes
+.unregistered-only, .registered-only
+  display: none
+// Now turn only one of them back on depending on some other context.
+body.registered
+  +reset-display(".registered-only")
+body.unregistered
+  +reset-display(".unregistered-only")
+</code></pre>
+
+</div></article>
+</div>
+<div id='wrap-footer'></div>
+</div>
+<footer role='contentinfo'><div class='legalese'>
+<p>
+<a rel="license" href="../../../../copyright/index.html"
+   id="cc-logo"><img alt="Creative Commons License" style="border-width:0"
+   src="http://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png" /></a>
+<br />
+by Christopher M. Eppstein.
+</p>
+</div>
+<div class='links'>
+<ul>
+<li>
+<a href='../../../../../index.html' rel='home'>Compass Homepage</a>
+</li>
+<li>
+Compass is Charityware -
+<a href='http://umdf.org/compass'>Donate Now!</a>
+</li>
+<li>
+Compass is Open Source -
+<a href='http://github.com/chriseppstein/compass'>Contribute</a>
+</li>
+</ul>
+</div>
+</footer>
+<script src='../../../../javascripts/jquery-1.3.2.min.js'></script>
+<script deferred='deferred' src='../../../../javascripts/fixups.js'></script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6779438-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>
+
+<!-- Localized -->

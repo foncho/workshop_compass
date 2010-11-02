@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html class='no-js' dir='ltr' lang='en'>
+<head>
+<meta charset='utf-8' />
+<meta content='chrome=1' http-equiv='X-UA-Compatible' />
+<link href='../../../images/compass_icon.png' rel='shortcut icon' type='image/png' />
+<title>
+Blueprint Interaction | Compass Documentation
+</title>
+<!--[if !IE 6]><!-->
+<link charset='utf-8' href='../../../stylesheets/screen.css' rel='stylesheet' type='text/css' />
+<!--<![endif]-->
+<!--[if gte IE 7]>
+<link charset='utf-8' href='../../../stylesheets/ie.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+<!--[if IE 6]>
+<link charset='utf-8' href='http://universal-ie6-css.googlecode.com/files/ie6.0.3.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+</head>
+<body class='docs reference blueprint' id='reference-blueprint-interaction'><div id='wrap'>
+<nav id='skip-links'>
+<a href='#content'>skip to content</a>
+</nav>
+<header id='banner' role='banner'>
+<div>
+<h1 class='vcard'>
+<a class='fn org url uid' href='../../../../index.html' rel='home'>Compass</a>
+</h1>
+</div>
+</header>
+<nav id='docs-nav' role='navigation'>
+<div class='container'>
+<ul>
+<li>
+<a href='../../../index.html'>introduction</a>
+</li>
+<li>
+<a href='../../compass/index.html'>core</a>
+</li>
+<li>
+<a href='../index.html'>blueprint</a>
+</li>
+<li>
+<a href='../../../tutorials/index.html'>tutorials</a>
+</li>
+<!--
+<li>
+<a href='/docs/plugins/'>plugins</a>
+</li>
+-->
+</ul>
+<div id='version'>
+Current Version:
+<a class='number' href='../../../CHANGELOG/index.html'>0.10.6.</a>
+</div>
+<div id='search-docs'>
+<form action='/docs/search/' method='GET'>
+<p>
+<label for='search'>search</label>
+<input id='search' name='q' type='text' value='' />
+</p>
+</form>
+</div>
+</div>
+</nav>
+<div id='page'><aside role='sidebar'>
+<nav id='local-nav'>
+<ul><li>
+<h2>
+<a href='../index.html'>Blueprint</a>
+</h2>
+</li>
+<ul><li>
+<h3>
+<a href='../buttons/index.html'>Buttons</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../colors/index.html'>Colors</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../debug/index.html'>Debug</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../fancy_type/index.html'>Fancy Type</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../form/index.html'>Form</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../grid/index.html'>Grid</a>
+</h3>
+</li>
+<li class='selected'>
+<h3>
+<a class='selected' href='index.html'>Interaction</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../ie/index.html'>Internet Explorer</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../link_icons/index.html'>Link Icons</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../liquid/index.html'>Liquid</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../print/index.html'>Print</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../reset/index.html'>Reset</a>
+</h3>
+</li>
+<ul><li>
+<a href='../reset/utilities/index.html'>Reset Utilities</a>
+</li>
+</ul>
+<li>
+<h3>
+<a href='../rtl/index.html'>Rtl</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../scaffolding/index.html'>Scaffolding</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../typography/index.html'>Typography</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../utilities/index.html'>Utilities</a>
+</h3>
+</li>
+</ul>
+</ul>
+</nav>
+</aside>
+<article><h1>Blueprint Interaction</h1>
+<p>
+Some classes that are used in common website interactions.
+</p>
+
+<p>
+This file can be imported using:
+<code>@import "blueprint/interaction"</code>
+</p>
+<p>
+View the
+<a href="http://github.com/chriseppstein/compass/blob/stable/frameworks/blueprint/stylesheets/blueprint/_interaction.scss">Source for this module on Github.</a>
+</p>
+
+<h2>Imports</h2>
+<p>
+The following sass files are automatically imported when you import this file:
+</p>
+<ol>
+<li>
+<a href="../colors/index.html" title="@import colors">Colors</a>
+</li>
+
+</ol><h2>Mixins</h2>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-blueprint-interaction-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-blueprint-interaction-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-blueprint-interaction">
+<a class="permalink" href="#mixin-blueprint-interaction">blueprint-interaction</a>
+</h3>
+<div class="mixin-source" id="mixin-blueprint-interaction-source">
+<div class="highlight source-code sass elided-code" id="mixin-blueprint-interaction-sass"><pre><span class="nf">=blueprint-interaction</span>
+  <span class="nc">.error</span>
+    <span class="nd">+error</span>
+  <span class="nc">.notice</span>
+    <span class="nd">+notice</span>
+  <span class="nc">.success</span>
+    <span class="nd">+success</span>
+  <span class="nc">.hide</span>
+    <span class="na">display:</span> <span class="no">none</span>
+  <span class="nc">.highlight</span>
+    <span class="nd">+highlight</span>
+  <span class="nc">.added</span>
+    <span class="nd">+added</span>
+  <span class="nc">.removed</span>
+    <span class="nd">+removed</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-blueprint-interaction-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">blueprint-interaction</span> {
+  .<span class="ke">error</span> {
+    <span class="di">@include</span> <span class="ke">error</span>; }
+  .<span class="ke">notice</span> {
+    <span class="di">@include</span> <span class="ke">notice</span>; }
+  .<span class="ke">success</span> {
+    <span class="di">@include</span> <span class="ke">success</span>; }
+  .<span class="ke">hide</span> {
+    <span class="ke">display</span>: <span class="vl">none</span>; }
+  .<span class="ke">highlight</span> {
+    <span class="di">@include</span> <span class="ke">highlight</span>; }
+  .<span class="ke">added</span> {
+    <span class="di">@include</span> <span class="ke">added</span>; }
+  .<span class="ke">removed</span> {
+    <span class="di">@include</span> <span class="ke">removed</span>; } }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-feedback-base-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-feedback-base-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-feedback-base">
+<a class="permalink" href="#mixin-feedback-base">feedback-base</a>
+</h3>
+<div class="mixin-source" id="mixin-feedback-base-source">
+<div class="highlight source-code sass elided-code" id="mixin-feedback-base-sass"><pre><span class="nf">=feedback-base</span>
+  <span class="na">padding:</span> <span class="mi">0</span><span class="mf">.8</span><span class="kt">em</span>
+  <span class="na">margin-bottom:</span> <span class="mi">1</span><span class="kt">em</span>
+  <span class="na">border:</span> <span class="mi">2</span><span class="kt">px</span> <span class="no">solid</span> <span class="err">$</span><span class="n">feedback_border_color</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-feedback-base-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">feedback-base</span> {
+  <span class="ke">padding</span>: <span class="fl">0.8em</span>;
+  <span class="ke">margin-bottom</span>: <span class="fl">1em</span>;
+  <span class="ke">border</span>: <span class="fl">2px</span> <span class="vl">solid</span> <span class="er">$</span><span class="vl">feedback_border_color</span>; }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-error-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-error-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-error">
+<a class="permalink" href="#mixin-error">error</a>
+</h3>
+<div class="mixin-source" id="mixin-error-source">
+<div class="highlight source-code sass elided-code" id="mixin-error-sass"><pre><span class="nf">=error</span>
+  <span class="nd">+feedback-base</span>
+  <span class="na">background:</span> <span class="err">$</span><span class="n">error_bg_color</span>
+  <span class="na">color:</span> <span class="err">$</span><span class="n">error_color</span>
+  <span class="na">border-color:</span> <span class="err">$</span><span class="n">error_border_color</span>
+  <span class="nt">a</span>
+    <span class="na">color:</span> <span class="err">$</span><span class="n">error_color</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-error-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">error</span> {
+  <span class="di">@include</span> <span class="ke">feedback-base</span>;
+  <span class="ke">background</span>: <span class="er">$</span><span class="vl">error_bg_color</span>;
+  <span class="ke">color</span>: <span class="er">$</span><span class="vl">error_color</span>;
+  <span class="ke">border-color</span>: <span class="er">$</span><span class="vl">error_border_color</span>;
+  <span class="ke">a</span> {
+    <span class="ke">color</span>: <span class="er">$</span><span class="vl">error_color</span>; } }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-notice-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-notice-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-notice">
+<a class="permalink" href="#mixin-notice">notice</a>
+</h3>
+<div class="mixin-source" id="mixin-notice-source">
+<div class="highlight source-code sass elided-code" id="mixin-notice-sass"><pre><span class="nf">=notice</span>
+  <span class="nd">+feedback-base</span>
+  <span class="na">background:</span> <span class="err">$</span><span class="n">notice_bg_color</span>
+  <span class="na">color:</span> <span class="err">$</span><span class="n">notice_color</span>
+  <span class="na">border-color:</span> <span class="err">$</span><span class="n">notice_border_color</span>
+  <span class="nt">a</span>
+    <span class="na">color:</span> <span class="err">$</span><span class="n">notice_color</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-notice-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">notice</span> {
+  <span class="di">@include</span> <span class="ke">feedback-base</span>;
+  <span class="ke">background</span>: <span class="er">$</span><span class="vl">notice_bg_color</span>;
+  <span class="ke">color</span>: <span class="er">$</span><span class="vl">notice_color</span>;
+  <span class="ke">border-color</span>: <span class="er">$</span><span class="vl">notice_border_color</span>;
+  <span class="ke">a</span> {
+    <span class="ke">color</span>: <span class="er">$</span><span class="vl">notice_color</span>; } }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-success-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-success-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-success">
+<a class="permalink" href="#mixin-success">success</a>
+</h3>
+<div class="mixin-source" id="mixin-success-source">
+<div class="highlight source-code sass elided-code" id="mixin-success-sass"><pre><span class="nf">=success</span>
+  <span class="nd">+feedback-base</span>
+  <span class="na">background:</span> <span class="err">$</span><span class="n">success_bg_color</span>
+  <span class="na">color:</span> <span class="err">$</span><span class="n">success_color</span>
+  <span class="na">border-color:</span> <span class="err">$</span><span class="n">success_border_color</span>
+  <span class="nt">a</span>
+    <span class="na">color:</span> <span class="err">$</span><span class="n">success_color</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-success-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">success</span> {
+  <span class="di">@include</span> <span class="ke">feedback-base</span>;
+  <span class="ke">background</span>: <span class="er">$</span><span class="vl">success_bg_color</span>;
+  <span class="ke">color</span>: <span class="er">$</span><span class="vl">success_color</span>;
+  <span class="ke">border-color</span>: <span class="er">$</span><span class="vl">success_border_color</span>;
+  <span class="ke">a</span> {
+    <span class="ke">color</span>: <span class="er">$</span><span class="vl">success_color</span>; } }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-highlight-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-highlight-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-highlight">
+<a class="permalink" href="#mixin-highlight">highlight</a>
+</h3>
+<div class="mixin-source" id="mixin-highlight-source">
+<div class="highlight source-code sass elided-code" id="mixin-highlight-sass"><pre><span class="nf">=highlight</span>
+  <span class="na">background:</span> <span class="err">$</span><span class="n">highlight_color</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-highlight-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">highlight</span> {
+  <span class="ke">background</span>: <span class="er">$</span><span class="vl">highlight_color</span>; }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-added-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-added-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-added">
+<a class="permalink" href="#mixin-added">added</a>
+</h3>
+<div class="mixin-source" id="mixin-added-source">
+<div class="highlight source-code sass elided-code" id="mixin-added-sass"><pre><span class="nf">=added</span>
+  <span class="na">background:</span> <span class="err">$</span><span class="n">added_bg_color</span>
+  <span class="na">color:</span> <span class="err">$</span><span class="n">added_color</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-added-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">added</span> {
+  <span class="ke">background</span>: <span class="er">$</span><span class="vl">added_bg_color</span>;
+  <span class="ke">color</span>: <span class="er">$</span><span class="vl">added_color</span>; }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-removed-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-removed-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-removed">
+<a class="permalink" href="#mixin-removed">removed</a>
+</h3>
+<div class="mixin-source" id="mixin-removed-source">
+<div class="highlight source-code sass elided-code" id="mixin-removed-sass"><pre><span class="nf">=removed</span>
+  <span class="na">background:</span> <span class="err">$</span><span class="n">removed_bg_color</span>
+  <span class="na">color:</span> <span class="err">$</span><span class="n">removed_color</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-removed-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">removed</span> {
+  <span class="ke">background</span>: <span class="er">$</span><span class="vl">removed_bg_color</span>;
+  <span class="ke">color</span>: <span class="er">$</span><span class="vl">removed_color</span>; }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+
+</div></article>
+</div>
+<div id='wrap-footer'></div>
+</div>
+<footer role='contentinfo'><div class='legalese'>
+<p>
+<a rel="license" href="../../../copyright/index.html"
+   id="cc-logo"><img alt="Creative Commons License" style="border-width:0"
+   src="http://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png" /></a>
+<br />
+by Christopher M. Eppstein.
+</p>
+</div>
+<div class='links'>
+<ul>
+<li>
+<a href='../../../../index.html' rel='home'>Compass Homepage</a>
+</li>
+<li>
+Compass is Charityware -
+<a href='http://umdf.org/compass'>Donate Now!</a>
+</li>
+<li>
+Compass is Open Source -
+<a href='http://github.com/chriseppstein/compass'>Contribute</a>
+</li>
+</ul>
+</div>
+</footer>
+<script src='../../../javascripts/jquery-1.3.2.min.js'></script>
+<script deferred='deferred' src='../../../javascripts/fixups.js'></script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6779438-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>
+
+<!-- Localized -->

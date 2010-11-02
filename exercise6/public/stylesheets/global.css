@@ -1,0 +1,686 @@
+/* 960 Grid System ~ Core CSS.
+ * Learn more ~ http://960.gs/
+ * *
+ * Licensed under GPL and MIT. */
+/* line 14, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 17, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+/* line 19, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 21, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 23, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 25, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: "" "";
+}
+/* line 96, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+}
+
+/* line 27, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 14, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 17, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+/* line 19, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 21, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 23, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 25, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: "" "";
+}
+/* line 96, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+}
+
+/* line 27, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* =HEADINGS */
+/* line 3, ../../app/stylesheets/text.scss */
+body {
+  font: normal 14px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* normalize font size across browsers */
+}
+
+/* line 7, ../../app/stylesheets/text.scss */
+em {
+  color: #828282;
+  font-size: 13px;
+  font-family: Cambria, Georgia, Times, 'Times New Roman', serif;
+  line-height: 40px;
+  text-align: right;
+}
+
+/* line 15, ../../app/stylesheets/text.scss */
+p {
+  color: #828282;
+}
+
+/* line 19, ../../app/stylesheets/text.scss */
+h1, h2 {
+  letter-spacing: -0.05em;
+  line-height: 40px;
+}
+
+/* line 24, ../../app/stylesheets/text.scss */
+h1 {
+  color: #000;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+/* line 31, ../../app/stylesheets/text.scss */
+h2 {
+  color: #666;
+  font-size: 28px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+/* line 38, ../../app/stylesheets/text.scss */
+h3 {
+  color: #59892f;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* line 44, ../../app/stylesheets/text.scss */
+h3.section, .blog_post .copy h4, h4.section {
+  border-top: 1px solid #eee;
+  clear: both;
+  color: #888;
+  font-size: .75em;
+  margin: 0 0 20px 0;
+  padding: 9px 0 10px 0;
+  text-transform: uppercase;
+}
+
+/* line 54, ../../app/stylesheets/text.scss */
+h4, h5 {
+  color: #3f5c26;
+  font-size: 1em;
+}
+
+/* line 59, ../../app/stylesheets/text.scss */
+h3 span, h4 span, h5 span {
+  font-weight: normal;
+}
+
+/* line 63, ../../app/stylesheets/text.scss */
+strong, b {
+  font-weight: bolder;
+}
+
+/* line 5, ../../app/stylesheets/menu.scss */
+.menu {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  overflow: hidden;
+  *zoom: 1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* line 10, ../../app/stylesheets/menu.scss */
+.menu li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 20;
+  padding-right: 20;
+}
+/* line 45, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+.menu li:first-child, .menu li.first {
+  padding-left: 0;
+}
+/* line 46, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+.menu li:last-child, .menu li.last {
+  padding-right: 0;
+}
+/* line 13, ../../app/stylesheets/menu.scss */
+.menu li a {
+  padding: 10px;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 21, ../../app/stylesheets/menu.scss */
+.menu li a:hover {
+  color: #d9e5e0;
+  background: #417d64;
+  -webkit-border-radius: 14px 14px;
+  -moz-border-radius: 14px / 14px;
+  -o-border-radius: 14px / 14px;
+  -ms-border-radius: 14px / 14px;
+  -khtml-border-radius: 14px / 14px;
+  border-radius: 14px / 14px;
+}
+
+@charset "UTF-8";
+/* incase an inverted custom gradient isn't specified */
+/* line 23, ../../app/stylesheets/global.scss */
+a {
+  text-decoration: none;
+  color: #6299c5;
+}
+/* line 26, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+a:hover {
+  color: #669933;
+}
+
+/* = HEADER */
+/* line 31, ../../app/stylesheets/global.scss */
+#gutter {
+  overflow: hidden;
+  *zoom: 1;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: #191919;
+}
+/* line 37, ../../app/stylesheets/global.scss */
+#gutter .gutter-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+}
+/* line 39, ../../app/stylesheets/global.scss */
+#gutter .gutter-container .logo {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 160px;
+}
+/* line 41, ../../app/stylesheets/global.scss */
+#gutter .gutter-container .sign-in {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 640px;
+  text-align: right;
+}
+/* line 44, ../../app/stylesheets/global.scss */
+#gutter .gutter-container .buttons {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 100px;
+  font-family: "Lucida Grande", Lucida, Arial, sans_serif;
+  background: url('/images/button_bg.png') repeat-x bottom left;
+  margin: 0;
+  width: auto;
+  overflow: visible;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border-style: solid;
+  font-weight: bold;
+  -moz-border-radius: 0.4em;
+  -webkit-border-radius: 0.4em;
+  -o-border-radius: 0.4em;
+  -ms-border-radius: 0.4em;
+  -khtml-border-radius: 0.4em;
+  border-radius: 0.4em;
+  font-size: 11px;
+  line-height: 13.2px;
+  padding: 2px 9px;
+  border-width: 1px;
+  background-color: #333333;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #878787), color-stop(10%, #595959), color-stop(50%, #2b2b2b), color-stop(50%, #242424), color-stop(100%, #3d3d3d));
+  background-image: -moz-linear-gradient(top, #878787 0%, #595959 10%, #2b2b2b 50%, #242424 50%, #3d3d3d 100%);
+  background-image: linear-gradient(top, #878787 0%, #595959 10%, #2b2b2b 50%, #242424 50%, #3d3d3d 100%);
+  border-color: #0d0d0d;
+  text-shadow: black 0px 1px 1px;
+  padding: 10px 20px;
+  border-width: 2px;
+}
+/* line 172, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#gutter .gutter-container .buttons::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+/* line 175, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#gutter .gutter-container .buttons:focus {
+  outline: none;
+}
+/* line 178, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#gutter .gutter-container .buttons.disabled, #gutter .gutter-container .buttons[disabled] {
+  opacity: 0.7;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+}
+/* line 183, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#gutter .gutter-container .buttons.disabled:hover, #gutter .gutter-container .buttons.disabled:focus, #gutter .gutter-container .buttons[disabled]:hover, #gutter .gutter-container .buttons[disabled]:focus {
+  cursor: default;
+}
+/* line 152, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#gutter .gutter-container .buttons:active {
+  padding: 1px 8px;
+  border-width: 2px;
+}
+/* line 156, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#gutter .gutter-container .buttons.disabled:active, #gutter .gutter-container .buttons[disabled] {
+  padding: 2px 9px;
+  border-width: 1px;
+}
+/* line 98, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#gutter .gutter-container .buttons, #gutter .gutter-container .buttons:visited {
+  color: white;
+}
+/* line 26, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#gutter .gutter-container .buttons.disabled:active, #gutter .gutter-container .buttons.disabled:hover, #gutter .gutter-container .buttons[disabled]:active, #gutter .gutter-container .buttons[disabled]:hover {
+  background-color: #333333;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #878787), color-stop(10%, #595959), color-stop(50%, #2b2b2b), color-stop(50%, #242424), color-stop(100%, #3d3d3d));
+  background-image: -moz-linear-gradient(top, #878787 0%, #595959 10%, #2b2b2b 50%, #242424 50%, #3d3d3d 100%);
+  background-image: linear-gradient(top, #878787 0%, #595959 10%, #2b2b2b 50%, #242424 50%, #3d3d3d 100%);
+  border-color: #0d0d0d;
+  text-shadow: black 0px 1px 1px;
+}
+/* line 98, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#gutter .gutter-container .buttons.disabled:active, #gutter .gutter-container .buttons.disabled:active:visited, #gutter .gutter-container .buttons.disabled:hover, #gutter .gutter-container .buttons.disabled:hover:visited, #gutter .gutter-container .buttons[disabled]:active, #gutter .gutter-container .buttons[disabled]:active:visited, #gutter .gutter-container .buttons[disabled]:hover, #gutter .gutter-container .buttons[disabled]:hover:visited {
+  color: white;
+}
+/* line 28, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#gutter .gutter-container .buttons:hover, #gutter .gutter-container .buttons:focus {
+  background-color: #2b2b2b;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #808080), color-stop(10%, #525252), color-stop(50%, #242424), color-stop(50%, #1c1c1c), color-stop(100%, #363636));
+  background-image: -moz-linear-gradient(top, #808080 0%, #525252 10%, #242424 50%, #1c1c1c 50%, #363636 100%);
+  background-image: linear-gradient(top, #808080 0%, #525252 10%, #242424 50%, #1c1c1c 50%, #363636 100%);
+  border-color: #050505;
+  text-shadow: black 0px 1px 1px;
+}
+/* line 98, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#gutter .gutter-container .buttons:hover, #gutter .gutter-container .buttons:hover:visited, #gutter .gutter-container .buttons:focus, #gutter .gutter-container .buttons:focus:visited {
+  color: white;
+}
+/* line 33, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#gutter .gutter-container .buttons:active {
+  background-color: #242424;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #242424), color-stop(30%, #292929), color-stop(50%, #1f1f1f), color-stop(50%, #171717), color-stop(100%, #383838));
+  background-image: -moz-linear-gradient(top, #242424 0%, #292929 30%, #1f1f1f 50%, #171717 50%, #383838 100%);
+  background-image: linear-gradient(top, #242424 0%, #292929 30%, #1f1f1f 50%, #171717 50%, #383838 100%);
+  border-color: black;
+  text-shadow: black 0px -1px -1px;
+}
+/* line 98, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#gutter .gutter-container .buttons:active, #gutter .gutter-container .buttons:active:visited {
+  color: white;
+}
+/* line 152, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#gutter .gutter-container .buttons:active {
+  padding: 9px 19px;
+  border-width: 3px;
+}
+/* line 156, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#gutter .gutter-container .buttons.disabled:active, #gutter .gutter-container .buttons[disabled] {
+  padding: 10px 20px;
+  border-width: 2px;
+}
+
+/* NAVIGATION */
+/* line 53, ../../app/stylesheets/global.scss */
+#navigation {
+  overflow: hidden;
+  *zoom: 1;
+  background-color: #4b9376;
+}
+/* line 57, ../../app/stylesheets/global.scss */
+#navigation .menu-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 61, ../../app/stylesheets/global.scss */
+#navigation .menu {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 760px;
+  margin-left: 0;
+}
+
+/* MIDDLE FRAME */
+/* line 68, ../../app/stylesheets/global.scss */
+#banner {
+  overflow: hidden;
+  *zoom: 1;
+  padding-top: 20px;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #5db585), color-stop(100%, #86c23c));
+  background-image: -moz-linear-gradient(top, #5db585 0%, #86c23c 100%);
+  background-image: linear-gradient(top, #5db585 0%, #86c23c 100%);
+}
+/* line 73, ../../app/stylesheets/global.scss */
+#banner .workspaces {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 77, ../../app/stylesheets/global.scss */
+#banner .workspaces .hero {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 460px;
+}
+/* line 81, ../../app/stylesheets/global.scss */
+#banner .workspaces .text-workspaces {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 460px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+/* line 85, ../../app/stylesheets/global.scss */
+#banner .workspaces .text-workspaces h1 {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+/* line 89, ../../app/stylesheets/global.scss */
+#banner .workspaces .text-workspaces .workspace-title {
+  text-shadow: #aaaaaa 1px 1px 1px;
+  color: white;
+  font-size: 38px;
+  font-weight: bold;
+}
+/* line 94, ../../app/stylesheets/global.scss */
+#banner .workspaces .text-workspaces button {
+  color: white;
+  font-weight: bold;
+  font-family: "Lucida Grande", Lucida, Arial, sans_serif;
+  background: url('/images/button_bg.png') repeat-x bottom left;
+  margin: 0;
+  width: auto;
+  overflow: visible;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border-style: solid;
+  font-weight: bold;
+  -moz-border-radius: 0.4em;
+  -webkit-border-radius: 0.4em;
+  -o-border-radius: 0.4em;
+  -ms-border-radius: 0.4em;
+  -khtml-border-radius: 0.4em;
+  border-radius: 0.4em;
+  font-size: 14px;
+  line-height: 16.8px;
+  padding: 2px 11px;
+  border-width: 1px;
+  background-color: #4e930d;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #a3cc7c), color-stop(10%, #75aa43), color-stop(50%, #476829), color-stop(50%, #405d24), color-stop(100%, #598233));
+  background-image: -moz-linear-gradient(top, #a3cc7c 0%, #75aa43 10%, #476829 50%, #405d24 50%, #598233 100%);
+  background-image: linear-gradient(top, #a3cc7c 0%, #75aa43 10%, #476829 50%, #405d24 50%, #598233 100%);
+  border-color: #293c17;
+  text-shadow: #101e03 0px 1px 1px;
+  padding: 10px 20px;
+  border-width: 1px;
+}
+/* line 172, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#banner .workspaces .text-workspaces button::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+/* line 175, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#banner .workspaces .text-workspaces button:focus {
+  outline: none;
+}
+/* line 178, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#banner .workspaces .text-workspaces button.disabled, #banner .workspaces .text-workspaces button[disabled] {
+  opacity: 0.7;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+}
+/* line 183, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#banner .workspaces .text-workspaces button.disabled:hover, #banner .workspaces .text-workspaces button.disabled:focus, #banner .workspaces .text-workspaces button[disabled]:hover, #banner .workspaces .text-workspaces button[disabled]:focus {
+  cursor: default;
+}
+/* line 152, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#banner .workspaces .text-workspaces button:active {
+  padding: 1px 10px;
+  border-width: 2px;
+}
+/* line 156, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#banner .workspaces .text-workspaces button.disabled:active, #banner .workspaces .text-workspaces button[disabled] {
+  padding: 2px 11px;
+  border-width: 1px;
+}
+/* line 98, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#banner .workspaces .text-workspaces button, #banner .workspaces .text-workspaces button:visited {
+  color: white;
+}
+/* line 26, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#banner .workspaces .text-workspaces button.disabled:active, #banner .workspaces .text-workspaces button.disabled:hover, #banner .workspaces .text-workspaces button[disabled]:active, #banner .workspaces .text-workspaces button[disabled]:hover {
+  background-color: #4e930d;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #a3cc7c), color-stop(10%, #75aa43), color-stop(50%, #476829), color-stop(50%, #405d24), color-stop(100%, #598233));
+  background-image: -moz-linear-gradient(top, #a3cc7c 0%, #75aa43 10%, #476829 50%, #405d24 50%, #598233 100%);
+  background-image: linear-gradient(top, #a3cc7c 0%, #75aa43 10%, #476829 50%, #405d24 50%, #598233 100%);
+  border-color: #293c17;
+  text-shadow: #101e03 0px 1px 1px;
+}
+/* line 98, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#banner .workspaces .text-workspaces button.disabled:active, #banner .workspaces .text-workspaces button.disabled:active:visited, #banner .workspaces .text-workspaces button.disabled:hover, #banner .workspaces .text-workspaces button.disabled:hover:visited, #banner .workspaces .text-workspaces button[disabled]:active, #banner .workspaces .text-workspaces button[disabled]:active:visited, #banner .workspaces .text-workspaces button[disabled]:hover, #banner .workspaces .text-workspaces button[disabled]:hover:visited {
+  color: white;
+}
+/* line 28, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#banner .workspaces .text-workspaces button:hover, #banner .workspaces .text-workspaces button:focus {
+  background-color: #47850c;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #9bc871), color-stop(10%, #6d9f3e), color-stop(50%, #405d24), color-stop(50%, #385220), color-stop(100%, #52772e));
+  background-image: -moz-linear-gradient(top, #9bc871 0%, #6d9f3e 10%, #405d24 50%, #385220 50%, #52772e 100%);
+  background-image: linear-gradient(top, #9bc871 0%, #6d9f3e 10%, #405d24 50%, #385220 50%, #52772e 100%);
+  border-color: #223113;
+  text-shadow: #081001 0px 1px 1px;
+}
+/* line 98, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#banner .workspaces .text-workspaces button:hover, #banner .workspaces .text-workspaces button:hover:visited, #banner .workspaces .text-workspaces button:focus, #banner .workspaces .text-workspaces button:focus:visited {
+  color: white;
+}
+/* line 33, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#banner .workspaces .text-workspaces button:active {
+  background-color: #3f770b;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #405d24), color-stop(30%, #456427), color-stop(50%, #3b5622), color-stop(50%, #334b1d), color-stop(100%, #547a30));
+  background-image: -moz-linear-gradient(top, #405d24 0%, #456427 30%, #3b5622 50%, #334b1d 50%, #547a30 100%);
+  background-image: linear-gradient(top, #405d24 0%, #456427 30%, #3b5622 50%, #334b1d 50%, #547a30 100%);
+  border-color: #1a260f;
+  text-shadow: #010200 0px -1px -1px;
+}
+/* line 98, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#banner .workspaces .text-workspaces button:active, #banner .workspaces .text-workspaces button:active:visited {
+  color: white;
+}
+/* line 152, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#banner .workspaces .text-workspaces button:active {
+  padding: 9px 19px;
+  border-width: 2px;
+}
+/* line 156, ../../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+#banner .workspaces .text-workspaces button.disabled:active, #banner .workspaces .text-workspaces button[disabled] {
+  padding: 10px 20px;
+  border-width: 1px;
+}
+/* line 101, ../../app/stylesheets/global.scss */
+#banner h1 {
+  color: #304812;
+  font-size: 26px;
+  font-weight: normal;
+  margin-top: 20px;
+}
+
+/* FOOTER*/
+/* line 111, ../../app/stylesheets/global.scss */
+.bg_footer {
+  overflow: hidden;
+  *zoom: 1;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: #191919;
+}
+/* line 117, ../../app/stylesheets/global.scss */
+.bg_footer .footer {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 121, ../../app/stylesheets/global.scss */
+.bg_footer .footer .column-footer {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+/* line 126, ../../app/stylesheets/global.scss */
+.bg_footer .footer .column-footer li {
+  list-style-type: none;
+}
+/* line 129, ../../app/stylesheets/global.scss */
+.bg_footer .footer .column-footer .suggestions {
+  border-top: 1px solid #333333;
+  margin-top: 10px;
+  padding-top: 9px;
+}
+/* line 135, ../../app/stylesheets/global.scss */
+.bg_footer .footer .runner {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 940px;
+  border-top: 1px solid #333333;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+/* line 141, ../../app/stylesheets/global.scss */
+.bg_footer .footer .runner .logo {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 100px;
+  margin-left: 0;
+}
+/* line 145, ../../app/stylesheets/global.scss */
+.bg_footer .footer .runner .copyright {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 280px;
+}
+/* line 148, ../../app/stylesheets/global.scss */
+.bg_footer .footer .runner .pitch-runner {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 520px;
+  margin-right: 0;
+  text-align: right;
+}

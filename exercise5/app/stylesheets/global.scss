@@ -1,0 +1,135 @@
+/* 960 Grid System ~ Core CSS.
+ * Learn more ~ http://960.gs/
+ * *
+ * Licensed under GPL and MIT. */
+
+@import "compass/reset";
+
+@include global-reset;
+
+@import "960/grid";
+@import "compass/utilities";
+@import "compass/css3/gradient";
+@import "text";
+@import "menu";
+@import "compass/css3/text-shadow";
+@import "colors";
+
+
+$ninesixty-columns: 16;
+
+a{
+  text-decoration: none;
+  @include link-colors($link_color,$link_hover_color);
+}
+
+
+/* = HEADER */
+
+#gutter{
+  @include clearfix;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: $dark_color;
+
+  .gutter-container {
+    @include grid-container;
+    .logo {
+      @include grid(3); }
+    .sign-in {
+      @include grid(11);
+      text-align: right;}
+    .buttons {
+      @include grid(2);
+      //include code here
+       }
+  }
+}
+
+/* MIDDLE FRAME */
+
+#banner{
+   @include clearfix;
+   padding-top: 20px;
+   @include linear-gradient(color-stops($workspace_bg_color1, $workspace_bg_color2));
+
+  .workspaces {
+     @include grid-container;
+     @include clearfix;
+
+    .hero {
+    @include grid(8);
+    }
+
+    .text-workspaces {
+      @include grid(8);
+      padding-bottom: 20px;
+      padding-top:20px;
+        h1 {
+          padding-bottom: 20px;
+          padding-top:20px;}
+
+        .workspace-title {
+          @include text-shadow();
+          color: white;
+          font-size: 38px;
+          font-weight: bold;}
+        button {
+           //include code here
+           }
+      }
+  }
+  h1{
+  color: $workspace_text;
+  font-size: 26px;
+  font-weight: normal;
+  margin-top:20px;}
+}
+
+
+/* FOOTER*/
+
+.bg_footer{
+  @include clearfix;
+  padding-bottom: 20px;
+   padding-top: 20px;
+   background-color: $dark_color;
+
+  .footer{
+    @include grid-container;
+    @include clearfix;
+
+    .column-footer {
+      @include grid(4);
+      padding-bottom:20px;
+      padding-top:20px;
+
+      li{
+        list-style-type:none;}
+
+      .suggestions {
+        border-top: 1px solid $line_color;
+        margin-top: 10px;
+        padding-top: 9px; }
+      }
+
+    .runner {
+      @include grid(16);
+      border-top: 1px solid $line_color;
+      padding-bottom:20px;
+      padding-top:20px;
+
+      .logo {
+        @include grid(2);
+        @include alpha;}
+
+      .copyright {
+        @include grid(5);}
+
+      .pitch-runner {
+        @include grid(9);
+        @include omega;
+        text-align: right;}
+      }
+  }
+}

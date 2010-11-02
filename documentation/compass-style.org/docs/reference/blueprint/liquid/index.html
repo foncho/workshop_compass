@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html class='no-js' dir='ltr' lang='en'>
+<head>
+<meta charset='utf-8' />
+<meta content='chrome=1' http-equiv='X-UA-Compatible' />
+<link href='../../../images/compass_icon.png' rel='shortcut icon' type='image/png' />
+<title>
+Blueprint Liquid | Compass Documentation
+</title>
+<!--[if !IE 6]><!-->
+<link charset='utf-8' href='../../../stylesheets/screen.css' rel='stylesheet' type='text/css' />
+<!--<![endif]-->
+<!--[if gte IE 7]>
+<link charset='utf-8' href='../../../stylesheets/ie.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+<!--[if IE 6]>
+<link charset='utf-8' href='http://universal-ie6-css.googlecode.com/files/ie6.0.3.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+</head>
+<body class='docs reference blueprint' id='reference-blueprint-liquid'><div id='wrap'>
+<nav id='skip-links'>
+<a href='#content'>skip to content</a>
+</nav>
+<header id='banner' role='banner'>
+<div>
+<h1 class='vcard'>
+<a class='fn org url uid' href='../../../../index.html' rel='home'>Compass</a>
+</h1>
+</div>
+</header>
+<nav id='docs-nav' role='navigation'>
+<div class='container'>
+<ul>
+<li>
+<a href='../../../index.html'>introduction</a>
+</li>
+<li>
+<a href='../../compass/index.html'>core</a>
+</li>
+<li>
+<a href='../index.html'>blueprint</a>
+</li>
+<li>
+<a href='../../../tutorials/index.html'>tutorials</a>
+</li>
+<!--
+<li>
+<a href='/docs/plugins/'>plugins</a>
+</li>
+-->
+</ul>
+<div id='version'>
+Current Version:
+<a class='number' href='../../../CHANGELOG/index.html'>0.10.6.</a>
+</div>
+<div id='search-docs'>
+<form action='/docs/search/' method='GET'>
+<p>
+<label for='search'>search</label>
+<input id='search' name='q' type='text' value='' />
+</p>
+</form>
+</div>
+</div>
+</nav>
+<div id='page'><aside role='sidebar'>
+<nav id='local-nav'>
+<ul><li>
+<h2>
+<a href='../index.html'>Blueprint</a>
+</h2>
+</li>
+<ul><li>
+<h3>
+<a href='../buttons/index.html'>Buttons</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../colors/index.html'>Colors</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../debug/index.html'>Debug</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../fancy_type/index.html'>Fancy Type</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../form/index.html'>Form</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../grid/index.html'>Grid</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../interaction/index.html'>Interaction</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../ie/index.html'>Internet Explorer</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../link_icons/index.html'>Link Icons</a>
+</h3>
+</li>
+<li class='selected'>
+<h3>
+<a class='selected' href='index.html'>Liquid</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../print/index.html'>Print</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../reset/index.html'>Reset</a>
+</h3>
+</li>
+<ul><li>
+<a href='../reset/utilities/index.html'>Reset Utilities</a>
+</li>
+</ul>
+<li>
+<h3>
+<a href='../rtl/index.html'>Rtl</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../scaffolding/index.html'>Scaffolding</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../typography/index.html'>Typography</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../utilities/index.html'>Utilities</a>
+</h3>
+</li>
+</ul>
+</ul>
+</nav>
+</aside>
+<article><h1>Blueprint Liquid</h1>
+<p>Import this to have a liquid grid.</p>
+
+<p>The original liquid grid documentation is
+<a href="http://groups.google.com/group/blueprintcss/msg/d7171a8bef20b9a2">here</a>.</p>
+
+<p>By default the container takes 80% of the canvas, you can override this:</p>
+
+<div class="CodeRay source-code scss">
+  <div class="code"><pre>
+<span class="cl">.container</span> {
+  <span class="ke">width</span>: <span class="fl">99%</span>
+}</pre></div>
+</div>
+
+<p>
+This file can be imported using:
+<code>@import "blueprint/liquid"</code>
+</p>
+<p>
+View the
+<a href="http://github.com/chriseppstein/compass/blob/stable/frameworks/blueprint/stylesheets/blueprint/_liquid.scss">Source for this module on Github.</a>
+</p>
+
+<h2>Imports</h2>
+<p>
+The following sass files are automatically imported when you import this file:
+</p>
+<ol>
+<li>
+<a href="../../compass/utilities/general/clearfix/index.html" title="@import compass/utilities/general/clearfix">Clearfix</a>
+– Mixins for clearfixing.
+</li>
+
+<li>
+<a href="../../compass/utilities/general/float/index.html" title="@import compass/utilities/general/float">Float</a>
+– Mixins for cross-browser floats.
+</li>
+
+</ol><h2>
+Configurable Variables
+<a class="help" href="../../../tutorials/configurable-variables/index.html">help</a>
+</h2>
+<h3 class="constant" id="const-blueprint-liquid-grid-columns">
+<a class="permalink" href="#const-blueprint-liquid-grid-columns">$blueprint-liquid-grid-columns</a>
+</h3>
+<dl class="constant-details source-documentation">
+<dt>Value</dt>
+<dd>
+<code>24</code>
+</dd>
+<dt>Description</dt>
+<dd>
+<p>Main layout grid, override these constants to build your grid and container sizes.
+The width shown gives the right floored percentage values.</p>
+</dd>
+</dl><h3 class="constant" id="const-blueprint-liquid-grid-width">
+<a class="permalink" href="#const-blueprint-liquid-grid-width">$blueprint-liquid-grid-width</a>
+</h3>
+<dl class="constant-details source-documentation">
+<dt>Value</dt>
+<dd>
+<code>3.167%</code>
+</dd>
+</dl><h3 class="constant" id="const-blueprint-liquid-grid-margin">
+<a class="permalink" href="#const-blueprint-liquid-grid-margin">$blueprint-liquid-grid-margin</a>
+</h3>
+<dl class="constant-details source-documentation">
+<dt>Value</dt>
+<dd>
+<code>1.042%</code>
+</dd>
+</dl><h3 class="constant" id="const-blueprint-liquid-container-width">
+<a class="permalink" href="#const-blueprint-liquid-container-width">$blueprint-liquid-container-width</a>
+</h3>
+<dl class="constant-details source-documentation">
+<dt>Value</dt>
+<dd>
+<code>80%</code>
+</dd>
+<dt>Description</dt>
+<dd>
+<p>Do not edit below this line unless you really know what you're doing.</p>
+</dd>
+</dl><h3 class="constant" id="const-blueprint-liquid-container-min-width">
+<a class="permalink" href="#const-blueprint-liquid-container-min-width">$blueprint-liquid-container-min-width</a>
+</h3>
+<dl class="constant-details source-documentation">
+<dt>Value</dt>
+<dd>
+<code>950px</code>
+</dd>
+</dl><h3 class="constant" id="const-blueprint-liquid-grid-push-pull">
+<a class="permalink" href="#const-blueprint-liquid-grid-push-pull">$blueprint-liquid-grid-push-pull</a>
+</h3>
+<dl class="constant-details source-documentation">
+<dt>Value</dt>
+<dd>
+<code>-($blueprint_liquid_grid_margin + $blueprint_liquid_grid_width)</code>
+</dd>
+</dl><h2>Mixins</h2>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-blueprint-liquid-grid-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-blueprint-liquid-grid-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-blueprint-liquid-grid">
+<a class="permalink" href="#mixin-blueprint-liquid-grid">blueprint-liquid-grid</a>
+</h3>
+<div class="mixin-source" id="mixin-blueprint-liquid-grid-source">
+<div class="highlight source-code sass elided-code" id="mixin-blueprint-liquid-grid-sass"><pre><span class="nf">=blueprint-liquid-grid</span>
+  <span class="c1">// A container should group all your columns</span>
+  <span class="nc">.container</span>
+    <span class="nd">+container</span>
+  <span class="c1">// Use these classes (or mixins) to set the width of a column.</span>
+  <span class="k">@for</span> <span class="n">$n</span> <span class="ow">from</span> <span class="mi">1</span> <span class="ow">to</span> <span class="n">$blueprint_liquid_grid_columns</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="nc">.span-</span><span class="si">#{</span><span class="n">$n}</span>
+      <span class="nd">+span</span><span class="o">(</span><span class="n">$n</span><span class="o">)</span>
+    <span class="nt">div</span>
+      <span class="k">&amp;</span><span class="nc">.span-</span><span class="si">#{</span><span class="n">$n}</span>
+        <span class="nd">+column</span><span class="o">(</span><span class="n">$n</span><span class="o">,</span> <span class="n">$n</span> <span class="o">==</span> <span class="n">$blueprint_liquid_grid_columns</span><span class="o">)</span>
+  <span class="c1">// The last column in a row needs this class (or mixin) or it will end up on the next row.</span>
+  <span class="nt">div</span><span class="nc">.last</span>
+    <span class="nd">+last</span>
+  <span class="c1">// Add these to a column to append empty cols.</span>
+  <span class="k">@for</span> <span class="n">$n</span> <span class="ow">from</span> <span class="mi">1</span> <span class="ow">to</span> <span class="n">$blueprint_liquid_grid_columns</span>
+    <span class="nc">.append-</span><span class="si">#{</span><span class="n">$n}</span>
+      <span class="nd">+append</span><span class="o">(</span><span class="n">$n</span><span class="o">)</span>
+  <span class="c1">// Add these to a column to prepend empty cols.</span>
+  <span class="k">@for</span> <span class="n">$n</span> <span class="ow">from</span> <span class="mi">1</span> <span class="ow">to</span> <span class="n">$blueprint_liquid_grid_columns</span>
+    <span class="nc">.prepend-</span><span class="si">#{</span><span class="n">$n}</span>
+      <span class="nd">+prepend</span><span class="o">(</span><span class="n">$n</span><span class="o">)</span>
+  <span class="c1">// Use these classes on an element to push it into the</span>
+  <span class="c1">// next column, or to pull it into the previous column.</span>
+  <span class="k">@for</span> <span class="n">$n</span> <span class="ow">from</span> <span class="mi">1</span> <span class="ow">to</span> <span class="n">$blueprint_liquid_grid_columns</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="nc">.pull-</span><span class="si">#{</span><span class="n">$n}</span>
+      <span class="nd">+pull</span><span class="o">(</span><span class="n">$n</span><span class="o">)</span>
+  <span class="k">@for</span> <span class="n">$n</span> <span class="ow">from</span> <span class="mi">1</span> <span class="ow">to</span> <span class="n">$blueprint_liquid_grid_columns</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="nc">.push-</span><span class="si">#{</span><span class="n">$n}</span>
+      <span class="nd">+push</span><span class="o">(</span><span class="n">$n</span><span class="o">)</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-blueprint-liquid-grid-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">blueprint-liquid-grid</span> {
+  // <span class="ke">A</span> <span class="ke">container</span> <span class="ke">should</span> <span class="ke">group</span> <span class="ke">all</span> <span class="ke">your</span> <span class="ke">columns</span>
+  .<span class="ke">container</span> {
+    <span class="di">@include</span> <span class="ke">container</span>; }
+  // <span class="ke">Use</span> <span class="ke">these</span> <span class="ke">classes</span> (<span class="ke">or</span> <span class="ke">mixins</span>) <span class="ke">to</span> <span class="ke">set</span> <span class="ke">the</span> <span class="ke">width</span> <span class="ke">of</span> <span class="ke">a</span> <span class="ke">column</span>.
+  <span class="di">@for</span> <span class="er">$</span><span class="ke">n</span> <span class="ke">from</span> <span class="fl">1</span> <span class="ke">to</span> <span class="er">$</span><span class="ke">blueprint_liquid_grid_columns</span> + <span class="fl">1</span> {
+    .<span class="ke">span-</span><span class="er">#</span>{<span class="er">$</span><span class="ke">n</span>} {
+      <span class="di">@include</span> <span class="er">s</span><span class="er">p</span><span class="er">a</span><span class="er">n</span>(<span class="er">$</span><span class="ke">n</span>); }
+    <span class="ke">div</span> {
+      <span class="er">&amp;</span>.<span class="ke">span-</span><span class="er">#</span>{<span class="er">$</span><span class="ke">n</span>} {
+        <span class="di">@include</span> <span class="er">c</span><span class="er">o</span><span class="er">l</span><span class="er">u</span><span class="er">m</span><span class="er">n</span>(<span class="er">$</span><span class="ke">n</span>, <span class="er">$</span><span class="ke">n</span> == <span class="er">$</span><span class="ke">blueprint_liquid_grid_columns</span>); } } }
+  // <span class="ke">The</span> <span class="ke">last</span> <span class="ke">column</span> <span class="ke">in</span> <span class="ke">a</span> <span class="ke">row</span> <span class="ke">needs</span> <span class="ke">this</span> <span class="ke">class</span> (<span class="ke">or</span> <span class="ke">mixin</span>) <span class="ke">or</span> <span class="ke">it</span> <span class="ke">will</span> <span class="ke">end</span> <span class="ke">up</span> <span class="ke">on</span> <span class="ke">the</span> <span class="ke">next</span> <span class="ke">row</span>.
+  <span class="ke">div</span>.<span class="ke">last</span> {
+    <span class="di">@include</span> <span class="ke">last</span>; }
+  // <span class="ke">Add</span> <span class="ke">these</span> <span class="ke">to</span> <span class="ke">a</span> <span class="ke">column</span> <span class="ke">to</span> <span class="ke">append</span> <span class="ke">empty</span> <span class="ke">cols</span>.
+  <span class="di">@for</span> <span class="er">$</span><span class="ke">n</span> <span class="ke">from</span> <span class="fl">1</span> <span class="ke">to</span> <span class="er">$</span><span class="ke">blueprint_liquid_grid_columns</span> {
+    .<span class="ke">append-</span><span class="er">#</span>{<span class="er">$</span><span class="ke">n</span>} {
+      <span class="di">@include</span> <span class="er">a</span><span class="er">p</span><span class="er">p</span><span class="er">e</span><span class="er">n</span><span class="er">d</span>(<span class="er">$</span><span class="ke">n</span>); } }
+  // <span class="ke">Add</span> <span class="ke">these</span> <span class="ke">to</span> <span class="ke">a</span> <span class="ke">column</span> <span class="ke">to</span> <span class="ke">prepend</span> <span class="ke">empty</span> <span class="ke">cols</span>.
+  <span class="di">@for</span> <span class="er">$</span><span class="ke">n</span> <span class="ke">from</span> <span class="fl">1</span> <span class="ke">to</span> <span class="er">$</span><span class="ke">blueprint_liquid_grid_columns</span> {
+    .<span class="ke">prepend-</span><span class="er">#</span>{<span class="er">$</span><span class="ke">n</span>} {
+      <span class="di">@include</span> <span class="er">p</span><span class="er">r</span><span class="er">e</span><span class="er">p</span><span class="er">e</span><span class="er">n</span><span class="er">d</span>(<span class="er">$</span><span class="ke">n</span>); } }
+  // <span class="ke">Use</span> <span class="ke">these</span> <span class="ke">classes</span> <span class="ke">on</span> <span class="ke">an</span> <span class="ke">element</span> <span class="ke">to</span> <span class="ke">push</span> <span class="ke">it</span> <span class="ke">into</span> <span class="ke">the</span>
+  // <span class="ke">next</span> <span class="ke">column</span>, <span class="ke">or</span> <span class="ke">to</span> <span class="ke">pull</span> <span class="ke">it</span> <span class="ke">into</span> <span class="ke">the</span> <span class="ke">previous</span> <span class="ke">column</span>.
+  <span class="di">@for</span> <span class="er">$</span><span class="ke">n</span> <span class="ke">from</span> <span class="fl">1</span> <span class="ke">to</span> <span class="er">$</span><span class="ke">blueprint_liquid_grid_columns</span> + <span class="fl">1</span> {
+    .<span class="ke">pull-</span><span class="er">#</span>{<span class="er">$</span><span class="ke">n</span>} {
+      <span class="di">@include</span> <span class="er">p</span><span class="er">u</span><span class="er">l</span><span class="er">l</span>(<span class="er">$</span><span class="ke">n</span>); } }
+  <span class="di">@for</span> <span class="er">$</span><span class="ke">n</span> <span class="ke">from</span> <span class="fl">1</span> <span class="ke">to</span> <span class="er">$</span><span class="ke">blueprint_liquid_grid_columns</span> + <span class="fl">1</span> {
+    .<span class="ke">push-</span><span class="er">#</span>{<span class="er">$</span><span class="ke">n</span>} {
+      <span class="di">@include</span> <span class="er">p</span><span class="er">u</span><span class="er">s</span><span class="er">h</span>(<span class="er">$</span><span class="ke">n</span>); } } }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-container-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-container-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-container">
+<a class="permalink" href="#mixin-container">container</a>
+</h3>
+<div class="mixin-source" id="mixin-container-source">
+<div class="highlight source-code sass elided-code" id="mixin-container-sass"><pre><span class="nf">=container</span>
+  <span class="na">min-width:</span> <span class="err">$</span><span class="n">blueprint_liquid_container_min_width</span>
+  <span class="na">width:</span> <span class="err">$</span><span class="n">blueprint_liquid_container_width</span>
+  <span class="na">margin:</span> <span class="mi">0</span> <span class="no">auto</span>
+  <span class="nd">+clearfix</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-container-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">container</span> {
+  <span class="ke">min-width</span>: <span class="er">$</span><span class="vl">blueprint_liquid_container_min_width</span>;
+  <span class="ke">width</span>: <span class="er">$</span><span class="vl">blueprint_liquid_container_width</span>;
+  <span class="ke">margin</span>: <span class="fl">0</span> <span class="vl">auto</span>;
+  <span class="di">@include</span> <span class="ke">clearfix</span>; }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-span-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-span-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-span">
+<a class="permalink" href="#mixin-span">span(<span class="arg">$n</span>, <span class="arg" data-default-value="false">$override</span>)</a>
+</h3>
+<div class="mixin-source" id="mixin-span-source">
+<div class="highlight source-code sass elided-code" id="mixin-span-sass"><pre><span class="nf">=span</span><span class="o">(</span><span class="n">$n</span><span class="o">,</span> <span class="n">$override:</span> <span class="n-Pseudo">false</span><span class="o">)</span>
+  <span class="na">$width:</span> <span class="err">$</span><span class="n">blueprint_liquid_grid_width</span> <span class="o">*</span> <span class="err">$</span><span class="n">n</span> <span class="o">+</span> <span class="err">$</span><span class="n">blueprint_liquid_grid_margin</span> <span class="o">*</span> <span class="p">(</span><span class="err">$</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+  <span class="k">@if</span> <span class="n">$override</span>
+    <span class="na">width:</span> <span class="err">$</span><span class="no">width</span> <span class="ne">!important</span>
+  <span class="k">@else</span>
+    <span class="na">width:</span> <span class="err">$</span><span class="no">width</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-span-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="er">s</span><span class="er">p</span><span class="er">a</span><span class="er">n</span>(<span class="er">$</span><span class="ty">n</span>, <span class="er">$</span><span class="ty">override</span>: <span class="ty">false</span>) {
+  <span class="er">$</span><span class="ke">width</span>: <span class="er">$</span><span class="vl">blueprint_liquid_grid_width</span> <span class="er">*</span> <span class="er">$</span><span class="vl">n</span> + <span class="er">$</span><span class="vl">blueprint_liquid_grid_margin</span> <span class="er">*</span> (<span class="er">$</span><span class="vl">n</span> <span class="er">-</span> <span class="fl">1</span>);
+  <span class="di">@if</span> <span class="er">$</span><span class="ke">override</span> {
+    <span class="ke">width</span>: <span class="er">$</span><span class="vl">width</span> <span class="im">!important</span>; }
+  <span class="di">@else</span> {
+    <span class="ke">width</span>: <span class="er">$</span><span class="vl">width</span>; } }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-last-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-last-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-last">
+<a class="permalink" href="#mixin-last">last</a>
+</h3>
+<div class="mixin-source" id="mixin-last-source">
+<div class="highlight source-code sass elided-code" id="mixin-last-sass"><pre><span class="nf">=last</span>
+  <span class="na">margin-right:</span> <span class="mi">0</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-last-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">last</span> {
+  <span class="ke">margin-right</span>: <span class="fl">0</span>; }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-column-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-column-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-column">
+<a class="permalink" href="#mixin-column">column(<span class="arg">$n</span>, <span class="arg" data-default-value="false">$last</span>)</a>
+</h3>
+<div class="mixin-source" id="mixin-column-source">
+<div class="highlight source-code sass elided-code" id="mixin-column-sass"><pre><span class="nf">=column</span><span class="o">(</span><span class="n">$n</span><span class="o">,</span> <span class="n">$last:</span> <span class="n-Pseudo">false</span><span class="o">)</span>
+  <span class="nd">+float-left</span>
+  <span class="na">overflow:</span> <span class="no">hidden</span>
+  <span class="nd">+span</span><span class="o">(</span><span class="n">$n</span><span class="o">)</span>
+  <span class="k">@if</span> <span class="n">$last</span>
+    <span class="nd">+last</span>
+  <span class="k">@else</span>
+    <span class="na">margin-right:</span> <span class="err">$</span><span class="n">blueprint_liquid_grid_margin</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-column-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="er">c</span><span class="er">o</span><span class="er">l</span><span class="er">u</span><span class="er">m</span><span class="er">n</span>(<span class="er">$</span><span class="ty">n</span>, <span class="er">$</span><span class="ty">last</span>: <span class="ty">false</span>) {
+  <span class="di">@include</span> <span class="ke">float-left</span>;
+  <span class="ke">overflow</span>: <span class="vl">hidden</span>;
+  <span class="di">@include</span> <span class="er">s</span><span class="er">p</span><span class="er">a</span><span class="er">n</span>(<span class="er">$</span><span class="ke">n</span>);
+  <span class="di">@if</span> <span class="er">$</span><span class="ke">last</span> {
+    <span class="di">@include</span> <span class="ke">last</span>; }
+  <span class="di">@else</span> {
+    <span class="ke">margin-right</span>: <span class="er">$</span><span class="vl">blueprint_liquid_grid_margin</span>; } }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-append-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-append-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-append">
+<a class="permalink" href="#mixin-append">append(<span class="arg">$n</span>)</a>
+</h3>
+<div class="mixin-source" id="mixin-append-source">
+<div class="highlight source-code sass elided-code" id="mixin-append-sass"><pre><span class="nf">=append</span><span class="o">(</span><span class="n">$n</span><span class="o">)</span>
+  <span class="na">padding-right:</span> <span class="p">(</span><span class="err">$</span><span class="n">blueprint_liquid_grid_width</span> <span class="o">+</span> <span class="err">$</span><span class="n">blueprint_liquid_grid_margin</span><span class="p">)</span> <span class="o">*</span> <span class="err">$</span><span class="n">n</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-append-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="er">a</span><span class="er">p</span><span class="er">p</span><span class="er">e</span><span class="er">n</span><span class="er">d</span>(<span class="er">$</span><span class="ty">n</span>) {
+  <span class="ke">padding-right</span>: (<span class="er">$</span><span class="vl">blueprint_liquid_grid_width</span> + <span class="er">$</span><span class="vl">blueprint_liquid_grid_margin</span>) <span class="er">*</span> <span class="er">$</span><span class="vl">n</span>; }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-prepend-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-prepend-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-prepend">
+<a class="permalink" href="#mixin-prepend">prepend(<span class="arg">$n</span>)</a>
+</h3>
+<div class="mixin-source" id="mixin-prepend-source">
+<div class="highlight source-code sass elided-code" id="mixin-prepend-sass"><pre><span class="nf">=prepend</span><span class="o">(</span><span class="n">$n</span><span class="o">)</span>
+  <span class="na">padding-left:</span> <span class="p">(</span><span class="err">$</span><span class="n">blueprint_liquid_grid_width</span> <span class="o">+</span> <span class="err">$</span><span class="n">blueprint_liquid_grid_margin</span><span class="p">)</span> <span class="o">*</span> <span class="err">$</span><span class="n">n</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-prepend-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="er">p</span><span class="er">r</span><span class="er">e</span><span class="er">p</span><span class="er">e</span><span class="er">n</span><span class="er">d</span>(<span class="er">$</span><span class="ty">n</span>) {
+  <span class="ke">padding-left</span>: (<span class="er">$</span><span class="vl">blueprint_liquid_grid_width</span> + <span class="er">$</span><span class="vl">blueprint_liquid_grid_margin</span>) <span class="er">*</span> <span class="er">$</span><span class="vl">n</span>; }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-pull-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-pull-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-pull">
+<a class="permalink" href="#mixin-pull">pull(<span class="arg">$n</span>, <span class="arg" data-default-value="false">$last</span>)</a>
+</h3>
+<div class="mixin-source" id="mixin-pull-source">
+<div class="highlight source-code sass elided-code" id="mixin-pull-sass"><pre><span class="nf">=pull</span><span class="o">(</span><span class="n">$n</span><span class="o">,</span> <span class="n">$last:</span> <span class="n-Pseudo">false</span><span class="o">)</span>
+  <span class="na">margin-left:</span> <span class="err">$</span><span class="n">blueprint_liquid_grid_push_pull</span> <span class="o">*</span> <span class="err">$</span><span class="n">n</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-pull-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="er">p</span><span class="er">u</span><span class="er">l</span><span class="er">l</span>(<span class="er">$</span><span class="ty">n</span>, <span class="er">$</span><span class="ty">last</span>: <span class="ty">false</span>) {
+  <span class="ke">margin-left</span>: <span class="er">$</span><span class="vl">blueprint_liquid_grid_push_pull</span> <span class="er">*</span> <span class="er">$</span><span class="vl">n</span>; }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-push-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-push-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-push">
+<a class="permalink" href="#mixin-push">push(<span class="arg">$n</span>)</a>
+</h3>
+<div class="mixin-source" id="mixin-push-source">
+<div class="highlight source-code sass elided-code" id="mixin-push-sass"><pre><span class="nf">=push</span><span class="o">(</span><span class="n">$n</span><span class="o">)</span>
+  <span class="nd">+float-right</span>
+  <span class="nt">margin</span><span class="nd">:</span>
+    <span class="na">top:</span> <span class="mi">0</span>
+    <span class="na">left:</span> <span class="err">$</span><span class="n">blueprint_liquid_grid_margin</span>
+    <span class="na">right:</span> <span class="err">$</span><span class="n">blueprint_liquid_grid_push_pull</span> <span class="o">*</span> <span class="err">$</span><span class="n">n</span>
+    <span class="na">bottom:</span> <span class="mi">0</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-push-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="er">p</span><span class="er">u</span><span class="er">s</span><span class="er">h</span>(<span class="er">$</span><span class="ty">n</span>) {
+  <span class="di">@include</span> <span class="ke">float-right</span>;
+  <span class="ke">margin</span>: {
+    <span class="ke">top</span>: <span class="fl">0</span>;
+    <span class="ke">left</span>: <span class="er">$</span><span class="vl">blueprint_liquid_grid_margin</span>;
+    <span class="ke">right</span>: <span class="er">$</span><span class="vl">blueprint_liquid_grid_push_pull</span> <span class="er">*</span> <span class="er">$</span><span class="vl">n</span>;
+    <span class="ke">bottom</span>: <span class="fl">0</span>; }; }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-border-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-border-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-border">
+<a class="permalink" href="#mixin-border">border</a>
+</h3>
+<div class="mixin-source" id="mixin-border-source">
+<div class="highlight source-code sass elided-code" id="mixin-border-sass"><pre><span class="nf">=border</span>
+  <span class="na">border-right:</span> <span class="mi">1</span><span class="kt">px</span> <span class="no">solid</span> <span class="mh">#eeeeee</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-border-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">border</span> {
+  <span class="ke">border-right</span>: <span class="fl">1px</span> <span class="vl">solid</span> <span class="cr">#eeeeee</span>; }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-colborder-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-colborder-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-colborder">
+<a class="permalink" href="#mixin-colborder">colborder</a>
+</h3>
+<div class="mixin-source" id="mixin-colborder-source">
+<div class="highlight source-code sass elided-code" id="mixin-colborder-sass"><pre><span class="nf">=colborder</span>
+  <span class="na">padding-right:</span> <span class="err">$</span><span class="n">blueprint_liquid_grid_margin</span> <span class="o">*</span> <span class="mi">2</span>
+  <span class="na">margin-right:</span> <span class="err">$</span><span class="n">blueprint_liquid_grid_margin</span> <span class="o">*</span> <span class="mi">2</span>
+  <span class="nd">+border</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-colborder-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">colborder</span> {
+  <span class="ke">padding-right</span>: <span class="er">$</span><span class="vl">blueprint_liquid_grid_margin</span> <span class="er">*</span> <span class="fl">2</span>;
+  <span class="ke">margin-right</span>: <span class="er">$</span><span class="vl">blueprint_liquid_grid_margin</span> <span class="er">*</span> <span class="fl">2</span>;
+  <span class="di">@include</span> <span class="ke">border</span>; }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-colruler-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-colruler-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-colruler">
+<a class="permalink" href="#mixin-colruler">colruler</a>
+</h3>
+<div class="mixin-source" id="mixin-colruler-source">
+<div class="highlight source-code sass elided-code" id="mixin-colruler-sass"><pre><span class="nf">=colruler</span>
+  <span class="na">background:</span> <span class="mh">#dddddd</span>
+  <span class="na">color:</span> <span class="mh">#dddddd</span>
+  <span class="na">clear:</span> <span class="no">both</span>
+  <span class="na">width:</span> <span class="mi">100</span><span class="kt">%</span>
+  <span class="na">height:</span> <span class="mi">0</span><span class="mf">.083</span><span class="kt">em</span>
+  <span class="na">margin:</span> <span class="mi">0</span>
+  <span class="na">margin-left:</span> <span class="err">$</span><span class="n">blueprint_liquid_grid_margin</span> <span class="o">*</span> <span class="mi">2</span>
+  <span class="na">margin-right:</span> <span class="err">$</span><span class="n">blueprint_liquid_grid_margin</span> <span class="o">*</span> <span class="mi">2</span>
+  <span class="na">border:</span> <span class="no">none</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-colruler-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">colruler</span> {
+  <span class="ke">background</span>: <span class="cr">#dddddd</span>;
+  <span class="ke">color</span>: <span class="cr">#dddddd</span>;
+  <span class="ke">clear</span>: <span class="vl">both</span>;
+  <span class="ke">width</span>: <span class="fl">100%</span>;
+  <span class="ke">height</span>: <span class="fl">0.083em</span>;
+  <span class="ke">margin</span>: <span class="fl">0</span>;
+  <span class="ke">margin-left</span>: <span class="er">$</span><span class="vl">blueprint_liquid_grid_margin</span> <span class="er">*</span> <span class="fl">2</span>;
+  <span class="ke">margin-right</span>: <span class="er">$</span><span class="vl">blueprint_liquid_grid_margin</span> <span class="er">*</span> <span class="fl">2</span>;
+  <span class="ke">border</span>: <span class="vl">none</span>; }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-colspacer-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-colspacer-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-colspacer">
+<a class="permalink" href="#mixin-colspacer">colspacer</a>
+</h3>
+<div class="mixin-source" id="mixin-colspacer-source">
+<div class="highlight source-code sass elided-code" id="mixin-colspacer-sass"><pre><span class="nf">=colspacer</span>
+  <span class="nd">+colruler</span>
+  <span class="na">background:</span> <span class="ni">white</span>
+  <span class="na">color:</span> <span class="ni">white</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-colspacer-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">colspacer</span> {
+  <span class="di">@include</span> <span class="ke">colruler</span>;
+  <span class="ke">background</span>: <span class="vl">white</span>;
+  <span class="ke">color</span>: <span class="vl">white</span>; }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+
+</div></article>
+</div>
+<div id='wrap-footer'></div>
+</div>
+<footer role='contentinfo'><div class='legalese'>
+<p>
+<a rel="license" href="../../../copyright/index.html"
+   id="cc-logo"><img alt="Creative Commons License" style="border-width:0"
+   src="http://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png" /></a>
+<br />
+by Christopher M. Eppstein.
+</p>
+</div>
+<div class='links'>
+<ul>
+<li>
+<a href='../../../../index.html' rel='home'>Compass Homepage</a>
+</li>
+<li>
+Compass is Charityware -
+<a href='http://umdf.org/compass'>Donate Now!</a>
+</li>
+<li>
+Compass is Open Source -
+<a href='http://github.com/chriseppstein/compass'>Contribute</a>
+</li>
+</ul>
+</div>
+</footer>
+<script src='../../../javascripts/jquery-1.3.2.min.js'></script>
+<script deferred='deferred' src='../../../javascripts/fixups.js'></script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6779438-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>
+
+<!-- Localized -->

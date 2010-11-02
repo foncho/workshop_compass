@@ -1,0 +1,76 @@
+/* =HEADINGS */
+/* line 3, ../../app/stylesheets/text.scss */
+body {
+  font: normal 14px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* normalize font size across browsers */
+}
+
+/* line 7, ../../app/stylesheets/text.scss */
+em {
+  color: #828282;
+  font-size: 13px;
+  font-family: Cambria, Georgia, Times, 'Times New Roman', serif;
+  line-height: 40px;
+  text-align: right;
+}
+
+/* line 15, ../../app/stylesheets/text.scss */
+p {
+  color: #828282;
+}
+
+/* line 19, ../../app/stylesheets/text.scss */
+h1, h2 {
+  letter-spacing: -0.05em;
+  line-height: 40px;
+}
+
+/* line 24, ../../app/stylesheets/text.scss */
+h1 {
+  color: #000;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+/* line 31, ../../app/stylesheets/text.scss */
+h2 {
+  color: #666;
+  font-size: 28px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+/* line 38, ../../app/stylesheets/text.scss */
+h3 {
+  color: #59892f;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* line 44, ../../app/stylesheets/text.scss */
+h3.section, .blog_post .copy h4, h4.section {
+  border-top: 1px solid #eee;
+  clear: both;
+  color: #888;
+  font-size: .75em;
+  margin: 0 0 20px 0;
+  padding: 9px 0 10px 0;
+  text-transform: uppercase;
+}
+
+/* line 54, ../../app/stylesheets/text.scss */
+h4, h5 {
+  color: #3f5c26;
+  font-size: 1em;
+}
+
+/* line 59, ../../app/stylesheets/text.scss */
+h3 span, h4 span, h5 span {
+  font-weight: normal;
+}
+
+/* line 63, ../../app/stylesheets/text.scss */
+strong, b {
+  font-weight: bolder;
+}

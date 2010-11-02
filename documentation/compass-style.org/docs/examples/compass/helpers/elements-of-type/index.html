@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html class='no-js' dir='ltr' lang='en'>
+<head>
+<meta charset='utf-8' />
+<meta content='chrome=1' http-equiv='X-UA-Compatible' />
+<link href='../../../../images/compass_icon.png' rel='shortcut icon' type='image/png' />
+<title>
+Compass Helper: elements-of-type | Compass Documentation
+</title>
+<!--[if !IE 6]><!-->
+<link charset='utf-8' href='../../../../stylesheets/screen.css' rel='stylesheet' type='text/css' />
+<!--<![endif]-->
+<!--[if gte IE 7]>
+<link charset='utf-8' href='../../../../stylesheets/ie.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+<!--[if IE 6]>
+<link charset='utf-8' href='http://universal-ie6-css.googlecode.com/files/ie6.0.3.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+<style type='text/css'>.example address, .example blockquote, .example center, .example dir, .example div, .example dd, .example dl, .example dt, .example fieldset, .example form, .example frameset, .example h1, .example h2, .example h3, .example h4, .example h5, .example h6, .example hr, .example isindex, .example menu, .example noframes, .example noscript, .example ol, .example p, .example pre, .example ul {
+  border: 1px solid #777777;
+  margin: 1em 3em;
+}
+.example a, .example abbr, .example acronym, .example b, .example basefont, .example bdo, .example big, .example br, .example cite, .example code, .example dfn, .example em, .example font, .example i, .example img, .example input, .example kbd, .example label, .example q, .example s, .example samp, .example select, .example small, .example span, .example strike, .example strong, .example sub, .example sup, .example textarea, .example tt, .example u, .example var {
+  color: #cc0000;
+}
+
+</style>
+</head>
+<body class='docs demo' id='examples-compass-helpers-elements-of-type'><div id='wrap'>
+<nav id='skip-links'>
+<a href='#content'>skip to content</a>
+</nav>
+<header id='banner' role='banner'>
+<div>
+<h1 class='vcard'>
+<a class='fn org url uid' href='../../../../../index.html' rel='home'>Compass</a>
+</h1>
+</div>
+</header>
+<nav id='docs-nav' role='navigation'>
+<div class='container'>
+<ul>
+<li>
+<a href='../../../../index.html'>introduction</a>
+</li>
+<li>
+<a href='../../../../reference/compass/index.html'>core</a>
+</li>
+<li>
+<a href='../../../../reference/blueprint/index.html'>blueprint</a>
+</li>
+<li>
+<a href='../../../../tutorials/index.html'>tutorials</a>
+</li>
+<!--
+<li>
+<a href='/docs/plugins/'>plugins</a>
+</li>
+-->
+</ul>
+<div id='version'>
+Current Version:
+<a class='number' href='../../../../CHANGELOG/index.html'>0.10.6.</a>
+</div>
+<div id='search-docs'>
+<form action='/docs/search/' method='GET'>
+<p>
+<label for='search'>search</label>
+<input id='search' name='q' type='text' value='' />
+</p>
+</form>
+</div>
+</div>
+</nav>
+<div id='page'><article><h1>Demo: Compass Helper: elements-of-type</h1>
+<div id="demo">
+<div class="example">
+  <div>
+    This is a block element.
+    It has an
+    <span>inline span</span>
+    and an
+    <em>inline em</em>
+    and a
+    <blockquote>
+      Nested blockquote element
+    </blockquote>
+  </div>
+</div>
+</div>
+
+<div id="how">
+<section id="markup"><nav><ul>
+<li>
+<a href="#html">html</a>
+</li>
+<li>
+<a href="#haml">haml</a>
+</li>
+</ul></nav><div class="code">
+<ul>
+<li id="html">
+<pre>&lt;div class='example'&gt;
+  &lt;div&gt;
+    This is a block element.
+    It has an
+    &lt;span&gt;inline span&lt;/span&gt;
+    and an
+    &lt;em&gt;inline em&lt;/em&gt;
+    and a
+    &lt;blockquote&gt;
+      Nested blockquote element
+    &lt;/blockquote&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</li>
+<li id="haml">
+<pre>.example
+  %div
+    This is a block element.
+    It has an
+    %span inline span
+    and an
+    %em inline em
+    and a
+    %blockquote
+      Nested blockquote element
+</pre>
+</li>
+</ul>
+</div>
+</section><section id="styles"><nav><ul>
+<li>
+<a href="#scss">scss</a>
+</li>
+<li>
+<a href="#sass">sass</a>
+</li>
+<li>
+<a href="#css">css</a>
+</li>
+</ul></nav><div class="code">
+<ul>
+<li id="scss">
+<pre>.example {
+  #{elements-of-type(block)} {
+    border: 1px solid #777777;
+    margin: 1em 3em; }
+  #{elements-of-type(inline)} {
+    color: #cc0000; } }
+</pre>
+</li>
+<li id="sass">
+<pre>.example
+  #{elements-of-type(block)}
+    border: 1px solid #777
+    margin: 1em 3em
+  #{elements-of-type(inline)}
+    color: #c00
+  </pre>
+</li>
+<li id="css">
+<pre>.example address, .example blockquote, .example center, .example dir, .example div, .example dd, .example dl, .example dt, .example fieldset, .example form, .example frameset, .example h1, .example h2, .example h3, .example h4, .example h5, .example h6, .example hr, .example isindex, .example menu, .example noframes, .example noscript, .example ol, .example p, .example pre, .example ul {
+  border: 1px solid #777777;
+  margin: 1em 3em;
+}
+.example a, .example abbr, .example acronym, .example b, .example basefont, .example bdo, .example big, .example br, .example cite, .example code, .example dfn, .example em, .example font, .example i, .example img, .example input, .example kbd, .example label, .example q, .example s, .example samp, .example select, .example small, .example span, .example strike, .example strong, .example sub, .example sup, .example textarea, .example tt, .example u, .example var {
+  color: #cc0000;
+}
+</pre>
+</li>
+</ul>
+</div>
+</section>
+</div></article>
+</div>
+<div id='wrap-footer'></div>
+</div>
+<footer role='contentinfo'><div class='legalese'>
+<p>
+<a rel="license" href="../../../../copyright/index.html"
+   id="cc-logo"><img alt="Creative Commons License" style="border-width:0"
+   src="http://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png" /></a>
+<br />
+by Christopher M. Eppstein.
+</p>
+</div>
+<div class='links'>
+<ul>
+<li>
+<a href='../../../../../index.html' rel='home'>Compass Homepage</a>
+</li>
+<li>
+Compass is Charityware -
+<a href='http://umdf.org/compass'>Donate Now!</a>
+</li>
+<li>
+Compass is Open Source -
+<a href='http://github.com/chriseppstein/compass'>Contribute</a>
+</li>
+</ul>
+</div>
+</footer>
+<script src='../../../../javascripts/jquery-1.3.2.min.js'></script>
+<script deferred='deferred' src='../../../../javascripts/fixups.js'></script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6779438-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>
+
+<!-- Localized -->

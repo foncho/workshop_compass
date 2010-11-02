@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class='no-js' dir='ltr' lang='en'>
+<head>
+<meta charset='utf-8' />
+<meta content='chrome=1' http-equiv='X-UA-Compatible' />
+<link href='../../images/compass_icon.png' rel='shortcut icon' type='image/png' />
+<title>
+Best practices | Compass Documentation
+</title>
+<!--[if !IE 6]><!-->
+<link charset='utf-8' href='../../stylesheets/screen.css' rel='stylesheet' type='text/css' />
+<!--<![endif]-->
+<!--[if gte IE 7]>
+<link charset='utf-8' href='../../stylesheets/ie.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+<!--[if IE 6]>
+<link charset='utf-8' href='http://universal-ie6-css.googlecode.com/files/ie6.0.3.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+</head>
+<body class='docs tutorial' id='tutorials-best-practices'><div id='wrap'>
+<nav id='skip-links'>
+<a href='#content'>skip to content</a>
+</nav>
+<header id='banner' role='banner'>
+<div>
+<h1 class='vcard'>
+<a class='fn org url uid' href='../../../index.html' rel='home'>Compass</a>
+</h1>
+</div>
+</header>
+<nav id='docs-nav' role='navigation'>
+<div class='container'>
+<ul>
+<li>
+<a href='../../index.html'>introduction</a>
+</li>
+<li>
+<a href='../../reference/compass/index.html'>core</a>
+</li>
+<li>
+<a href='../../reference/blueprint/index.html'>blueprint</a>
+</li>
+<li>
+<a href='../index.html'>tutorials</a>
+</li>
+<!--
+<li>
+<a href='/docs/plugins/'>plugins</a>
+</li>
+-->
+</ul>
+<div id='version'>
+Current Version:
+<a class='number' href='../../CHANGELOG/index.html'>0.10.6.</a>
+</div>
+<div id='search-docs'>
+<form action='/docs/search/' method='GET'>
+<p>
+<label for='search'>search</label>
+<input id='search' name='q' type='text' value='' />
+</p>
+</form>
+</div>
+</div>
+</nav>
+<div id='page'><aside role='sidebar'>
+<nav id='local-nav'>
+<ul><li>
+<h2>
+<a href='../index.html'>Tutorials</a>
+</h2>
+</li>
+<ul><li class='selected'>
+<h3>
+<a class='selected' href='index.html'>Best practices</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../blueprint/index.html'>Blueprint Framework</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../command-line/index.html'>Compass Command Line Documentation</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../configuration-reference/index.html'>Configuration Reference</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../contributing/index.html'>Contributing</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../extensions/index.html'>Creating Compass Extensions</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../production-css/index.html'>Production Stylesheets</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../configurable-variables/index.html'>Working with Configurable Variables</a>
+</h3>
+</li>
+</ul>
+</ul>
+</nav>
+</aside>
+<article><h3>Use a Base stylesheet file</h3>
+
+<p>Create a <code>_base.scss</code> <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#partials">partial</a> to initialize your stylesheets with common
+variables and (<a href="http://groups.google.com/group/compass-users/browse_frm/thread/0ed216d409476f88">often</a>) the framework utilities you plan to use:</p>
+
+<h4>_base.scss</h4>
+
+<pre><code>$blueprint-grid-columns : 24;
+$blueprint-grid-width   : 30px;
+$blueprint-grid-margin  : 10px;
+$font-color             : #333;
+
+@import "compass/reset";
+@import "compass/utilities";
+@import "blueprint";
+
+// etc.
+</code></pre>
+
+<p>The <code>_base.scss</code> file is also a great place to keep your own custom mixins, so
+they’re available to any stylesheet that includes it.</p>
+
+<p>Then you can include this file in all other stylesheets:</p>
+
+<h4>application.scss</h4>
+
+<pre><code>@import "base";
+
+#wrapper {
+  @include container;
+}
+
+// etc.
+</code></pre>
+
+<p>It is important to define any compass/framework constants that you want to override
+in base.scss first, before @import-ing the framework files. See <a href="http://wiki.github.com/chriseppstein/compass/overriding-constants">Overriding
+Constants</a> , for an example of where the number of grid columns for blueprint
+is overridden/set to 32.  Note that you can refer to <code>_base.scss</code> without the
+leading underscore and without the extension, since it is a <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#partials">partial</a>.</p>
+
+<h3>Write your own Custom Mixins</h3>
+
+<p>Mixins let you insert any number of style rules into a selector (and its
+descendants!) with a single line. This is a great way to <a href="http://c2.com/cgi/wiki?DontRepeatYourself">DRY</a> up your
+stylesheet source code and make it much more maintainable. Using mixins will
+also make your stylesheet look like self-documented source code -- It’s much
+more obvious to read something like <code>@include round-corners(6px, #f00)</code> than the whole
+list of rules which define that appearance.</p>
+
+<h4>Presentation-free Markup</h4>
+
+<p>CSS was created to extract the presentational concerns of a website from the
+webpage content. Following this best practice theoretically results in a website
+that is easier to maintain. However, in reality, the functional limitations of
+CSS force abstractions down into the markup to facilitate the <a href="http://c2.com/cgi/wiki?DontRepeatYourself">DRY</a> principle
+of code maintainability. Sass allows us to move our presentation completely to
+the stylesheets because it let's us create abstractions and reuse entirely in
+that context. Read <a href="http://chriseppstein.github.com/blog/2009/09/20/why-stylesheet-abstraction-matters/">this blog post</a> for more information on the subject.</p>
+
+<p>Once you have clean markup, style it using Mixins and Inheritance. With clean
+and clear abstractions you should be able to read stylesheets and imagine what
+the webpage will look like without even loading the page in your web browser.</p>
+
+<p>If you find your CSS is getting too bloated due to sharing styles between
+semantic selectors, it may be time to refactor. For instance this stylesheet
+will be unnecessarily bloated:</p>
+
+<pre><code>@mixin three-column {
+  .container { @include container;  }
+  .header,
+  .footer    { @include column(24); }
+  .sidebar   { @include column(6);  }
+  article    { @include column(10); }
+  .rightbar  { @include column(8);  }
+}
+body#article,
+body#snippet,
+body#blog-post { @include three-column; }
+</code></pre>
+
+<p>Instead, ask yourself "what non-presentational quality do these pages share in
+common?" In this case, they are all pages of content, so it's better to apply a
+body class of "content" to these pages and then style against that class.</p>
+
+<h4>Nest selectors, but not too much.</h4>
+
+<p>It's easier to style a webpage from scratch or starting from some common base
+point for your application than it is to contend with unwanted styles bleeding
+into your new design. In this way, it is better to use some basic nesting of
+styles using some selector early in the markup tree. And then to refactor as patterns of use emerge to reduce bloat.</p>
+
+<p>It's important to remember that long selectors incur a small rendering
+performance penalty that in aggregate can slow down your web page. There is
+no need to exactly mimic your document structure in your css. Instead nest
+only deep enough that the selector is unique to that part of the document.
+For instance, don't use <code>table thead tr th</code> when a simple <code>th</code> selector will
+suffice. This might mean that you have to separate your styles into several
+selectors and let the document cascade work to your advantage.</p>
+</article>
+</div>
+<div id='wrap-footer'></div>
+</div>
+<footer role='contentinfo'><div class='legalese'>
+<p>
+<a rel="license" href="../../copyright/index.html"
+   id="cc-logo"><img alt="Creative Commons License" style="border-width:0"
+   src="http://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png" /></a>
+<br />
+by Christopher M. Eppstein.
+</p>
+</div>
+<div class='links'>
+<ul>
+<li>
+<a href='../../../index.html' rel='home'>Compass Homepage</a>
+</li>
+<li>
+Compass is Charityware -
+<a href='http://umdf.org/compass'>Donate Now!</a>
+</li>
+<li>
+Compass is Open Source -
+<a href='http://github.com/chriseppstein/compass'>Contribute</a>
+</li>
+</ul>
+</div>
+</footer>
+<script src='../../javascripts/jquery-1.3.2.min.js'></script>
+<script deferred='deferred' src='../../javascripts/fixups.js'></script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6779438-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>
+
+<!-- Localized -->

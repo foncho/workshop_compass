@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html class='no-js' dir='ltr' lang='en'>
+<head>
+<meta charset='utf-8' />
+<meta content='chrome=1' http-equiv='X-UA-Compatible' />
+<link href='../../images/compass_icon.png' rel='shortcut icon' type='image/png' />
+<title>
+Compass Command Line Documentation | Compass Documentation
+</title>
+<!--[if !IE 6]><!-->
+<link charset='utf-8' href='../../stylesheets/screen.css' rel='stylesheet' type='text/css' />
+<!--<![endif]-->
+<!--[if gte IE 7]>
+<link charset='utf-8' href='../../stylesheets/ie.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+<!--[if IE 6]>
+<link charset='utf-8' href='http://universal-ie6-css.googlecode.com/files/ie6.0.3.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+</head>
+<body class='docs tutorial' id='tutorials-command-line'><div id='wrap'>
+<nav id='skip-links'>
+<a href='#content'>skip to content</a>
+</nav>
+<header id='banner' role='banner'>
+<div>
+<h1 class='vcard'>
+<a class='fn org url uid' href='../../../index.html' rel='home'>Compass</a>
+</h1>
+</div>
+</header>
+<nav id='docs-nav' role='navigation'>
+<div class='container'>
+<ul>
+<li>
+<a href='../../index.html'>introduction</a>
+</li>
+<li>
+<a href='../../reference/compass/index.html'>core</a>
+</li>
+<li>
+<a href='../../reference/blueprint/index.html'>blueprint</a>
+</li>
+<li>
+<a href='../index.html'>tutorials</a>
+</li>
+<!--
+<li>
+<a href='/docs/plugins/'>plugins</a>
+</li>
+-->
+</ul>
+<div id='version'>
+Current Version:
+<a class='number' href='../../CHANGELOG/index.html'>0.10.6.</a>
+</div>
+<div id='search-docs'>
+<form action='/docs/search/' method='GET'>
+<p>
+<label for='search'>search</label>
+<input id='search' name='q' type='text' value='' />
+</p>
+</form>
+</div>
+</div>
+</nav>
+<div id='page'><aside role='sidebar'>
+<nav id='local-nav'>
+<ul><li>
+<h2>
+<a href='../index.html'>Tutorials</a>
+</h2>
+</li>
+<ul><li>
+<h3>
+<a href='../best_practices/index.html'>Best practices</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../blueprint/index.html'>Blueprint Framework</a>
+</h3>
+</li>
+<li class='selected'>
+<h3>
+<a class='selected' href='index.html'>Compass Command Line Documentation</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../configuration-reference/index.html'>Configuration Reference</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../contributing/index.html'>Contributing</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../extensions/index.html'>Creating Compass Extensions</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../production-css/index.html'>Production Stylesheets</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='../configurable-variables/index.html'>Working with Configurable Variables</a>
+</h3>
+</li>
+</ul>
+</ul>
+</nav>
+</aside>
+<article><h1>Compass Command Line Documentation</h1>
+
+<p>This page lists the compass commands you can use to set up and manage your project.</p>
+
+<p>You may also find one of these walk throughs useful:</p>
+
+<ul>
+<li>HOWTO: <a href="../production-css/index.html">Compile your stylesheets for production</a></li>
+</ul>
+
+
+<!--
+Extensions Commands
+-------------------
+
+### install a global extension. probably requires sudo.
+
+    compass extension install extension_name 
+
+### install an extension into a project
+    compass extension unpack extension_name [path/to/project]
+
+### uninstall a local or global extension. global extensions will require sudo.
+
+    compass extension uninstall extension_name [path/to/project]
+
+### list the extensions in the project
+
+    compass extensions list
+
+### list the extensions available for install
+
+    compass extensions available
+-->
+
+
+<h2>Project Commands</h2>
+
+<p><a name="create"/></p>
+
+<h3>Create a new compass project</h3>
+
+<pre><code>compass create path/to/project [--using blueprint] [--sass-dir=sass ...] [--project-type=rails]
+</code></pre>
+
+<p><a name="init"/></p>
+
+<h3>Initialize an existing project to work with compass</h3>
+
+<pre><code>compass init rails path/to/project [--using blueprint]
+</code></pre>
+
+<p><a name="install"/></p>
+
+<h3>Install a pattern from an extension into a project</h3>
+
+<pre><code>compass install blueprint/buttons [path/to/project]
+</code></pre>
+
+<p><a name="compile"/></p>
+
+<h3>Compile the project's sass files into css</h3>
+
+<pre><code>compass compile [path/to/project]
+</code></pre>
+
+<p><a name="watch"/></p>
+
+<h3>Watch the project for changes and compile whenever it does</h3>
+
+<pre><code>compass watch [path/to/project]
+</code></pre>
+
+<p><a name="config"/></p>
+
+<h3>Emit a configuration file at the location specified.</h3>
+
+<pre><code>compass config [path/to/config] [--sass-dir=sass --css-dir=css ...]
+</code></pre>
+
+<p><a name="validate"/></p>
+
+<h3>Validate the generated CSS.</h3>
+
+<pre><code>compass validate [path/to/project]
+</code></pre>
+
+<h2>Misc commands</h2>
+
+<p><a name="grid-img"/></p>
+
+<h3>Generate a background image that can be used to verify grid alignment</h3>
+
+<pre><code>compass grid-img W+GxH [path/to/grid.png]
+</code></pre>
+
+<p>Where:</p>
+
+<dl class="table">
+  <dg><dt><code>W</code> = </dt><dd>Width of 1 column in pixels.</dd></dg>
+  <dg><dt><code>G</code> = </dt><dd>Width of 1 gutter in pixels.</dd></dg>
+  <dg><dt><code>H</code> = </dt><dd>Height of the typographic baseline in pixels.</dd></dg>
+</dl>
+
+
+<p>Examples:</p>
+
+<pre><code># 40px column, 10px gutter, 20px height at &lt;images_dir&gt;/grid.png
+compass grid-img 40+10
+# 40px column, 20px gutter, 28px height at &lt;images_dir&gt;/grid.png
+compass grid-img 40+20x28
+# 60px column, 20px gutter, 28px height at images/wide_grid.png
+compass grid-img 60+20x28 images/wide_grid.png
+</code></pre>
+
+<p><a name="interactive"/></p>
+
+<h3>Enter into a console for testing SassScript in a compass environment.</h3>
+
+<pre><code>compass interactive
+</code></pre>
+
+<p><a name="stats"/></p>
+
+<h3>Print out statistics about your stylesheets</h3>
+
+<pre><code>compass stats
+</code></pre>
+
+<p><a name="version"/></p>
+
+<h3>Emit the version of compass</h3>
+
+<pre><code>compass version
+</code></pre>
+
+<p><a name="unpack"/></p>
+
+<h3>Unpack a framework or extension into your project</h3>
+
+<pre><code>compass unpack &lt;extension&gt;
+</code></pre>
+
+<h2>Get Help on the Command Line</h2>
+
+<p><a name="help"/></p>
+
+<h3>Get help on compass</h3>
+
+<pre><code>compass help
+</code></pre>
+
+<p><a name="help-extension"/></p>
+
+<h3>Get help on an extension</h3>
+
+<pre><code>compass help extension_name
+</code></pre>
+
+<p><a name="help-pattern"/></p>
+
+<h3>Get help about an extension pattern</h3>
+
+<pre><code>compass help extension_name/pattern_name
+</code></pre>
+
+<p><a name="help-command"/></p>
+
+<h3>Get help about a particular sub command</h3>
+
+<pre><code>compass help command_name
+</code></pre>
+</article>
+</div>
+<div id='wrap-footer'></div>
+</div>
+<footer role='contentinfo'><div class='legalese'>
+<p>
+<a rel="license" href="../../copyright/index.html"
+   id="cc-logo"><img alt="Creative Commons License" style="border-width:0"
+   src="http://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png" /></a>
+<br />
+by Christopher M. Eppstein.
+</p>
+</div>
+<div class='links'>
+<ul>
+<li>
+<a href='../../../index.html' rel='home'>Compass Homepage</a>
+</li>
+<li>
+Compass is Charityware -
+<a href='http://umdf.org/compass'>Donate Now!</a>
+</li>
+<li>
+Compass is Open Source -
+<a href='http://github.com/chriseppstein/compass'>Contribute</a>
+</li>
+</ul>
+</div>
+</footer>
+<script src='../../javascripts/jquery-1.3.2.min.js'></script>
+<script deferred='deferred' src='../../javascripts/fixups.js'></script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6779438-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>
+
+<!-- Localized -->

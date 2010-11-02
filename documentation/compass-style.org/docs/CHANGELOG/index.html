@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html class='no-js' dir='ltr' lang='en'>
+<head>
+<meta charset='utf-8' />
+<meta content='chrome=1' http-equiv='X-UA-Compatible' />
+<link href='../images/compass_icon.png' rel='shortcut icon' type='image/png' />
+<title>
+Compass History | Compass Documentation
+</title>
+<!--[if !IE 6]><!-->
+<link charset='utf-8' href='../stylesheets/screen.css' rel='stylesheet' type='text/css' />
+<!--<![endif]-->
+<!--[if gte IE 7]>
+<link charset='utf-8' href='../stylesheets/ie.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+<!--[if IE 6]>
+<link charset='utf-8' href='http://universal-ie6-css.googlecode.com/files/ie6.0.3.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+</head>
+<body class='docs' id='changelog'><div id='wrap'>
+<nav id='skip-links'>
+<a href='#content'>skip to content</a>
+</nav>
+<header id='banner' role='banner'>
+<div>
+<h1 class='vcard'>
+<a class='fn org url uid' href='../../index.html' rel='home'>Compass</a>
+</h1>
+</div>
+</header>
+<nav id='docs-nav' role='navigation'>
+<div class='container'>
+<ul>
+<li>
+<a href='../index.html'>introduction</a>
+</li>
+<li>
+<a href='../reference/compass/index.html'>core</a>
+</li>
+<li>
+<a href='../reference/blueprint/index.html'>blueprint</a>
+</li>
+<li>
+<a href='../tutorials/index.html'>tutorials</a>
+</li>
+<!--
+<li>
+<a href='/docs/plugins/'>plugins</a>
+</li>
+-->
+</ul>
+<div id='version'>
+Current Version:
+<a class='number' href='index.html'>0.10.6.</a>
+</div>
+<div id='search-docs'>
+<form action='/docs/search/' method='GET'>
+<p>
+<label for='search'>search</label>
+<input id='search' name='q' type='text' value='' />
+</p>
+</form>
+</div>
+</div>
+</nav>
+<div id='page'><article><h1>COMPASS CHANGELOG</h1>
+
+<h2>0.10.7 (UNRELEASED)</h2>
+
+<ul>
+<li>compass config -p <property> -- will now print out the configuration value
+for that property for the current project</li>
+<li>Bug fix: In webkit, when the last gradient color stop was a percent less than 100%, the
+intermediate values were being scaled to that value.</li>
+<li>You can now pass --no-line-comments to the Compass command line to disable line comments.</li>
+<li>Make the compass configuration file more self documenting by adding comments for
+<code>preferred_syntax</code>, <code>output_style</code>, and <code>line_comments</code>.</li>
+<li>Work around IE compatibility issues with the :last-child selector. <a href="http://github.com/jdsiegel/compass/commit/c1fb764dba9c54cc5d02f2f7de213fb21ac6ca09">Commit</a>.</li>
+<li>Only the action is colorized in command line output now.</li>
+<li>Compass Validator has been upgraded and fine-tuned. It is now using the "css3" profile
+to validate and provides a more consistent UI with other compass commands. To upgrade:
+<code>gem install compass-validator</code></li>
+</ul>
+
+
+<h2>0.10.6 (10/11/2010)</h2>
+
+<ul>
+<li>HTML5 reset includes box-model reset for newer browsers.</li>
+<li>Fix encoding issue for ruby 1.9 users of the font-face mixin.</li>
+<li>Make it easier to disable the asset cache buster: <code>asset_cache_buster :none</code></li>
+<li>Can now set <code>$padding</code> to <code>false</code> to make the <code>horizontal-list</code> mixin skip the
+padding properties.</li>
+<li>It is now possible to disable support for legacy IE browsers.
+See <a href="../reference/compass/support/index.html">the docs</a> for more information.</li>
+</ul>
+
+
+<h2>0.10.5 (08/29/2010)</h2>
+
+<ul>
+<li>The <a href="../reference/compass/reset/utilities/index.html#mixin-reset-html5">HTML5 Reset mixin</a> now resets the following new elements:
+<code>canvas</code>, <code>details</code>, <code>figcaption</code>, <code>hgroup</code>, <code>menu</code>, <code>summary</code></li>
+<li>A new Utility mixin has been added: <a href="../reference/compass/utilities/lists/inline-block-list/index.html">inline-block-list</a>.</li>
+<li>Compass projects can now (as was always intended) use paths outside of the project directory
+for css, images, fonts, etc by configuring those locations using <code>xxx_path</code> instead of
+<code>xxx_dir</code>. For instance: <code>css_path = "/var/www/docroot/css"</code>. It is recommended
+to set the corresponding <code>http_xxx_path</code> when you do this, for instance:
+<code>http_stylesheets_path = "/css"</code>. On the command line, all absolute urls are
+treated as paths instead of relative directories so
+<code>--css-dir /var/www/docroot/css</code> will set <code>css_path</code>. Should both a directory
+and a path be specified, the path will override the corresponding directory.</li>
+<li>A new command is available that will unpack an extension from the system location into
+your extensions folder. Run <code>compass help unpack</code> for more information.</li>
+</ul>
+
+
+<h2>0.10.4 (8/08/2010)</h2>
+
+<ul>
+<li>[Rails] Fixed a bug introduced in 0.10.3 that caused rails applications using the old configuration file (config/compass.config) to break.</li>
+<li>[Extensions] Make it easier to create manifest files by allowing template files to be discovered. See the Manifest Declarations section of <a href="../tutorials/extensions/index.html">extensions tutorial</a> for details.</li>
+<li>[Rails] Don't install configuration files when installing extensions.</li>
+<li>[Compass Core] All url helpers now accept a second argument that when true will cause only the path to be emitted. This allows the url helpers to be used with IE filters.</li>
+</ul>
+
+
+<h2>0.10.3 (8/1/2010)</h2>
+
+<h3>!important</h3>
+
+<p>All rails users should run the following command:</p>
+
+<pre><code>compass init rails --prepare
+</code></pre>
+
+<p>This will update your compass initializer file.</p>
+
+<h3>Compass Core</h3>
+
+<ul>
+<li>Add missing clearfix import to horizontal-list.</li>
+<li>Emit less css for inline lists with the same result.</li>
+<li>New helper <code>opposite-position($position)</code> returns the opposite value of a position. <a href="../reference/compass/helpers/constants/index.html">Documentation</a></li>
+<li>Allow horizontal lists to be floated to the right.</li>
+<li>Bugfix for inline-font-files helper.</li>
+<li><code>+font-face</code> mixin no longer uses <code>$postscript</code> name or <code>$style</code> type variables, in favor of the Paul Irish <a href="http://paulirish.com/2009/bulletproof-font-face-implementation-syntax/">smiley bulletproof technique</a>. Older declarations will still work, but will not apply the variables and will display a deprecation warning.</li>
+<li><code>+box-shadow</code> now supports <code>$spread</code> length and <code>$inset</code> declarations.</li>
+<li>The gradient mixins output official w3c declarations along with the <code>-webkit</code> and <code>-moz</code> prefixed versions. The official code is based on the w3c spec and is nearly ideantical to the mozilla version, although it is currently not supported by any browser.</li>
+<li><code>+opacity</code> no longer uses any prefixed variations, as IE uses <code>filter</code> and
+all other modern browsers support the official spec or nothing at all.</li>
+<li>Support for specifying horizontal and vertical radii for the shorthand border-radius property.</li>
+<li>The <code>has-layout</code> mixin now uses pixels instead of ems to work around an opera bug.</li>
+</ul>
+
+
+<h3>Blueprint</h3>
+
+<ul>
+<li>Two colors used in typography can now be customized.</li>
+<li>Support for inputs of type email.</li>
+</ul>
+
+
+<h3>Extensions</h3>
+
+<ul>
+<li>Extensions can now create empty directories with the <code>directory</code> directive. <a href="../tutorials/extensions/index.html">Docs</a>.</li>
+<li>It's now easier to load extensions from a configuration file using the <code>load</code> and <code>discover</code> directives.</li>
+</ul>
+
+
+<h3>Rails</h3>
+
+<p>As stated above, all rails users should run the following command:</p>
+
+<pre><code>compass init rails . --prepare
+</code></pre>
+
+<p>This will fix a bug in the rails initializer that caused compass extensions to not be recognized when placed into the <code>vendor/plugins/compass_extensions</code> directory. It will also make sure that future bugs in the boot process won't require an end-user action to fix.</p>
+
+<h3>Contributors:</h3>
+
+<ul>
+<li><a href="http://github.com/quadule">Milo Winningham</a></li>
+<li><a href="http://github.com/jonathanpberger">jonathanpberger</a></li>
+<li><a href="http://github.com/stephankaag">Stephan Kaag</a></li>
+</ul>
+
+
+<h2>0.10.2 (May 31, 2010)</h2>
+
+<p>This is a bug fix release. <a href="http://github.com/chriseppstein/compass/compare/v0.10.1...v0.10.2">Details on Github.</a></p>
+
+<h2>0.10.1 (May 15, 2010)</h2>
+
+<ul>
+<li>Fixed a regression in the Blueprint module, the blueprint reset
+was no longer automatically applying the reset styles. This behavior
+is restored in this release. If you <code>@import blueprint/reset</code> and
+then apply the reset mixin yourself, you should remove the mixin
+call or change your import to <code>blueprint/reset/utilities</code>.</li>
+<li>Added a subcommand for emitting sass imports for the sass CLI.</li>
+<li>Added a subcommand for listing the available frameworks.</li>
+<li>Fixed a number of bugs related to Sass &amp; Rails integration</li>
+<li>Fixed some documentation issues in the command line and on the website.</li>
+</ul>
+
+
+<h2>0.10.0 (May 10, 2010)</h2>
+
+<p>This changelog entry is condensed from a very long beta release. You can read <a href="../CHANGELOG-v0-10-0-beta/index.html">the 0.10.0 beta release notes here</a>.</p>
+
+<h3>Gem Location</h3>
+
+<p>The compass gem is now (and has been for some time) hosted on <a href="http://rubygems.org">rubygems.org</a>. If you have an old version
+installed from github, please remove it:</p>
+
+<pre><code>sudo gem uninstall chriseppstein-compass
+</code></pre>
+
+<h3>Sass 3:</h3>
+
+<ul>
+<li>Compass now depends on Sass 3 -- Please be prepared to upgrade.
+Things won't break but you'll have a lot of deprecation warnings.
+Upgrading is pretty easy thanks to the <code>sass-convert</code> tool. See the
+<a href="http://sass-lang.com/docs/yardoc/file.SASS_CHANGELOG.html">Sass Changelog</a>
+for more information.</li>
+<li>All compass stylesheets are now written in the SCSS syntax,
+if you import compass framework stylesheets with an explicit
+<code>.sass</code> extension, then you'll receive deprecation warnings
+directing you to update your stylesheets.</li>
+<li>A new command line switch <code>--syntax</code> (or <code>-x</code>) has been added
+to commands that install stylesheets into your project that
+allows you to select the syntax to use (scss or sass)</li>
+<li>A new configuration option <code>preferred_syntax</code> now exists
+and defaults to <code>:scss</code>. Please update your project's configuration
+file with <code>preferred_syntax = :sass</code> if you prefer to use the
+indentation-based syntax.</li>
+<li>You may silence deprecation warnings by adding
+<code>sass_options = {:quiet =&gt; true}</code> to your configuration.</li>
+</ul>
+
+
+<h3>Command-Line:</h3>
+
+<ul>
+<li>The compass command-line tool has been re-written to allow be easier to
+use and be more flexible. The old command line is still supported at
+this time. "compass help" will get you started on using the new
+command line syntax.</li>
+<li>Allow specification of a height for the grid image</li>
+<li>For the truly hardcore compass users, you may now create a
+compass project using "compass create my_project --bare"
+and you'll have a completely bare project created for you with no
+sass files provided for you.</li>
+<li>Get stats on your compass project with "compass stats". You'll
+need to install the "css_parser" ruby gem to get stats on your
+css files.</li>
+<li>Command line switch (--boring) to turn off colorized output.</li>
+<li>Color any output from the <code>Sass::Engine</code> red during compilation.</li>
+<li>If you only want to compile certain files, you can now
+specify them when invoking compass compile. E.g. <code>compass compile src/foo.sass</code></li>
+</ul>
+
+
+<h3>Configuration:</h3>
+
+<ul>
+<li>The entire configuration infrastructure has been re-written to make it
+easier to support the various sources of configuration data (project type,
+config file, command line, and hard coded defaults)</li>
+<li>Whether to generate relative links to assets is now controlled by a
+separate boolean configuration flag called <code>relative_assets</code> in the
+configuration file and <code>--relative-assets</code> on the command line.
+Setting <code>http_images_path</code> to <code>:relative</code> is deprecated.</li>
+<li>You may now configure the http locations for your project by simply setting
+<code>http_path</code> for the top level path of the project. You
+may also set <code>http_images_dir</code>, <code>http_stylesheets_dir</code>, and
+<code>http_javascripts_dir</code> relative to the <code>http_path</code> instead of
+setting the absolute <code>http_XXX_path</code> counterparts.</li>
+<li>You may now configure the fonts directory for your project (fonts_dir).
+By default, for standalone projects, it is the "fonts" subdirectory of
+  your css directory. Rails projects will default to "public/fonts".</li>
+<li>The sass cache location can now be set in the compass config
+file using the <code>cache_dir</code> property and the cache can be disabled by setting
+<code>cache = false</code>.</li>
+<li>In your configuration file, setting <code>http_images_path</code> to <code>:relative</code> is
+deprecated in favor of setting <code>relative_assets</code> to <code>true</code></li>
+</ul>
+
+
+<h3>Rails:</h3>
+
+<p><strong>IMPORTANT:</strong> Existing rails projects <em>must</em> change their compass initializer file to:</p>
+
+<pre><code>require 'compass'
+rails_root = (defined?(Rails) ? Rails.root : RAILS_ROOT).to_s
+Compass.add_project_configuration(File.join(rails_root, "config", "compass.rb"))
+Compass.configure_sass_plugin!
+Compass.handle_configuration_change!
+</code></pre>
+
+<ul>
+<li>The rails template has been updated to use the latest haml and compass versions.</li>
+<li>Compass now supports Rails 3, but asset_host and cache_buster integration is disabled.</li>
+<li>When configuring Sass during initialization,
+Compass now passes the template locations as an array of tuples
+instead of as a hash. This preserves ordering in all versions
+of ruby and ensures that the deprecated imports do not take precedence.</li>
+</ul>
+
+
+<h3>Compass Core:</h3>
+
+<ul>
+<li>A new helper function <code>stylesheet-url(path)</code> can now be used to refer
+to assets that are relative to the css directory.</li>
+<li>Compass sprite mixins are now more flexible and feature rich.</li>
+<li>Fixed the <code>append-selector</code> function to allow comma-delimited selectors
+for both arguments instead of just the first</li>
+<li>There is no longer any outline on unstyled links in the :active and :focused states.</li>
+<li>New CSS3 Compatibility Mixins. You can import them all with <code>@import compass/css3.sass</code>
+Read the [documentation][http://compass-style.org/docs/reference/compass/css3/].</li>
+<li>The import for <code>+inline-block</code> has moved from "compass/utilities/general/inline_block"
+to "compass/css3/inline-block".</li>
+<li>The import for <code>+opacity</code> has moved from "compass/utilities/general/opacity"
+to "compass/css3/opacity"</li>
+<li>Note: If you are using the <code>+opacity</code> or <code>+inline-block</code> mixins,
+you may need to update your imports.</li>
+<li><code>+min-height</code>, <code>+min-width</code>, and <code>+bang-hack</code> mixins in the
+compass/utilities/general/min.sass module. (Credit: <a href="http://github.com/adamstac">Adam Stacoviak</a>)</li>
+<li>Split out <code>+hide-text</code> as its own mixin. (Credit: <a href="http://github.com/avit">Andrew Vit</a>)</li>
+<li>Support :first-child and :last-child pseudo selectors for +horizontal-list. (Credit: Cody Robbins)</li>
+<li>Added new helper functions: <code>image_width("path/to/image.png")</code> &amp; <code>image_height("path/to/image.png")</code> that return the size in pixels. (Credit: Deepak Jois &amp; Richard Aday)</li>
+<li>The <code>pretty-bullets</code> mixin will now infer the image dimensions by
+reading the image file if the image dimensions are not provided.</li>
+<li>In addition to installing the <code>binding.xml</code>, the configuration constant
+<code>$use-mozilla-ellipsis-binding</code> must now be set to <code>true</code>
+to support any version of mozilla less than 3.6 in the <code>+ellipsis</code> mixin.</li>
+</ul>
+
+
+<h3>Blueprint:</h3>
+
+<ul>
+<li>The useless blueprint "modules" folder will be removed. Please update your
+blueprint imports by removing the modules folder. Deprecation warnings will be
+emitted if you use the old imports.</li>
+<li>Blueprint mixins that used to accept a "body selector" argument, are now
+deprecated, instead you should pass <code>true</code> to them and mix them into
+the selector of your choice.</li>
+<li>Make the primary blueprint mixins easier to use by allowing them to be
+nested when passing true as the first argument.
+The old approach of passing a selector as the first argument is now deprecated
+in favor of a simple flag to indicate nesting or not.</li>
+<li>Take margins into account in liquid grid. (Credit: Christoffer Eliesen)</li>
+</ul>
+
+
+<h3>YUI:</h3>
+
+<ul>
+<li>YUI was upgraded to 2.7.0</li>
+<li>Yahoo has deprecated the YUI CSS framework, as such YUI has been extracted to a plugin.
+If you use it, please <a href="http://github.com/chriseppstein/yui-compass-plugin">install it</a>.</li>
+</ul>
+
+
+<h3>Extensions:</h3>
+
+<ul>
+<li>Extensions can now be installed locally by unpacking them into a project's
+"extensions" directory. Rails projects use "vendor/plugins/compass/extenstions".</li>
+<li>Extensions can deliver html to projects if they like. The html can be in
+haml and will be transformed to html and can contain inline, compass-enabled
+  sass.</li>
+<li>All files can be processed using ERB before being copied into the user's
+project.</li>
+<li>Compass extensions can now add support for other application frameworks.
+These extensions can help compass understand the project structure of that
+framework as well as provide runtime integration for ruby-based apps.
+Contact me if you plan to do this -- the first couple times may be a little
+rough.</li>
+<li>Compass extensions can now add new command line commands. Contact me if you
+plan to do this -- the first couple times may be a little rough.</li>
+<li>Extensions can now provide help documentation just after a project is
+created and on demand when the user uses the command line help system.
+This can be done via the manifest file or by adding a USAGE.markdown file
+at the top level of the framework template.</li>
+</ul>
+
+
+<h3>Miscellaneous:</h3>
+
+<ul>
+<li>Lot of new docs can be found at: <a href="../index.html">http://compass-style.org/docs/</a>.</li>
+<li>The compass configuration object is no longer a singleton, this makes it
+possible for other ruby software to manage multiple compass projects at a
+time.</li>
+<li>Compass no longer requires rubygems in order to work, this is a ruby
+best-practice.</li>
+<li>The command line tool is now tested using the cucumber testing framework.</li>
+<li>Removed support for the rip package manager.</li>
+<li>Removed the dependency on RMagic for grid image generation.
+(Credit: <a href="http://github.com/der-rich">Richard Wöber</a>)</li>
+<li>The <code>unobtrusive-logo</code> mixin is deprecated and will be removed.
+If you use this, please move the source to your project.</li>
+</ul>
+
+
+<h2>0.8.17 (September 24, 2009)</h2>
+
+<ul>
+<li>The enumerate function now accepts an optional fourth parameter that specifies the separator to be used.
+Enables fixing a bug in the Compass 960 Plugin.</li>
+</ul>
+
+
+<h2>0.8.16 (September 12, 2009)</h2>
+
+<ul>
+<li>Fixed a bug in compass that assumed compass extensions would provide stylesheets.</li>
+</ul>
+
+
+<h2>0.8.15 (September 5, 2009)</h2>
+
+<ul>
+<li>Upgrade the FSSM library to 0.0.6 to fix bugs on windows.</li>
+</ul>
+
+
+<h2>0.8.14 (September 2, 2009)</h2>
+
+<ul>
+<li>Upgrade the FSSM library to 0.0.4 to fix bugs and enable FS Events on Mac OS.</li>
+</ul>
+
+
+<h2>0.8.13 (August 30, 2009)</h2>
+
+<ul>
+<li>[Blueprint] Mixins have been added for these as +prepend-top and +append-bottom and grid classes will be generated by +blueprint-grid.</li>
+<li>[Command Line] The watch mode has been re-implemented to use the FSSM library by Travis Tilley. OSX users will
+now have support for filesystem monitoring. Fixes an infinite looping bug that occured with syntax users.</li>
+</ul>
+
+
+<h2>0.8.12 (August 22, 2009)</h2>
+
+<p>Bug Fix Release:</p>
+
+<ul>
+<li>[Compass Core] Bug fix to sprites: fixed width and height assignments for x and y position variables</li>
+<li>Ruby 1.9.1 fix: binding for parse_string</li>
+<li>[Rails] Don't suggest creating a stylesheet link to partials.</li>
+</ul>
+
+
+<h2>0.8.10 (August 16, 2009)</h2>
+
+<p>Bug Fix Release:</p>
+
+<ul>
+<li>Write files in binary mode to avoid data corruption when installing images on windows.
+Fixes <a href="http://github.com/chriseppstein/compass/issues/#issue/39">Issue #39</a></li>
+</ul>
+
+
+<h2>0.8.9 (August 9, 2009)</h2>
+
+<p>Bug Fix Release:</p>
+
+<ul>
+<li>[Blueprint] The default screen.sass generated invalid selectors due to improper nesting. A better fix is coming in the next release.</li>
+</ul>
+
+
+<h2>0.8.8 (July 21, 2009)</h2>
+
+<p>Bug Fix Release:</p>
+
+<ul>
+<li>[Compass Core] Fixed a bug in alternating_rows_and_columns. Improper nesting caused some styles to be improperly rendered.
+<a href="http://github.com/chriseppstein/compass/commit/e277ed2cd3fded0b98ddaa87fc4d3b9d37cb7354">Commit</a></li>
+<li>[YUI] Fixed a bug in yui grids where the .first div wouldn't get the right styles in some rare cases due to incorrect nesting.
+<a href="http://github.com/chriseppstein/compass/commit/4bfcef4f376ee6e5d5a2b47419d2f21ef4c6eff8">Commit</a></li>
+</ul>
+
+
+<h2>0.8.7 (July 09, 2009)</h2>
+
+<p>Bug Fix Release:</p>
+
+<ul>
+<li>Load haml-edge only if it's all new and shiny. Closes GH-26.
+<a href="http://github.com/chriseppstein/compass/commit/59a6067b3a67a79bfd9a5ce325fc1be4bb6c9e78">Commit</a></li>
+<li>[Blueprint] Added more descriptive comments to the Blueprint IE template.
+<a href="http://github.com/chriseppstein/compass/commit/8684966be1e8166a986ae81abd3daf6c44ed4f94">Commit</a></li>
+<li>[Rails] Fixed a bug in rails integration if the request is not set on the controller.
+<a href="http://github.com/chriseppstein/compass/commit/7fba6028d8073a9124a6505aab9246b5b459db34">Commit</a></li>
+<li>[Blueprint] Fixed a bug in the calculations for the +colborder mixin. Closes GH-25.
+<a href="http://github.com/chriseppstein/compass/commit/d2b1370c80a32f70ae6ec94126b737f4f0fc0851">Commit</a></li>
+</ul>
+
+
+<h2>0.8.6 (July 08, 2009)</h2>
+
+<h3>Rails</h3>
+
+<ul>
+<li>The rails installer now correctly references the haml 2.2 dependency.
+<a href="http://github.com/chriseppstein/compass/commit/85bb337f50a3a3dfaafa2820d5463f7296140c9e">Commit</a>
+by <a href="http://github.com/filiptepper">Filip Tepper</a>.</li>
+<li>When installing into a new rails project, set the http paths correctly for stylesheets and javascripts
+in the configuration file.
+<a href="http://github.com/chriseppstein/compass/commit/94e9696b30a9a9fd750c45e6fe3c2bc93eba506a">Commit</a></li>
+<li>Fixed a bug in asset hosts support when compiling outside the context of a controller.
+<a href="http://github.com/chriseppstein/compass/commit/6b8bbd22b13ef4c329777913a633948e66e3da99">Commit</a></li>
+</ul>
+
+
+<h3>Command Line</h3>
+
+<ul>
+<li>Fixed a bug that caused the output after installing to not display the conditional comments.
+<a href="http://github.com/chriseppstein/compass/commit/48a0356ad8bc7b965e64f82498a9adcc1872abad">Commit</a></li>
+</ul>
+
+
+<h3>Compass Core</h3>
+
+<ul>
+<li>Fixed a copy &amp; paste error in image_url() that caused the http_images_path to not get picked up unless the
+http_stylesheets_path was also set.
+<a href="http://github.com/chriseppstein/compass/commit/b7a9772efb89b2b882d3fafe02813c0fc650719a">Commit</a></li>
+</ul>
+
+
+<h2>0.8.5 (July 06, 2009)</h2>
+
+<p>The Compass::TestCase class now inherits from ActiveSupport::TestCase if it exists.
+<a href="http://github.com/chriseppstein/compass/commit/71d5ae8544d1c5ae49e28dcd6b3768fc39d7f01c">Commit</a></p>
+
+<h2>0.8.4 (July 06, 2009)</h2>
+
+<p>Fixed a bug in rails integration introduced in 0.8.3.</p>
+
+<h2>0.8.3 (July 06, 2009)</h2>
+
+<p>Note: Compass now depends on the stable release of haml with version 2.2.0 or greater.</p>
+
+<h3>Compass Core</h3>
+
+<ul>
+<li>A new helper function <code>stylesheet_url(path)</code> can now be used to refer to assets that are relative to the css directory.
+<a href="http://github.com/chriseppstein/compass/commit/ff5c8500144272ee2b94271b06cce1690cbbc000">Commit</a>.</li>
+<li>Cross browser ellipsis mixin is now available. Use <code>compass -p ellipsis</code> to install it into your project since it
+requires some additional assets.
+<a href="http://github.com/chriseppstein/compass/commit/3d909ceda997bdcde2aec09bd72e646098389e7d">Commit</a>.</li>
+</ul>
+
+
+<h3>Blueprint</h3>
+
+<ul>
+<li>The +colruler mixin now accepts an argument for the color.
+<a href="http://github.com/chriseppstein/compass/commit/a5393bbb7cd0941ab8add5be188aea1d6f9d4b00">Commit</a>
+by <a href="http://github.com/tdreyno">Thomas Reynolds</a>.</li>
+</ul>
+
+
+<h3>Extensions</h3>
+
+<ul>
+<li>A bug was fixed related to how javascript installation as part of an extension manifest.
+<a href="http://github.com/chriseppstein/compass/commit/a5393bbb7cd0941ab8add5be188aea1d6f9d4b00">Commit</a>
+by <a href="http://github.com/dturnbull">dturnbull</a>.</li>
+<li>When installing a file, the :like option can now be set to have it installed into the
+same location as what it is like. E.g. <code>file 'foo.xml', :like =&gt; :css</code> will install
+the foo.xml file into the top level of the project's css directory.
+<a href="http://github.com/chriseppstein/compass/commit/21cfce33db81e185ce5517818844a9849b5a836e">Commit</a>.</li>
+</ul>
+
+
+<h3>Configuration</h3>
+
+<ul>
+<li>Setting <code>http_images_path</code> to <code>:relative</code> is now <strong>deprecated</strong>. Instead, please set <code>relative_assets</code> to
+<code>true</code>.
+<a href="http://github.com/chriseppstein/compass/commit/956c437fe9ffaad08b6b34d91b6cfb80d6121a2f">Commit</a>.</li>
+<li>New configuration option <code>http_path</code> can be used to set the project's path relative to the server's root.
+Defaults to "/". The http paths to images, stylesheets, and javascripts are now assumed to be relative to that
+path but can be overridden using the <code>http_images_path</code>, <code>http_css_path</code>, <code>http_javascripts_path</code>.
+<a href="http://github.com/chriseppstein/compass/commit/6555ab3952ae37d736d54f43ee7053c2a88f4a69">Commit</a>.</li>
+</ul>
+
+
+<h3>Command Line</h3>
+
+<ul>
+<li>A new command line option <code>--relative-assets</code> can be used to cause links to assets generated
+via compass helper functions to be relative to the target css file.
+<a href="http://github.com/chriseppstein/compass/commit/956c437fe9ffaad08b6b34d91b6cfb80d6121a2f">Commit</a>.</li>
+</ul>
+
+
+<h2>0.8.2 (July 04, 2009)</h2>
+
+<p>Fixed a bug that caused touch to fail on windows due to open files. (Contributor: Joe Wasson)</p>
+
+<h2>0.8.1</h2>
+
+<p>Fixed some build issues and a bug in the rewritten --watch mode that caused changes to partials to go unnoticed.</p>
+
+<h2>0.8.0</h2>
+
+<h3>Rails</h3>
+
+<ul>
+<li><p>image_url() now integrates with the rails asset handling code when
+stylesheets are generated within the rails container.
+<strong>This causes your rails configuration for cache busting and asset hosts
+to be used when generating your stylesheets</strong>. Unfortunately, all
+that code runs within the context of a controller, so the stylesheets
+have to be generated during first request to use this functionality. If you
+need to compile stylesheets offline, use the compass configuration file to set
+the <code>asset_host</code> and <code>asset_cache_buster</code>.
+<a href="http://github.com/chriseppstein/compass/commit/998168160b11c8702ded0a32820ea15b70d51e83">Commit</a>.</p></li>
+<li><p>An official Rails template for Compass is now <a href="http://github.com/chriseppstein/compass/raw/4e7e51e2c5491851f66c77abf3f15194f2f8fb8d/lib/compass/app_integration/rails/templates/compass-install-rails.rb">provided</a>.
+<a href="http://github.com/chriseppstein/compass/commit/f6948d1d58818ef8babce8f8f9d775562d7cd7ef">Commit</a>
+by <a href="http://github.com/perezd">Derek Perez</a>.</p></li>
+</ul>
+
+
+<h3>Blueprint</h3>
+
+<ul>
+<li><p>The Blueprint port has been upgraded to match Blueprint 0.9. The following changes were made as part
+of that project:</p>
+
+<ul>
+<li>Removed body margins from blueprint scaffolding by default.
+The old body styles can be reinstated by mixing +blueprint-scaffolding-body into your body selector(s).
+<a href="http://github.com/chriseppstein/compass/commit/45af89d4c7a396fae5d14fab4ef3bab23bcdfb6a">Commit</a>
+by <a href="http://github.com/enricob">Enrico Bianco</a>.</li>
+<li>A bug in the calculations affecting the +colborder mixin has been fixed.
+<a href="http://github.com/chriseppstein/compass/commit/4b33fae5e5c5421580ba536116cb10194f1318d1">Commit</a>
+by <a href="http://github.com/enricob">Enrico Bianco</a>.
+Related <a href="http://github.com/chriseppstein/compass/commit/0a0a14aab597d2ec31ff9d267f6ee8cfad878e10">commit</a>.</li>
+<li>Blueprint now has inline form support. Mix +blueprint-inline-form into a form selector to make it inline.
+<a href="http://github.com/chriseppstein/compass/commit/56c745b939c763cfcc5549b54979d48ab1309087">Commit</a>
+by <a href="http://github.com/enricob">Enrico Bianco</a>.</li>
+<li>Please update the conditional comment that surrounds your IE stylesheet to use "lt IE 8" as the condition
+as these styles are not needed in IE8. New blueprint projects will now use this conditional as their default.
+<a href="http://github.com/chriseppstein/compass/commit/77f6e02c0ec80d2b6fd19e611ced02be003c98ae">Commit</a>
+by <a href="http://github.com/enricob">Enrico Bianco</a>.</li>
+<li>Explicitly define image interpolation mode for IE so that images aren't jagged when resizing.
+<a href="http://github.com/chriseppstein/compass/commit/63075f82db367913efcce5e1d0f5489888e86ca4">Commit</a>
+by <a href="http://github.com/enricob">Enrico Bianco</a>.</li>
+</ul>
+</li>
+<li><p>When starting a new project based on Blueprint, a more complete screen.sass file will be
+provided that follows compass best practices instead of matching blueprint css exactly. A
+partials/_base.sass file is provided and already set up for blueprint customization.
+<a href="http://github.com/chriseppstein/compass/commit/11b6ea14c3ee919711fa4bdce349f88b64b68d51">Commit</a></p></li>
+<li><p>The sizes and borders for form styling can now be altered via mixin arguments.
+<a href="http://github.com/chriseppstein/compass/commit/b84dd3031b82547cff8e1ef1f85de66d98cd162b">Commit</a>
+by <a href="http://github.com/tdreyno">Thomas Reynolds</a>.</p></li>
+<li><p>Grid borders can now be altered via mixin arguments.
+<a href="http://github.com/chriseppstein/compass/commit/0a0a14aab597d2ec31ff9d267f6ee8cfad878e10">Commit</a>
+by <a href="http://github.com/tdreyno">Thomas Reynolds</a>.</p></li>
+<li><p>The reset file for blueprint has moved from compass/reset.sass to blueprint/reset.sass. Please
+update your imports accordingly. Also note that some of the reset mixin names have changed
+(now prefixed with blueprint-*).
+<a href="http://github.com/chriseppstein/compass/commit/2126240a1a16edacb0a758d782334a9ced5d9116">Commit</a>
+by <a href="http://github.com/noel">Noel Gomez</a>.</p></li>
+</ul>
+
+
+<h3>Compass Core</h3>
+
+<ul>
+<li><p><strong>Sprites</strong>. A basic sprite mixin is now available. Import compass/utilities/sprites.sass and use the +sprite-img
+mixin to set the background image from a sprite image file. Assumes every sprite in the sprite image
+file has the same dimensions.
+<a href="http://github.com/chriseppstein/compass/commit/1f21d6309140c009188d350ed911eed5d34bf02e">Commit</a>
+by <a href="http://github.com/tdreyno">Thomas Reynolds</a>.</p></li>
+<li><p><strong>Reset</strong>. The compass reset is now based on <a href="http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/">Eric Meyer's reset</a>.
+which makes no attempt to apply base styles like the blueprint reset does. <strong>Existing compass projects
+will want to change their reset import to point to blueprint/reset.sass</strong> -- which is where the old
+default reset for compass projects now lives -- see the blueprint notes above for more information.
+<a href="http://github.com/chriseppstein/compass/commit/2126240a1a16edacb0a758d782334a9ced5d9116">Commit</a>
+by <a href="http://github.com/noel">Noel Gomez</a>.</p></li>
+<li><p>A bug was fixed in the tag_cloud mixin so that it actually works.
+<a href="http://github.com/chriseppstein/compass/commit/be5c0ff6731ec5e0cdac73bc47f5603c3db899b5">Commit</a>
+by <a href="http://github.com/Chrononaut">Bjørn Arild Mæland</a>.</p></li>
+</ul>
+
+
+<h3>Sass Extensions</h3>
+
+<ul>
+<li>The <code>inline_image(image_path)</code> function can now be used to generate a data url that embeds the image data in
+the generated css file -- avoiding the need for another request.
+This function works like <code>image_url()</code> in that it expects the image to be a path
+relative to the images directory. There are clear advantages and disadvantages to this approach.
+See <a href="http://en.wikipedia.org/wiki/Data_URI_scheme">Wikipedia</a> for more details.
+NOTE: Neither IE6 nor IE7 support this feature.
+<a href="http://github.com/chriseppstein/compass/commit/5a015b3824f280af56f1265bf8c3a7c64a252621">Commit</a>.</li>
+</ul>
+
+
+<h3>Configuration</h3>
+
+<ul>
+<li><p><strong>Asset Hosts</strong>. You can now configure the asset host(s) used for images via the image_url() function.
+Asset hosts are off unless configured and also off when relative urls are enabled.
+<a href="http://github.com/chriseppstein/compass/commit/ef47f3dd9dbfc087de8b12a90f9a82993bbb592e">Commit</a>.
+In your compass configuration file, you must define an asset_host algorithm to be used like so:</p>
+
+<pre><code># Return the same host for all images:
+asset_host {|path| "http://assets.example.com" }
+# Return a different host based on the image path.
+asset_host do |path|
+  "http://assets%d.example.com" % (path.hash % 4)
+end
+</code></pre></li>
+<li><p><strong>Configurable Cache Buster</strong>. You can now configure the cache buster that gets placed at the end of
+images via the image_url function. This might be useful if you need to coordinate the query string
+or use something other than a timestamp.
+<a href="http://github.com/chriseppstein/compass/commit/ef47f3dd9dbfc087de8b12a90f9a82993bbb592e">Commit</a>
+Example:</p>
+
+<pre><code>asset_cache_buster do |path, file|
+  "busted=true"
+end
+</code></pre></li>
+<li><p>You can now set/override arbitrary sass options by setting the <code>sass_options</code> configuration property
+to a hash. <a href="http://github.com/chriseppstein/compass/commit/802bca61741db31da7131c82d31fff45f9323696">Commit</a>.</p></li>
+<li><p>You can now specify additional import paths to look for sass code outside the project.
+<a href="http://github.com/chriseppstein/compass/commit/047be06a0a63923846f53849fc220fb4be69513b">Commit</a>.
+This can be done in two ways:</p>
+
+<ol>
+<li>By setting <code>additional_import_paths</code> to an array of paths.</li>
+<li>By (repeatedly) calling <code>add_import_path(path)</code></li>
+</ol>
+</li>
+<li><p>The compass configuration can now be placed in PROJECT_DIR/.compass/config.rb if you so choose.
+<a href="http://github.com/chriseppstein/compass/commit/69cf32f70ac79c155198d2dbf96f50856bee9504">Commit</a>.</p></li>
+</ul>
+
+
+<h3>Command Line</h3>
+
+<ul>
+<li><p><strong>Watch Improvements</strong> The watch command was rewritten for robustness and reliability. The most
+important change is that generated css files will be deleted if the originating sass file is removed while
+watching the project. <a href="http://github.com/chriseppstein/compass/commit/0a232bd922695f6f659fac9f90466745d4425839">Commit</a>.</p></li>
+<li><p>The images and javascripts directories may now be set via the command line.
+<a href="http://github.com/chriseppstein/compass/84aec053d0109923ea0208ac0847684cf09cefc1">Commit</a>.</p></li>
+<li><p>The usage output (-h) of the command-line has been reformatted to make it more readable and understandable.
+<a href="http://github.com/chriseppstein/compass/f742f26208f4c5c783ba63aa0cc509bb19e06ab9">Commit</a>.</p></li>
+<li><p>The configuration file being read can now be specified explicitly using the -c option.
+This also affects the output location of the --write-configuration command.
+NOTE: The -c option used to be for writing the configuration file, an infrequently used option.
+<a href="http://github.com/chriseppstein/compass/d2acd343b899db960c1d3a377e2ee6f58595c6b1">Commit</a>.</p></li>
+<li><p>You can now install into the current working directory by explicitly setting the command line mode to -i
+and providing no project name.
+<a href="http://github.com/chriseppstein/compass/f742f26208f4c5c783ba63aa0cc509bb19e06ab9">Commit</a>.</p></li>
+</ul>
+
+
+<h3>Compass Internals</h3>
+
+<ul>
+<li><p>Some internal code was reorganized to make managing sass extensions and functions more manageable.</p></li>
+<li><p>Some internal code was reorganized to make managing ruby application integration more manageable.</p></li>
+<li><p>The compass unit tests were reorganized to separate rails testing from other tests.</p></li>
+<li><p>The <a href="http://hellorip.com">Rip Packaging System</a> is now supported.
+<a href="http://github.com/chriseppstein/compass/commit/56f36577c7654b93a349f74abf274327df23402b">Commit</a>
+by <a href="http://github.com/wfarr">Will Farrington</a>.</p></li>
+<li><p>A <a href="http://github.com/chriseppstein/compass/blob/master/LICENSE.markdown">licence is now available</a>
+making the copyrights and terms of use clear for people who care about such things.</p></li>
+</ul>
+
+
+<h2>0.6.14</h2>
+
+<p>Extracted the css validator to an external gem that is only required if you try to use the validation feature.
+This makes the compass gem a lot smaller (0.37MB instead of 4MB). To install the validator:</p>
+
+<pre><code>sudo gem install chriseppstein-compass-validator --source http://gems.github.com/
+</code></pre>
+
+<h2>0.6.8 thru 0.6.13</h2>
+
+<p>The compass gem is now built with Jeweler instead of Echoe. No changes to speak of. These versions were bug
+fixes and working out the new release process.</p>
+
+<h2>0.6.7</h2>
+
+<p>Bug fix release.</p>
+
+<h3>Rails</h3>
+
+<p>The output_style will no longer be set in the compass.config file. Instead compass will use the runtime rails environment to set a sensible default.</p>
+
+<h3>Command Line</h3>
+
+<p>The Sass cache directory will be placed into the sass directory of the project instead of the directory from where the compass command was ran.</p>
+
+<h3>Compass Core</h3>
+
+<p>Extracted two new mixins from +horizontal-list.  The new +horizontal-list-container and +horizontal-list-item mixins can be used to build your
+horizontal list when you need more control over the selectors (E.g. when working with nested lists).</p>
+
+<h2>0.6.6</h2>
+
+<p>The Haml project now releases a gem called haml-edge that is built from the haml master branch instead of stable. Compass now depends on this gem and will continue to do so until haml 2.2 is released. This should reduce the number of installation problems that have been encountered by new users.</p>
+
+<h3>Command Line</h3>
+
+<ul>
+<li>Fixed a bug that had broken the --write-configuration (-c) option.</li>
+<li>The --force option will now force recompilation. Useful when the stylesheets don't appear to need a recompile according to the file timestamps.</li>
+</ul>
+
+
+<h3>Unit tests</h3>
+
+<ul>
+<li>Some unit tests were cleaned up for clarity and to better take advantage of the compass project management facilities.</li>
+</ul>
+
+
+<h2>0.6.5</h2>
+
+<h3>Compass Core</h3>
+
+<p>Converted all mixins definitions referencing images to use the new sass function <code>image_url()</code>. The following mixins were affected:</p>
+
+<ul>
+<li><code>+pretty-bullets</code></li>
+<li><code>+replace-text</code></li>
+</ul>
+
+
+<p>The calls to these mixins should now pass a path to the image that is relative to the images directory of the project.</p>
+
+<h3>Command Line</h3>
+
+<ul>
+<li>Required frameworks specified from the command line will now be added into the initial project configuration file.</li>
+</ul>
+
+
+<h2>0.6.4</h2>
+
+<h3>Command Line</h3>
+
+<p>Added a command line option --install-dir that will emit the directory where compass is installed. Useful for debugging and drilling into the compass examples and libraries.</p>
+
+<h2>0.6.3</h2>
+
+<h3>Rails</h3>
+
+<p>Bug fix: The http_images_path configuration default should be "/images" instead of "/public/images".</p>
+
+<h3>Command Line</h3>
+
+<p>These changes, coupled with upcoming changes to Sass result in significantly reduced time spent on compilation for large projects.</p>
+
+<ul>
+<li>The compass command line will no longer recompile sass files that haven't changed (taking import dependencies into account).</li>
+<li>The compass command line will now respect the -q (quiet) option during compilation. Additionally, the quiet option will be set by default when watching a project for changes.</li>
+</ul>
+
+
+<h2>0.6.2</h2>
+
+<h3>Blueprint</h3>
+
+<p>Split the push and pull mixins into sub-mixins that separate the common styles from the ones that vary. The generated css when using presentational class names will be smaller as a result. The existing <code>+push</code> and <code>+pull</code> mixins continue to work as expected. The following mixins were added:</p>
+
+<pre><code>+push-base
++push-margins
++pull-base
++pull-margins
+</code></pre>
+
+<p>Additonally, the liquid plugin was updated to have a span mixin that matches elsewhere.</p>
+
+<h3>YUI</h3>
+
+<p>Added Yahoo's version of the css reset. To use it, mix into the top level of your project:</p>
+
+<pre><code>@import yui/modules/reset.sass
++reset
+</code></pre>
+
+<h3>Rails</h3>
+
+<ul>
+<li>Conditionally defining #blank? on String/NilClass (Erik Bryn <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#101;&#x72;&#x69;&#x6b;&#x2e;&#98;&#114;&#x79;&#x6e;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;">&#x65;&#114;&#x69;&#x6b;&#x2e;&#x62;&#114;&#x79;&#110;&#x40;&#x67;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#111;&#x6d;</a>)</li>
+<li>Set compass environment in plugin based on RAILS_ENV (Lee Nussbaum <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#x6f;&#58;&#x77;&#108;&#110;&#64;&#115;&#99;&#114;&#117;&#x6e;&#x63;&#x68;&#x2e;&#x6f;&#x72;&#103;">&#119;&#108;&#110;&#64;&#115;&#99;&#114;&#117;&#x6e;&#x63;&#104;&#46;&#111;&#x72;&#x67;</a>)</li>
+</ul>
+
+
+<h2>0.6.1</h2>
+
+<p>Maintenance release that fixes several bugs in the handling of configuration files.</p>
+
+<h2>0.6.0</h2>
+
+<h3>New Core Functionality: <strong>Patterns</strong></h3>
+
+<p>Patterns give a framework or plugin access to the compass installer framework
+to install customizable sass, html as well as image and javascript assets.</p>
+
+<p>A pattern is a folder in the plugin's templates directory. It must
+have a manifest file that tells compass what to install and where.
+Unlike the project template, a pattern can be stamped out any number of
+times.</p>
+
+<p>It is best for pattern stylesheets to only provide example usage to get
+the user started. All the core styles for the pattern should be
+distributed as part of the framework's stylesheets as mixins to
+facilitate easy upgrades and bug fixing on the part of the pattern's
+maintainer.</p>
+
+<p>Example Usage:
+compass --framework blueprint --pattern buttons</p>
+
+<p>Please read the
+<a href="http://wiki.github.com/chriseppstein/compass/patterns">Wiki Page</a> for more information.</p>
+
+<h3>New Command-line options:</h3>
+
+<ol>
+<li><code>--validate</code><br/>
+Validate your project's compiled css. Requires java and probably only works on Mac and Unix.</li>
+<li><code>--grid-img [DIMENSIONS]</code><br/>
+Generate a background image to test grid alignment. Dimension is given as
+&lt;column_width>+&lt;gutter_width>. Defaults to 30+10.</li>
+<li><code>-p, --pattern PATTERN</code><br/>
+When combined with with the --framework option, will stamp a plugin's pattern named PATTERN.</li>
+<li><code>-n, --pattern-name NAME</code><br/>
+When combined with the --pattern option, the pattern that gets stamped out will
+be isolated in subdirectories named NAME.</li>
+<li><code>-c, --write-configuration</code><br/>
+Emit a compass configuration file into the current directory, taking any existing configuration
+file and any command line options provided into account. (command line options override
+configuration file options).</li>
+</ol>
+
+
+<h3>New Sass Functions:</h3>
+
+<p>Compass projects can call these sass functions within their sass files, if you find them useful.</p>
+
+<ol>
+<li><code>enumerate(prefix, start, end)</code><br/>
+Generates selectors with a prefix and a numerical ending
+counting from start to end. E.g. enumerate("foo", 1, 3) returns "foo-1, foo-2, foo-3"</li>
+<li><code>image_url(path)</code><br/>
+Uses the compass configuration to convert a path relative to the compass
+project directory to a path that is either absolute for serving in an HTTP
+context or that is relative to whatever css file the function was being
+compiled into. In the future, this function may also tap into the rails
+asset host configuration.</li>
+</ol>
+
+
+<h3>New Compass Core Mixins</h3>
+
+<ol>
+<li><code>+float-left</code> &amp; <code>+float-right</code><br/>
+In order to include fixes for IE's double-margin bug universally,
+floats were implemented as a utility mixins. These are available by importing
+compass/utilities/general/float.sass which also imports the clearfix module.</li>
+<li><code>+pie-clearfix</code><br/>
+Implementation of the
+<a href="http://www.positioniseverything.net/easyclearing.html">position-is-everything clearfix</a>
+that uses content :after.</li>
+</ol>
+
+
+<h3>Blueprint 0.8</h3>
+
+<p>The Compass port of Blueprint has been upgraded from 0.7.1 to 0.8.0. The 0.8.0 release
+brings many bug fixes and a few backward incompatible changes if you use it's presentational
+classnames (you don't do that, do you?). Upgrading to 0.8 is automatic when you upgrade to
+compass 0.6.0. The Blueprint team didn't release a detailed changelog for me to point at here.
+One of the key features of the release was the inclusion of three new core blueprint plugins
+(a.k.a. folders you can copy). These are what prompted the development of the compass patterns
+feature and two of them are packaged as patterns:</p>
+
+<ol>
+<li>Buttons<br/>
+To install: <code>compass --framework blueprint --pattern buttons</code><br/>
+Then follow your nose.</li>
+<li>Link Icons<br/>
+To install: <code>compass --framework blueprint --pattern link_icons</code><br/>
+Then follow your nose.</li>
+</ol>
+
+
+<p>The third plugin is the RTL (right-to-left) plugin. To use this one, simply import it after the import
+of the blueprint grid and your mixins will be redefined to work in a left to right manner. Additionally,
+it provides +rtl-typography mixin that works in conjunction with +blueprint-typography and should be mixed
+in with it.</p>
+
+<p>Lastly, I've rewrote some of the presentational class name generation code so that it very nearly
+matches the blueprint CSS. Please note that they are not 100% the same because we fix some bugs
+that are not yet fixed in blueprint-css and we use a different clearfix implementation.</p>
+
+<h3>Bug Fixes</h3>
+
+<ol>
+<li>A Safari bug related to the +clearfix mixin was resolved.</li>
+<li>Running the compass command line installer a second time.</li>
+</ol>
+
+
+<h3>Bugs Introduced</h3>
+
+<p>Almost definitely. Please let me know if you encounter any problems and I'll get a patch out</p>
+</article>
+</div>
+<div id='wrap-footer'></div>
+</div>
+<footer role='contentinfo'><div class='legalese'>
+<p>
+<a rel="license" href="../copyright/index.html"
+   id="cc-logo"><img alt="Creative Commons License" style="border-width:0"
+   src="http://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png" /></a>
+<br />
+by Christopher M. Eppstein.
+</p>
+</div>
+<div class='links'>
+<ul>
+<li>
+<a href='../../index.html' rel='home'>Compass Homepage</a>
+</li>
+<li>
+Compass is Charityware -
+<a href='http://umdf.org/compass'>Donate Now!</a>
+</li>
+<li>
+Compass is Open Source -
+<a href='http://github.com/chriseppstein/compass'>Contribute</a>
+</li>
+</ul>
+</div>
+</footer>
+<script src='../javascripts/jquery-1.3.2.min.js'></script>
+<script deferred='deferred' src='../javascripts/fixups.js'></script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6779438-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>
+
+<!-- Localized -->

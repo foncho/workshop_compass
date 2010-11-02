@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html class='no-js' dir='ltr' lang='en'>
+<head>
+<meta charset='utf-8' />
+<meta content='chrome=1' http-equiv='X-UA-Compatible' />
+<link href='../../../../images/compass_icon.png' rel='shortcut icon' type='image/png' />
+<title>
+Compass Transform | Compass Documentation
+</title>
+<!--[if !IE 6]><!-->
+<link charset='utf-8' href='../../../../stylesheets/screen.css' rel='stylesheet' type='text/css' />
+<!--<![endif]-->
+<!--[if gte IE 7]>
+<link charset='utf-8' href='../../../../stylesheets/ie.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+<!--[if IE 6]>
+<link charset='utf-8' href='http://universal-ie6-css.googlecode.com/files/ie6.0.3.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+</head>
+<body class='docs reference core css3' id='reference-compass-css3-transform'><div id='wrap'>
+<nav id='skip-links'>
+<a href='#content'>skip to content</a>
+</nav>
+<header id='banner' role='banner'>
+<div>
+<h1 class='vcard'>
+<a class='fn org url uid' href='../../../../../index.html' rel='home'>Compass</a>
+</h1>
+</div>
+</header>
+<nav id='docs-nav' role='navigation'>
+<div class='container'>
+<ul>
+<li>
+<a href='../../../../index.html'>introduction</a>
+</li>
+<li>
+<a href='../../index.html'>core</a>
+</li>
+<li>
+<a href='../../../blueprint/index.html'>blueprint</a>
+</li>
+<li>
+<a href='../../../../tutorials/index.html'>tutorials</a>
+</li>
+<!--
+<li>
+<a href='/docs/plugins/'>plugins</a>
+</li>
+-->
+</ul>
+<div id='version'>
+Current Version:
+<a class='number' href='../../../../CHANGELOG/index.html'>0.10.6.</a>
+</div>
+<div id='search-docs'>
+<form action='/docs/search/' method='GET'>
+<p>
+<label for='search'>search</label>
+<input id='search' name='q' type='text' value='' />
+</p>
+</form>
+</div>
+</div>
+</nav>
+<nav id='module-nav'><ul><ul><li>
+<a href='../../support/index.html'>Browser Support</a>
+</li>
+<li>
+<a href='../index.html'>CSS3</a>
+</li>
+<li>
+<a href='../../helpers/index.html'>Helpers</a>
+</li>
+<li>
+<a href='../../layout/index.html'>Layout</a>
+</li>
+<li>
+<a href='../../reset/index.html'>Reset</a>
+</li>
+<li>
+<a href='../../utilities/index.html'>Utilities</a>
+</li>
+</ul>
+</ul>
+</nav>
+<div id='page'><aside role='sidebar'><nav id='local-nav'>
+<ul><li>
+<h2>
+<a href='../../support/index.html'>Browser Support</a>
+</h2>
+</li>
+<li>
+<h2>
+<a href='../index.html'>CSS3</a>
+</h2>
+</li>
+<ul><li>
+<a href='../background_clip/index.html'>Background Clip</a>
+</li>
+<li>
+<a href='../background_origin/index.html'>Background Origin</a>
+</li>
+<li>
+<a href='../background_size/index.html'>Background Size</a>
+</li>
+<li>
+<a href='../border_radius/index.html'>Border Radius</a>
+</li>
+<li>
+<a href='../box/index.html'>Box</a>
+</li>
+<li>
+<a href='../box_shadow/index.html'>Box Shadow</a>
+</li>
+<li>
+<a href='../box_sizing/index.html'>Box Sizing</a>
+</li>
+<li>
+<a href='../shared/index.html'>CSS3 Utilities</a>
+</li>
+<li>
+<a href='../columns/index.html'>Columns</a>
+</li>
+<li>
+<a href='../font_face/index.html'>Font Face</a>
+</li>
+<li>
+<a href='../gradient/index.html'>Gradient</a>
+</li>
+<li>
+<a href='../inline_block/index.html'>Inline Block</a>
+</li>
+<li>
+<a href='../opacity/index.html'>Opacity</a>
+</li>
+<li>
+<a href='../text_shadow/index.html'>Text Shadow</a>
+</li>
+<li class='selected'>
+<a class='selected' href='index.html'>Transform</a>
+</li>
+<li>
+<a href='../transition/index.html'>Transition</a>
+</li>
+</ul>
+<li>
+<h2>
+<a href='../../helpers/index.html'>Helpers</a>
+</h2>
+</li>
+<ul><li>
+<a href='../../helpers/color-stops/index.html'>Color Stops</a>
+</li>
+<li>
+<a href='../../helpers/constants/index.html'>Constants</a>
+</li>
+<li>
+<a href='../../helpers/display/index.html'>Display Helpers</a>
+</li>
+<li>
+<a href='../../helpers/font-files/index.html'>Font Files</a>
+</li>
+<li>
+<a href='../../helpers/image-dimensions/index.html'>Image Dimensions</a>
+</li>
+<li>
+<a href='../../helpers/inline-data/index.html'>Inline Data</a>
+</li>
+<li>
+<a href='../../helpers/selectors/index.html'>Selectors</a>
+</li>
+<li>
+<a href='../../helpers/urls/index.html'>URLs</a>
+</li>
+</ul>
+<li>
+<h2>
+<a href='../../layout/index.html'>Layout</a>
+</h2>
+</li>
+<ul><li>
+<a href='../../layout/sticky_footer/index.html'>Sticky Footer</a>
+</li>
+</ul>
+<li>
+<h2>
+<a href='../../reset/index.html'>Reset</a>
+</h2>
+</li>
+<ul><li>
+<a href='../../reset/utilities/index.html'>Reset Utilities</a>
+</li>
+</ul>
+<li>
+<h2>
+<a href='../../utilities/index.html'>Utilities</a>
+</h2>
+</li>
+<ul><li>
+<a href='../../utilities/general/index.html'>General</a>
+</li>
+<li>
+<a href='../../utilities/links/index.html'>Links</a>
+</li>
+<li>
+<a href='../../utilities/lists/index.html'>Lists</a>
+</li>
+<li>
+<a href='../../utilities/print/index.html'>Print</a>
+</li>
+<li>
+<a href='../../utilities/sprites/index.html'>Sprites</a>
+</li>
+<li>
+<a href='../../utilities/tables/index.html'>Tables</a>
+</li>
+<li>
+<a href='../../utilities/text/index.html'>Text</a>
+</li>
+</ul>
+</ul>
+
+</nav>
+</aside>
+<article><h1>Compass Transform</h1>
+<p>
+Provides mixins for CSS3 transforms. See <a href="http://www.w3.org/TR/css3-2d-transforms/">W3C: CSS 2D transforms</a>.
+</p>
+
+<p>
+This file can be imported using:
+<code>@import "compass/css3/transform"</code>
+</p>
+<p>
+View the
+<a href="http://github.com/chriseppstein/compass/blob/stable/frameworks/compass/stylesheets/compass/css3/_transform.scss">Source for this module on Github.</a>
+</p>
+<h2>Examples</h2>
+<dl class="examples">
+<dt><a href="../../../../examples/compass/css3/transform/index.html">Transform</a></dt>
+<dd>css3 mixin for css transforms</dd>
+</dl><h2>Imports</h2>
+<p>
+The following sass files are automatically imported when you import this file:
+</p>
+<ol>
+<li>
+<a href="../shared/index.html" title="@import shared">CSS3 Utilities</a>
+</li>
+
+</ol><h2>Mixins</h2>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-apply-transform-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-apply-transform-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-apply-transform">
+<a class="permalink" href="#mixin-apply-transform">apply-transform(<span class="arg">$transform</span>)</a>
+</h3>
+<div class="mixin-source" id="mixin-apply-transform-source">
+<div class="highlight source-code sass elided-code" id="mixin-apply-transform-sass"><pre><span class="nf">=apply-transform</span><span class="o">(</span><span class="n">$transform</span><span class="o">)</span>
+  <span class="nd">+experimental</span><span class="o">(</span><span class="n">transform</span><span class="o">,</span> <span class="n">$transform</span><span class="o">,</span> <span class="o">-</span><span class="n">moz</span><span class="o">,</span> <span class="o">-</span><span class="n">webkit</span><span class="o">,</span> <span class="o">-</span><span class="n">o</span><span class="o">,</span> <span class="ow">not</span> <span class="o">-</span><span class="n">ms</span><span class="o">,</span> <span class="ow">not</span> <span class="o">-</span><span class="n">khtml</span><span class="o">,</span> <span class="n">official</span><span class="o">)</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-apply-transform-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="er">a</span><span class="er">p</span><span class="er">p</span><span class="er">l</span><span class="er">y</span><span class="er">-</span><span class="er">t</span><span class="er">r</span><span class="er">a</span><span class="er">n</span><span class="er">s</span><span class="er">f</span><span class="er">o</span><span class="er">r</span><span class="er">m</span>(<span class="er">$</span><span class="ty">transform</span>) {
+  <span class="di">@include</span> <span class="er">e</span><span class="er">x</span><span class="er">p</span><span class="er">e</span><span class="er">r</span><span class="er">i</span><span class="er">m</span><span class="er">e</span><span class="er">n</span><span class="er">t</span><span class="er">a</span><span class="er">l</span>(<span class="ke">transform</span>, <span class="er">$</span><span class="ke">transform</span>, <span class="ke">-moz</span>, <span class="ke">-webkit</span>, <span class="ke">-o</span>, <span class="ke">not</span> <span class="ke">-ms</span>, <span class="ke">not</span> <span class="ke">-khtml</span>, <span class="ke">official</span>); }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>CSS Transform and Transform-Origin
+Apply a transform sent as a complete string.</p>
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-apply-origin-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-apply-origin-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-apply-origin">
+<a class="permalink" href="#mixin-apply-origin">apply-origin(<span class="arg">$origin</span>)</a>
+</h3>
+<div class="mixin-source" id="mixin-apply-origin-source">
+<div class="highlight source-code sass elided-code" id="mixin-apply-origin-sass"><pre><span class="nf">=apply-origin</span><span class="o">(</span><span class="n">$origin</span><span class="o">)</span>
+  <span class="nd">+experimental</span><span class="o">(</span><span class="n">transform-origin</span><span class="o">,</span> <span class="n">$origin</span><span class="o">,</span> <span class="o">-</span><span class="n">moz</span><span class="o">,</span> <span class="o">-</span><span class="n">webkit</span><span class="o">,</span> <span class="o">-</span><span class="n">o</span><span class="o">,</span> <span class="ow">not</span> <span class="o">-</span><span class="n">ms</span><span class="o">,</span> <span class="ow">not</span> <span class="o">-</span><span class="n">khtml</span><span class="o">,</span> <span class="n">official</span><span class="o">)</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-apply-origin-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="er">a</span><span class="er">p</span><span class="er">p</span><span class="er">l</span><span class="er">y</span><span class="er">-</span><span class="er">o</span><span class="er">r</span><span class="er">i</span><span class="er">g</span><span class="er">i</span><span class="er">n</span>(<span class="er">$</span><span class="ty">origin</span>) {
+  <span class="di">@include</span> <span class="er">e</span><span class="er">x</span><span class="er">p</span><span class="er">e</span><span class="er">r</span><span class="er">i</span><span class="er">m</span><span class="er">e</span><span class="er">n</span><span class="er">t</span><span class="er">a</span><span class="er">l</span>(<span class="ke">transform-origin</span>, <span class="er">$</span><span class="ke">origin</span>, <span class="ke">-moz</span>, <span class="ke">-webkit</span>, <span class="ke">-o</span>, <span class="ke">not</span> <span class="ke">-ms</span>, <span class="ke">not</span> <span class="ke">-khtml</span>, <span class="ke">official</span>); }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>Apply a transform-origin sent as a complete string.</p>
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-transform-origin-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-transform-origin-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-transform-origin">
+<a class="permalink" href="#mixin-transform-origin">transform-origin(<span class="arg" data-default-value="50%">$originx</span>, <span class="arg" data-default-value="50%">$originy</span>)</a>
+</h3>
+<div class="mixin-source" id="mixin-transform-origin-source">
+<div class="highlight source-code sass elided-code" id="mixin-transform-origin-sass"><pre><span class="nf">=transform-origin</span><span class="o">(</span><span class="n">$originx:</span> <span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="n">$originy:</span> <span class="mi">50</span><span class="kt">%</span><span class="o">)</span>
+  <span class="k">@if</span> <span class="n">$originx</span> <span class="ow">or</span> <span class="n">$originy</span>
+    <span class="k">@if</span> <span class="n">$originy</span>
+      <span class="nd">+apply-origin</span><span class="o">(</span><span class="n">$originx</span> <span class="ow">or</span> <span class="mi">50</span><span class="kt">%</span> <span class="n">$originy</span><span class="o">)</span>
+    <span class="k">@else</span>
+      <span class="nd">+apply-origin</span><span class="o">(</span><span class="n">$originx</span><span class="o">)</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-transform-origin-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="er">t</span><span class="er">r</span><span class="er">a</span><span class="er">n</span><span class="er">s</span><span class="er">f</span><span class="er">o</span><span class="er">r</span><span class="er">m</span><span class="er">-</span><span class="er">o</span><span class="er">r</span><span class="er">i</span><span class="er">g</span><span class="er">i</span><span class="er">n</span>(<span class="er">$</span><span class="ty">originx</span>: <span class="fl">50%</span>, <span class="er">$</span><span class="ty">originy</span>: <span class="fl">50%</span>) {
+  <span class="di">@if</span> <span class="er">$</span><span class="ke">originx</span> <span class="ke">or</span> <span class="er">$</span><span class="ke">originy</span> {
+    <span class="di">@if</span> <span class="er">$</span><span class="ke">originy</span> {
+      <span class="di">@include</span> <span class="er">a</span><span class="er">p</span><span class="er">p</span><span class="er">l</span><span class="er">y</span><span class="er">-</span><span class="er">o</span><span class="er">r</span><span class="er">i</span><span class="er">g</span><span class="er">i</span><span class="er">n</span>(<span class="er">$</span><span class="ke">originx</span> <span class="ke">or</span> <span class="fl">50%</span> <span class="er">$</span><span class="ke">originy</span>); }
+    <span class="di">@else</span> {
+      <span class="di">@include</span> <span class="er">a</span><span class="er">p</span><span class="er">p</span><span class="er">l</span><span class="er">y</span><span class="er">-</span><span class="er">o</span><span class="er">r</span><span class="er">i</span><span class="er">g</span><span class="er">i</span><span class="er">n</span>(<span class="er">$</span><span class="ke">originx</span>); } } }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>transform-origin requires x and y coordinates</p>
+
+<ul>
+<li>only applies the coordinates if they are there so that it can be called by scale, rotate and skew safely</li>
+</ul>
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-transform-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-transform-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-transform">
+<a class="permalink" href="#mixin-transform">transform(<span class="arg" data-default-value="1">$scale</span>, <span class="arg" data-default-value="0deg">$rotate</span>, <span class="arg" data-default-value="0">$transx</span>, <span class="arg" data-default-value="0">$transy</span>, <span class="arg" data-default-value="0deg">$skewx</span>, <span class="arg" data-default-value="0deg">$skewy</span>, <span class="arg" data-default-value="false">$originx</span>, <span class="arg" data-default-value="false">$originy</span>)</a>
+</h3>
+<div class="mixin-source" id="mixin-transform-source">
+<div class="highlight source-code sass elided-code" id="mixin-transform-sass"><pre><span class="nf">=transform</span><span class="o">(</span><span class="n">$scale:</span> <span class="mi">1</span><span class="o">,</span> <span class="n">$rotate:</span> <span class="mi">0</span><span class="kt">deg</span><span class="o">,</span> <span class="n">$transx:</span> <span class="mi">0</span><span class="o">,</span> <span class="n">$transy:</span> <span class="mi">0</span><span class="o">,</span> <span class="n">$skewx:</span> <span class="mi">0</span><span class="kt">deg</span><span class="o">,</span> <span class="n">$skewy:</span> <span class="mi">0</span><span class="kt">deg</span><span class="o">,</span> <span class="n">$originx:</span> <span class="n-Pseudo">false</span><span class="o">,</span> <span class="n">$originy:</span> <span class="n-Pseudo">false</span><span class="o">)</span>
+  <span class="na">$transform:</span> <span class="n">scale</span><span class="p">(</span><span class="err">$</span><span class="n">scale</span><span class="p">)</span> <span class="n">rotate</span><span class="p">(</span><span class="err">$</span><span class="n">rotate</span><span class="p">)</span> <span class="n">translate</span><span class="p">(</span><span class="err">$</span><span class="n">transx</span><span class="o">,</span> <span class="err">$</span><span class="n">transy</span><span class="p">)</span> <span class="n">skew</span><span class="p">(</span><span class="err">$</span><span class="n">skewx</span><span class="o">,</span> <span class="err">$</span><span class="n">skewy</span><span class="p">)</span>
+  <span class="nd">+apply-transform</span><span class="o">(</span><span class="n">$transform</span><span class="o">)</span>
+  <span class="nd">+transform-origin</span><span class="o">(</span><span class="n">$originx</span><span class="o">,</span> <span class="n">$originy</span><span class="o">)</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-transform-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="er">t</span><span class="er">r</span><span class="er">a</span><span class="er">n</span><span class="er">s</span><span class="er">f</span><span class="er">o</span><span class="er">r</span><span class="er">m</span>(<span class="er">$</span><span class="ty">scale</span>: <span class="fl">1</span>, <span class="er">$</span><span class="ty">rotate</span>: <span class="fl">0</span><span class="ty">deg</span>, <span class="er">$</span><span class="ty">transx</span>: <span class="fl">0</span>, <span class="er">$</span><span class="ty">transy</span>: <span class="fl">0</span>, <span class="er">$</span><span class="ty">skewx</span>: <span class="fl">0</span><span class="ty">deg</span>, <span class="er">$</span><span class="ty">skewy</span>: <span class="fl">0</span><span class="ty">deg</span>, <span class="er">$</span><span class="ty">originx</span>: <span class="ty">false</span>, <span class="er">$</span><span class="ty">originy</span>: <span class="ty">false</span>) {
+  <span class="er">$</span><span class="ke">transform</span>: <span class="er">s</span><span class="er">c</span><span class="er">a</span><span class="er">l</span><span class="er">e</span>(<span class="er">$</span><span class="vl">scale</span>) <span class="er">r</span><span class="er">o</span><span class="er">t</span><span class="er">a</span><span class="er">t</span><span class="er">e</span>(<span class="er">$</span><span class="vl">rotate</span>) <span class="er">t</span><span class="er">r</span><span class="er">a</span><span class="er">n</span><span class="er">s</span><span class="er">l</span><span class="er">a</span><span class="er">t</span><span class="er">e</span>(<span class="er">$</span><span class="vl">transx</span>, <span class="er">$</span><span class="vl">transy</span>) <span class="er">s</span><span class="er">k</span><span class="er">e</span><span class="er">w</span>(<span class="er">$</span><span class="vl">skewx</span>, <span class="er">$</span><span class="vl">skewy</span>);
+  <span class="di">@include</span> <span class="er">a</span><span class="er">p</span><span class="er">p</span><span class="er">l</span><span class="er">y</span><span class="er">-</span><span class="er">t</span><span class="er">r</span><span class="er">a</span><span class="er">n</span><span class="er">s</span><span class="er">f</span><span class="er">o</span><span class="er">r</span><span class="er">m</span>(<span class="er">$</span><span class="ke">transform</span>);
+  <span class="di">@include</span> <span class="er">t</span><span class="er">r</span><span class="er">a</span><span class="er">n</span><span class="er">s</span><span class="er">f</span><span class="er">o</span><span class="er">r</span><span class="er">m</span><span class="er">-</span><span class="er">o</span><span class="er">r</span><span class="er">i</span><span class="er">g</span><span class="er">i</span><span class="er">n</span>(<span class="er">$</span><span class="ke">originx</span>, <span class="er">$</span><span class="ke">originy</span>); }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>A full transform mixin with everything you could want</p>
+
+<ul>
+<li>including origin adjustments if you want them</li>
+<li>scale, rotate and skew require units of degrees(deg)</li>
+<li>scale takes a multiplier, rotate and skew take degrees</li>
+</ul>
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-scale-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-scale-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-scale">
+<a class="permalink" href="#mixin-scale">scale(<span class="arg" data-default-value="1.25">$scale</span>, <span class="arg" data-default-value="false">$originx</span>, <span class="arg" data-default-value="false">$originy</span>)</a>
+</h3>
+<div class="mixin-source" id="mixin-scale-source">
+<div class="highlight source-code sass elided-code" id="mixin-scale-sass"><pre><span class="nf">=scale</span><span class="o">(</span><span class="n">$scale:</span> <span class="mi">1</span><span class="mf">.25</span><span class="o">,</span> <span class="n">$originx:</span> <span class="n-Pseudo">false</span><span class="o">,</span> <span class="n">$originy:</span> <span class="n-Pseudo">false</span><span class="o">)</span>
+  <span class="nd">+apply-transform</span><span class="o">(</span><span class="nf">scale</span><span class="o">(</span><span class="n">$scale</span><span class="o">))</span>
+  <span class="nd">+transform-origin</span><span class="o">(</span><span class="n">$originx</span><span class="o">,</span> <span class="n">$originy</span><span class="o">)</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-scale-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="er">s</span><span class="er">c</span><span class="er">a</span><span class="er">l</span><span class="er">e</span>(<span class="er">$</span><span class="ty">scale</span>: <span class="fl">1</span><span class="cl">.25</span>, <span class="er">$</span><span class="ty">originx</span>: <span class="ty">false</span>, <span class="er">$</span><span class="ty">originy</span>: <span class="ty">false</span>) {
+  <span class="di">@include</span> <span class="er">a</span><span class="er">p</span><span class="er">p</span><span class="er">l</span><span class="er">y</span><span class="er">-</span><span class="er">t</span><span class="er">r</span><span class="er">a</span><span class="er">n</span><span class="er">s</span><span class="er">f</span><span class="er">o</span><span class="er">r</span><span class="er">m</span>(<span class="er">s</span><span class="er">c</span><span class="er">a</span><span class="er">l</span><span class="er">e</span>(<span class="er">$</span><span class="ke">scale</span>));
+  <span class="di">@include</span> <span class="er">t</span><span class="er">r</span><span class="er">a</span><span class="er">n</span><span class="er">s</span><span class="er">f</span><span class="er">o</span><span class="er">r</span><span class="er">m</span><span class="er">-</span><span class="er">o</span><span class="er">r</span><span class="er">i</span><span class="er">g</span><span class="er">i</span><span class="er">n</span>(<span class="er">$</span><span class="ke">originx</span>, <span class="er">$</span><span class="ke">originy</span>); }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>Transform Partials</p>
+
+<p>These work well on their own, but they don't add to each other, they override.
+Use them with extra origin args, or along side +transform-origin
+Adjust only the scale, with optional origin coordinates</p>
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-rotate-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-rotate-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-rotate">
+<a class="permalink" href="#mixin-rotate">rotate(<span class="arg" data-default-value="45deg">$rotate</span>, <span class="arg" data-default-value="false">$originx</span>, <span class="arg" data-default-value="false">$originy</span>)</a>
+</h3>
+<div class="mixin-source" id="mixin-rotate-source">
+<div class="highlight source-code sass elided-code" id="mixin-rotate-sass"><pre><span class="nf">=rotate</span><span class="o">(</span><span class="n">$rotate:</span> <span class="mi">45</span><span class="kt">deg</span><span class="o">,</span> <span class="n">$originx:</span> <span class="n-Pseudo">false</span><span class="o">,</span> <span class="n">$originy:</span> <span class="n-Pseudo">false</span><span class="o">)</span>
+  <span class="nd">+apply-transform</span><span class="o">(</span><span class="nf">rotate</span><span class="o">(</span><span class="n">$rotate</span><span class="o">))</span>
+  <span class="nd">+transform-origin</span><span class="o">(</span><span class="n">$originx</span><span class="o">,</span> <span class="n">$originy</span><span class="o">)</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-rotate-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="er">r</span><span class="er">o</span><span class="er">t</span><span class="er">a</span><span class="er">t</span><span class="er">e</span>(<span class="er">$</span><span class="ty">rotate</span>: <span class="fl">45</span><span class="ty">deg</span>, <span class="er">$</span><span class="ty">originx</span>: <span class="ty">false</span>, <span class="er">$</span><span class="ty">originy</span>: <span class="ty">false</span>) {
+  <span class="di">@include</span> <span class="er">a</span><span class="er">p</span><span class="er">p</span><span class="er">l</span><span class="er">y</span><span class="er">-</span><span class="er">t</span><span class="er">r</span><span class="er">a</span><span class="er">n</span><span class="er">s</span><span class="er">f</span><span class="er">o</span><span class="er">r</span><span class="er">m</span>(<span class="er">r</span><span class="er">o</span><span class="er">t</span><span class="er">a</span><span class="er">t</span><span class="er">e</span>(<span class="er">$</span><span class="ke">rotate</span>));
+  <span class="di">@include</span> <span class="er">t</span><span class="er">r</span><span class="er">a</span><span class="er">n</span><span class="er">s</span><span class="er">f</span><span class="er">o</span><span class="er">r</span><span class="er">m</span><span class="er">-</span><span class="er">o</span><span class="er">r</span><span class="er">i</span><span class="er">g</span><span class="er">i</span><span class="er">n</span>(<span class="er">$</span><span class="ke">originx</span>, <span class="er">$</span><span class="ke">originy</span>); }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>Adjust only the rotation, with optional origin coordinates</p>
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-translate-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-translate-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-translate">
+<a class="permalink" href="#mixin-translate">translate(<span class="arg" data-default-value="0">$transx</span>, <span class="arg" data-default-value="0">$transy</span>)</a>
+</h3>
+<div class="mixin-source" id="mixin-translate-source">
+<div class="highlight source-code sass elided-code" id="mixin-translate-sass"><pre><span class="nf">=translate</span><span class="o">(</span><span class="n">$transx:</span> <span class="mi">0</span><span class="o">,</span> <span class="n">$transy:</span> <span class="mi">0</span><span class="o">)</span>
+  <span class="nd">+apply-transform</span><span class="o">(</span><span class="nf">translate</span><span class="o">(</span><span class="n">$transx</span><span class="o">,</span> <span class="n">$transy</span><span class="o">))</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-translate-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="er">t</span><span class="er">r</span><span class="er">a</span><span class="er">n</span><span class="er">s</span><span class="er">l</span><span class="er">a</span><span class="er">t</span><span class="er">e</span>(<span class="er">$</span><span class="ty">transx</span>: <span class="fl">0</span>, <span class="er">$</span><span class="ty">transy</span>: <span class="fl">0</span>) {
+  <span class="di">@include</span> <span class="er">a</span><span class="er">p</span><span class="er">p</span><span class="er">l</span><span class="er">y</span><span class="er">-</span><span class="er">t</span><span class="er">r</span><span class="er">a</span><span class="er">n</span><span class="er">s</span><span class="er">f</span><span class="er">o</span><span class="er">r</span><span class="er">m</span>(<span class="er">t</span><span class="er">r</span><span class="er">a</span><span class="er">n</span><span class="er">s</span><span class="er">l</span><span class="er">a</span><span class="er">t</span><span class="er">e</span>(<span class="er">$</span><span class="ke">transx</span>, <span class="er">$</span><span class="ke">transy</span>)); }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>Adjust only the translation</p>
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-skew-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-skew-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-skew">
+<a class="permalink" href="#mixin-skew">skew(<span class="arg" data-default-value="0deg">$skewx</span>, <span class="arg" data-default-value="0deg">$skewy</span>, <span class="arg" data-default-value="false">$originx</span>, <span class="arg" data-default-value="false">$originy</span>)</a>
+</h3>
+<div class="mixin-source" id="mixin-skew-source">
+<div class="highlight source-code sass elided-code" id="mixin-skew-sass"><pre><span class="nf">=skew</span><span class="o">(</span><span class="n">$skewx:</span> <span class="mi">0</span><span class="kt">deg</span><span class="o">,</span> <span class="n">$skewy:</span> <span class="mi">0</span><span class="kt">deg</span><span class="o">,</span> <span class="n">$originx:</span> <span class="n-Pseudo">false</span><span class="o">,</span> <span class="n">$originy:</span> <span class="n-Pseudo">false</span><span class="o">)</span>
+  <span class="nd">+apply-transform</span><span class="o">(</span><span class="nf">skew</span><span class="o">(</span><span class="n">$skewx</span><span class="o">,</span> <span class="n">$skewy</span><span class="o">))</span>
+  <span class="nd">+transform-origin</span><span class="o">(</span><span class="n">$originx</span><span class="o">,</span> <span class="n">$originy</span><span class="o">)</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-skew-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="er">s</span><span class="er">k</span><span class="er">e</span><span class="er">w</span>(<span class="er">$</span><span class="ty">skewx</span>: <span class="fl">0</span><span class="ty">deg</span>, <span class="er">$</span><span class="ty">skewy</span>: <span class="fl">0</span><span class="ty">deg</span>, <span class="er">$</span><span class="ty">originx</span>: <span class="ty">false</span>, <span class="er">$</span><span class="ty">originy</span>: <span class="ty">false</span>) {
+  <span class="di">@include</span> <span class="er">a</span><span class="er">p</span><span class="er">p</span><span class="er">l</span><span class="er">y</span><span class="er">-</span><span class="er">t</span><span class="er">r</span><span class="er">a</span><span class="er">n</span><span class="er">s</span><span class="er">f</span><span class="er">o</span><span class="er">r</span><span class="er">m</span>(<span class="er">s</span><span class="er">k</span><span class="er">e</span><span class="er">w</span>(<span class="er">$</span><span class="ke">skewx</span>, <span class="er">$</span><span class="ke">skewy</span>));
+  <span class="di">@include</span> <span class="er">t</span><span class="er">r</span><span class="er">a</span><span class="er">n</span><span class="er">s</span><span class="er">f</span><span class="er">o</span><span class="er">r</span><span class="er">m</span><span class="er">-</span><span class="er">o</span><span class="er">r</span><span class="er">i</span><span class="er">g</span><span class="er">i</span><span class="er">n</span>(<span class="er">$</span><span class="ke">originx</span>, <span class="er">$</span><span class="ke">originy</span>); }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>Adjust only the skew, with optional origin coordinates</p>
+
+</div></article>
+</div>
+<div id='wrap-footer'></div>
+</div>
+<footer role='contentinfo'><div class='legalese'>
+<p>
+<a rel="license" href="../../../../copyright/index.html"
+   id="cc-logo"><img alt="Creative Commons License" style="border-width:0"
+   src="http://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png" /></a>
+<br />
+by Christopher M. Eppstein.
+</p>
+</div>
+<div class='links'>
+<ul>
+<li>
+<a href='../../../../../index.html' rel='home'>Compass Homepage</a>
+</li>
+<li>
+Compass is Charityware -
+<a href='http://umdf.org/compass'>Donate Now!</a>
+</li>
+<li>
+Compass is Open Source -
+<a href='http://github.com/chriseppstein/compass'>Contribute</a>
+</li>
+</ul>
+</div>
+</footer>
+<script src='../../../../javascripts/jquery-1.3.2.min.js'></script>
+<script deferred='deferred' src='../../../../javascripts/fixups.js'></script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6779438-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>
+
+<!-- Localized -->

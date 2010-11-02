@@ -1,0 +1,15 @@
+/* line 6, ../../app/stylesheets/menu.scss */
+.menu {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* line 15, ../../app/stylesheets/menu.scss */
+.menu li a {
+  padding: 10px;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}

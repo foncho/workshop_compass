@@ -1,0 +1,22 @@
+/* Welcome to Susy. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+@charset "UTF-8";
+/* line 62, content/stylesheets/././_base.sass */
+#skip-links {
+  position: relative;
+}
+/* line 58, content/stylesheets/././_base.sass */
+#skip-links a {
+  position: absolute;
+  top: -9999em;
+  display: block;
+  width: 100%;
+}
+/* line 75, /Library/Ruby/Gems/1.8/gems/compass-susy-plugin-0.7.0/sass/susy/./_utils.scss */
+#skip-links a:focus {
+  top: 0;
+  z-index: 999;
+}

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html class='no-js' dir='ltr' lang='en'>
+<head>
+<meta charset='utf-8' />
+<meta content='chrome=1' http-equiv='X-UA-Compatible' />
+<link href='../../images/compass_icon.png' rel='shortcut icon' type='image/png' />
+<title>
+Blueprint Module | Compass Documentation
+</title>
+<!--[if !IE 6]><!-->
+<link charset='utf-8' href='../../stylesheets/screen.css' rel='stylesheet' type='text/css' />
+<!--<![endif]-->
+<!--[if gte IE 7]>
+<link charset='utf-8' href='../../stylesheets/ie.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+<!--[if IE 6]>
+<link charset='utf-8' href='http://universal-ie6-css.googlecode.com/files/ie6.0.3.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+</head>
+<body class='docs reference blueprint' id='reference-blueprint'><div id='wrap'>
+<nav id='skip-links'>
+<a href='#content'>skip to content</a>
+</nav>
+<header id='banner' role='banner'>
+<div>
+<h1 class='vcard'>
+<a class='fn org url uid' href='../../../index.html' rel='home'>Compass</a>
+</h1>
+</div>
+</header>
+<nav id='docs-nav' role='navigation'>
+<div class='container'>
+<ul>
+<li>
+<a href='../../index.html'>introduction</a>
+</li>
+<li>
+<a href='../compass/index.html'>core</a>
+</li>
+<li>
+<a href='index.html'>blueprint</a>
+</li>
+<li>
+<a href='../../tutorials/index.html'>tutorials</a>
+</li>
+<!--
+<li>
+<a href='/docs/plugins/'>plugins</a>
+</li>
+-->
+</ul>
+<div id='version'>
+Current Version:
+<a class='number' href='../../CHANGELOG/index.html'>0.10.6.</a>
+</div>
+<div id='search-docs'>
+<form action='/docs/search/' method='GET'>
+<p>
+<label for='search'>search</label>
+<input id='search' name='q' type='text' value='' />
+</p>
+</form>
+</div>
+</div>
+</nav>
+<div id='page'><aside role='sidebar'>
+<nav id='local-nav'>
+<ul><li class='selected'>
+<h2>
+<a class='selected' href='index.html'>Blueprint</a>
+</h2>
+</li>
+<ul><li>
+<h3>
+<a href='buttons/index.html'>Buttons</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='colors/index.html'>Colors</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='debug/index.html'>Debug</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='fancy_type/index.html'>Fancy Type</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='form/index.html'>Form</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='grid/index.html'>Grid</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='interaction/index.html'>Interaction</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='ie/index.html'>Internet Explorer</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='link_icons/index.html'>Link Icons</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='liquid/index.html'>Liquid</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='print/index.html'>Print</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='reset/index.html'>Reset</a>
+</h3>
+</li>
+<ul><li>
+<a href='reset/utilities/index.html'>Reset Utilities</a>
+</li>
+</ul>
+<li>
+<h3>
+<a href='rtl/index.html'>Rtl</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='scaffolding/index.html'>Scaffolding</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='typography/index.html'>Typography</a>
+</h3>
+</li>
+<li>
+<h3>
+<a href='utilities/index.html'>Utilities</a>
+</h3>
+</li>
+</ul>
+</ul>
+</nav>
+</aside>
+<article><h1>Blueprint Module</h1>
+<p>The blueprint module is a simple way of importing all of the most
+commonly used blueprint modules. In addition, it provides
+a single mixin, <code class="mixin">+blueprint</code>, that
+can be used to generate the blueprint css styles.</p>
+
+<h3>Installing</h3>
+
+<p>To create a project using blueprint:</p>
+
+<pre><code>compass create my_project --using blueprint
+</code></pre>
+
+<p>To add blueprint to an existing compass project:</p>
+
+<pre><code>compass install blueprint
+</code></pre>
+
+<p>To add blueprint and compass to a Rails project:</p>
+
+<pre><code>compass init rails --using blueprint
+</code></pre>
+
+<h3>Alternate Project Layouts</h3>
+
+<p>For any of the above commands you could have also selected
+the <code>blueprint/basic</code> or <code>blueprint/semantic</code> patterns. The basic
+pattern assumes that you'll start out using conventional class-based
+blueprint styling techniques, while the semantic template
+assumes that you'll be using mixins and <code>@extend</code> to style
+your site. Example:</p>
+
+<pre><code>compass create my_project --using blueprint/semantic
+</code></pre>
+
+<p>
+This file can be imported using:
+<code>@import "blueprint"</code>
+</p>
+<p>
+View the
+<a href="http://github.com/chriseppstein/compass/blob/stable/frameworks/blueprint/stylesheets/_blueprint.scss">Source for this module on Github.</a>
+</p>
+
+<h2>Imports</h2>
+<p>
+The following sass files are automatically imported when you import this file:
+</p>
+<ol>
+<li>
+<a href="colors/index.html" title="@import blueprint/colors">Colors</a>
+</li>
+
+<li>
+<a href="debug/index.html" title="@import blueprint/debug">Debug</a>
+</li>
+
+<li>
+<a href="form/index.html" title="@import blueprint/form">Form</a>
+</li>
+
+<li>
+<a href="grid/index.html" title="@import blueprint/grid">Grid</a>
+</li>
+
+<li>
+<a href="ie/index.html" title="@import blueprint/ie">Internet Explorer</a>
+</li>
+
+<li>
+<a href="interaction/index.html" title="@import blueprint/interaction">Interaction</a>
+</li>
+
+<li>
+<a href="print/index.html" title="@import blueprint/print">Print</a>
+</li>
+
+<li>
+<a href="typography/index.html" title="@import blueprint/typography">Typography</a>
+</li>
+
+<li>
+<a href="utilities/index.html" title="@import blueprint/utilities">Utilities</a>
+</li>
+
+</ol><h2>Mixins</h2>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-blueprint-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-blueprint-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-blueprint">
+<a class="permalink" href="#mixin-blueprint">blueprint(<span class="arg" data-default-value="body">$body_selector</span>)</a>
+</h3>
+<div class="mixin-source" id="mixin-blueprint-source">
+<div class="highlight source-code sass elided-code" id="mixin-blueprint-sass"><pre><span class="nf">=blueprint</span><span class="o">(</span><span class="n">$body_selector:</span> <span class="n">body</span><span class="o">)</span>
+  <span class="c1">//@doc off</span>
+  <span class="k">@if</span> <span class="ow">not</span> <span class="o">(</span><span class="n">$body_selector</span> <span class="o">==</span> <span class="s2">"body"</span> <span class="ow">or</span> <span class="n">$body_selector</span> <span class="o">==</span> <span class="n-Pseudo">true</span><span class="o">)</span>
+    <span class="k">@warn</span> <span class="s2">"[DEPRECATED] To specify a the selector \"</span><span class="si">#{</span><span class="n">$body_selector}\\"</span> <span class="n">to</span> <span class="o">+</span><span class="n">blueprint</span><span class="o">,</span> <span class="n">pass</span> <span class="n-Pseudo">true</span> <span class="n">as</span> <span class="n">the</span> <span class="n">first</span> <span class="n">argument</span> <span class="ow">and</span> <span class="n">mix</span> <span class="n">it</span> <span class="n">into</span> <span class="n">#{$body_selector}."</span>
+  <span class="c1">//@doc on</span>
+  <span class="nd">+blueprint-typography</span><span class="o">(</span><span class="n">$body_selector</span><span class="o">)</span>
+  <span class="nd">+blueprint-utilities</span>
+  <span class="nd">+blueprint-grid</span>
+  <span class="nd">+blueprint-debug</span>
+  <span class="nd">+blueprint-interaction</span>
+  <span class="nd">+blueprint-form</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-blueprint-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="er">b</span><span class="er">l</span><span class="er">u</span><span class="er">e</span><span class="er">p</span><span class="er">r</span><span class="er">i</span><span class="er">n</span><span class="er">t</span>(<span class="er">$</span><span class="ty">body_selector</span>: <span class="ty">body</span>) {
+  //<span class="di">@doc</span> <span class="ke">off</span>
+  <span class="di">@if</span> <span class="ke">not</span> (<span class="er">$</span><span class="ke">body_selector</span> == <span class="s"><span class="dl">"</span><span class="k">body</span><span class="dl">"</span></span> <span class="ke">or</span> <span class="er">$</span><span class="ke">body_selector</span> == <span class="ke">true</span>) {
+    <span class="di">@warn</span> <span class="s"><span class="dl">"</span><span class="k">[DEPRECATED] To specify a the selector \"#{$body_selector}\\</span><span class="dl">"</span></span> <span class="ke">to</span> +<span class="ke">blueprint</span>, <span class="ke">pass</span> <span class="ke">true</span> <span class="ke">as</span> <span class="ke">the</span> <span class="ke">first</span> <span class="ke">argument</span> <span class="ke">and</span> <span class="ke">mix</span> <span class="ke">it</span> <span class="ke">into</span> <span class="er">#</span>{<span class="er">$</span><span class="ke">body_selector</span>}.<span class="s"><span class="dl">"</span><span class="k">; </span><span class="dl">}</span></span>
+  //<span class="di">@doc</span> <span class="ke">on</span>
+  <span class="di">@include</span> <span class="er">b</span><span class="er">l</span><span class="er">u</span><span class="er">e</span><span class="er">p</span><span class="er">r</span><span class="er">i</span><span class="er">n</span><span class="er">t</span><span class="er">-</span><span class="er">t</span><span class="er">y</span><span class="er">p</span><span class="er">o</span><span class="er">g</span><span class="er">r</span><span class="er">a</span><span class="er">p</span><span class="er">h</span><span class="er">y</span>(<span class="er">$</span><span class="ke">body_selector</span>);
+  <span class="di">@include</span> <span class="ke">blueprint-utilities</span>;
+  <span class="di">@include</span> <span class="ke">blueprint-grid</span>;
+  <span class="di">@include</span> <span class="ke">blueprint-debug</span>;
+  <span class="di">@include</span> <span class="ke">blueprint-interaction</span>;
+  <span class="di">@include</span> <span class="ke">blueprint-form</span>; }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<h3>Usage examples:</h3>
+
+<p>As a top-level mixin, apply to any page that includes the stylesheet:</p>
+
+<div class="highlight source-code sass"><pre><span class="nd">+blueprint</span>
+</pre></div>
+
+
+<p>Scoped by a presentational class:</p>
+
+<div class="highlight source-code sass"><pre><span class="nt">body</span><span class="nc">.blueprint</span>
+  <span class="nd">+blueprint</span><span class="o">(</span><span class="n-Pseudo">true</span><span class="o">)</span>
+</pre></div>
+
+
+<p>Scoped by semantic selectors:</p>
+
+<div class="highlight source-code sass"><pre><span class="nt">body</span><span class="nn">#page-1</span><span class="o">,</span> <span class="nt">body</span><span class="nn">#page-2</span><span class="o">,</span> <span class="nt">body</span><span class="nc">.a-special-page-type</span>
+  <span class="nd">+blueprint</span><span class="o">(</span><span class="n-Pseudo">true</span><span class="o">)</span>
+</pre></div>
+
+
+<h4>Deprecated:</h4>
+
+<p>You use to be able to pass the body selector as the first argument when used as a top-level mixin</p>
+
+<div class="highlight source-code sass"><pre><span class="nd">+blueprint</span><span class="o">(</span><span class="s2">"body#page-1, body#page-2, body.a-special-page-type"</span><span class="o">)</span>
+</pre></div>
+
+
+</div></article>
+</div>
+<div id='wrap-footer'></div>
+</div>
+<footer role='contentinfo'><div class='legalese'>
+<p>
+<a rel="license" href="../../copyright/index.html"
+   id="cc-logo"><img alt="Creative Commons License" style="border-width:0"
+   src="http://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png" /></a>
+<br />
+by Christopher M. Eppstein.
+</p>
+</div>
+<div class='links'>
+<ul>
+<li>
+<a href='../../../index.html' rel='home'>Compass Homepage</a>
+</li>
+<li>
+Compass is Charityware -
+<a href='http://umdf.org/compass'>Donate Now!</a>
+</li>
+<li>
+Compass is Open Source -
+<a href='http://github.com/chriseppstein/compass'>Contribute</a>
+</li>
+</ul>
+</div>
+</footer>
+<script src='../../javascripts/jquery-1.3.2.min.js'></script>
+<script deferred='deferred' src='../../javascripts/fixups.js'></script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6779438-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>
+
+<!-- Localized -->

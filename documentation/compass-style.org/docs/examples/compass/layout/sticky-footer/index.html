@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html class='no-js' dir='ltr' lang='en'>
+<head>
+<meta charset='utf-8' />
+<meta content='chrome=1' http-equiv='X-UA-Compatible' />
+<link href='../../../../images/compass_icon.png' rel='shortcut icon' type='image/png' />
+<title>
+Compass Sticky Footer Example | Compass Documentation
+</title>
+<!--[if !IE 6]><!-->
+<link charset='utf-8' href='../../../../stylesheets/screen.css' rel='stylesheet' type='text/css' />
+<!--<![endif]-->
+<!--[if gte IE 7]>
+<link charset='utf-8' href='../../../../stylesheets/ie.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+<!--[if IE 6]>
+<link charset='utf-8' href='http://universal-ie6-css.googlecode.com/files/ie6.0.3.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+<style type='text/css'>html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: "" "";
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+}
+
+a img {
+  border: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+#layout {
+  clear: both;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -72px;
+}
+#layout #layout_footer {
+  height: 72px;
+}
+
+#footer {
+  clear: both;
+  position: relative;
+  height: 72px;
+}
+
+#header {
+  background: #999999;
+  height: 72px;
+}
+
+#footer {
+  background: #cccccc;
+}
+
+.example {
+  height: 500px;
+  border: 3px solid red;
+}
+.example p {
+  margin: 1em 0.5em;
+}
+
+</style>
+</head>
+<body class='docs demo' id='examples-compass-layout-sticky-footer'><div id='wrap'>
+<nav id='skip-links'>
+<a href='#content'>skip to content</a>
+</nav>
+<header id='banner' role='banner'>
+<div>
+<h1 class='vcard'>
+<a class='fn org url uid' href='../../../../../index.html' rel='home'>Compass</a>
+</h1>
+</div>
+</header>
+<nav id='docs-nav' role='navigation'>
+<div class='container'>
+<ul>
+<li>
+<a href='../../../../index.html'>introduction</a>
+</li>
+<li>
+<a href='../../../../reference/compass/index.html'>core</a>
+</li>
+<li>
+<a href='../../../../reference/blueprint/index.html'>blueprint</a>
+</li>
+<li>
+<a href='../../../../tutorials/index.html'>tutorials</a>
+</li>
+<!--
+<li>
+<a href='/docs/plugins/'>plugins</a>
+</li>
+-->
+</ul>
+<div id='version'>
+Current Version:
+<a class='number' href='../../../../CHANGELOG/index.html'>0.10.6.</a>
+</div>
+<div id='search-docs'>
+<form action='/docs/search/' method='GET'>
+<p>
+<label for='search'>search</label>
+<input id='search' name='q' type='text' value='' />
+</p>
+</form>
+</div>
+</div>
+</nav>
+<div id='page'><article><h1>Demo: Compass Sticky Footer Example</h1>
+<div id="demo">
+<div class="example">
+  <div id="layout">
+    <div id="header">
+      <h1>Sticky Footer Example</h1>
+    </div>
+    <p>
+      This is the main content area.
+    </p>
+    <p>
+      In this example you should pretend that the red box
+      is actually the browser window.
+    </p>
+    <p>
+      Because, being a contrived example, it's not actually sticking
+      to the bottom of the page.
+    </p>
+    <div id="layout_footer"></div>
+  </div>
+  <div id="footer">
+    This is the footer area.
+  </div>
+</div>
+</div>
+
+<div id="how">
+<section id="markup"><nav><ul>
+<li>
+<a href="#html">html</a>
+</li>
+<li>
+<a href="#haml">haml</a>
+</li>
+</ul></nav><div class="code">
+<ul>
+<li id="html">
+<pre>&lt;div class='example'&gt;
+  &lt;div id='layout'&gt;
+    &lt;div id='header'&gt;
+      &lt;h1&gt;Sticky Footer Example&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;p&gt;
+      This is the main content area.
+    &lt;/p&gt;
+    &lt;p&gt;
+      In this example you should pretend that the red box
+      is actually the browser window.
+    &lt;/p&gt;
+    &lt;p&gt;
+      Because, being a contrived example, it's not actually sticking
+      to the bottom of the page.
+    &lt;/p&gt;
+    &lt;div id='layout_footer'&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div id='footer'&gt;
+    This is the footer area.
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</li>
+<li id="haml">
+<pre>.example
+  #layout
+    #header
+      %h1 Sticky Footer Example
+
+    %p
+      This is the main content area.
+    %p
+      In this example you should pretend that the red box
+      is actually the browser window.
+    %p
+      Because, being a contrived example, it's not actually sticking
+      to the bottom of the page.
+    #layout_footer
+  #footer
+    This is the footer area.
+</pre>
+</li>
+</ul>
+</div>
+</section><section id="styles"><nav><ul>
+<li>
+<a href="#scss">scss</a>
+</li>
+<li>
+<a href="#sass">sass</a>
+</li>
+<li>
+<a href="#css">css</a>
+</li>
+</ul></nav><div class="code">
+<ul>
+<li id="scss">
+<pre>@import "compass/reset.scss";
+@import "compass/layout.scss";
+
+@include sticky-footer(72px, "#layout", "#layout_footer", "#footer");
+
+#header {
+  background: #999999;
+  height: 72px; }
+
+#footer {
+  background: #cccccc; }
+
+.example {
+  height: 500px;
+  border: 3px solid red;
+  p {
+    margin: 1em 0.5em; } }
+</pre>
+</li>
+<li id="sass">
+<pre>@import compass/reset.scss
+@import compass/layout.scss
+
++sticky-footer(72px, "#layout", "#layout_footer", "#footer")
+
+#header
+  :background #999
+  :height 72px
+
+#footer
+  :background #ccc
+
+.example
+  height: 500px
+  border: 3px solid red
+  
+  p
+    margin: 1em 0.5em
+</pre>
+</li>
+<li id="css">
+<pre>html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: "" "";
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+}
+
+a img {
+  border: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+#layout {
+  clear: both;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -72px;
+}
+#layout #layout_footer {
+  height: 72px;
+}
+
+#footer {
+  clear: both;
+  position: relative;
+  height: 72px;
+}
+
+#header {
+  background: #999999;
+  height: 72px;
+}
+
+#footer {
+  background: #cccccc;
+}
+
+.example {
+  height: 500px;
+  border: 3px solid red;
+}
+.example p {
+  margin: 1em 0.5em;
+}
+</pre>
+</li>
+</ul>
+</div>
+</section>
+</div></article>
+</div>
+<div id='wrap-footer'></div>
+</div>
+<footer role='contentinfo'><div class='legalese'>
+<p>
+<a rel="license" href="../../../../copyright/index.html"
+   id="cc-logo"><img alt="Creative Commons License" style="border-width:0"
+   src="http://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png" /></a>
+<br />
+by Christopher M. Eppstein.
+</p>
+</div>
+<div class='links'>
+<ul>
+<li>
+<a href='../../../../../index.html' rel='home'>Compass Homepage</a>
+</li>
+<li>
+Compass is Charityware -
+<a href='http://umdf.org/compass'>Donate Now!</a>
+</li>
+<li>
+Compass is Open Source -
+<a href='http://github.com/chriseppstein/compass'>Contribute</a>
+</li>
+</ul>
+</div>
+</footer>
+<script src='../../../../javascripts/jquery-1.3.2.min.js'></script>
+<script deferred='deferred' src='../../../../javascripts/fixups.js'></script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6779438-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>
+
+<!-- Localized -->

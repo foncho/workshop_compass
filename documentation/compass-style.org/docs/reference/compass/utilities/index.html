@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html class='no-js' dir='ltr' lang='en'>
+<head>
+<meta charset='utf-8' />
+<meta content='chrome=1' http-equiv='X-UA-Compatible' />
+<link href='../../../images/compass_icon.png' rel='shortcut icon' type='image/png' />
+<title>
+Compass Utilities | Compass Documentation
+</title>
+<!--[if !IE 6]><!-->
+<link charset='utf-8' href='../../../stylesheets/screen.css' rel='stylesheet' type='text/css' />
+<!--<![endif]-->
+<!--[if gte IE 7]>
+<link charset='utf-8' href='../../../stylesheets/ie.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+<!--[if IE 6]>
+<link charset='utf-8' href='http://universal-ie6-css.googlecode.com/files/ie6.0.3.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+</head>
+<body class='docs reference core utilities' id='reference-compass-utilities'><div id='wrap'>
+<nav id='skip-links'>
+<a href='#content'>skip to content</a>
+</nav>
+<header id='banner' role='banner'>
+<div>
+<h1 class='vcard'>
+<a class='fn org url uid' href='../../../../index.html' rel='home'>Compass</a>
+</h1>
+</div>
+</header>
+<nav id='docs-nav' role='navigation'>
+<div class='container'>
+<ul>
+<li>
+<a href='../../../index.html'>introduction</a>
+</li>
+<li>
+<a href='../index.html'>core</a>
+</li>
+<li>
+<a href='../../blueprint/index.html'>blueprint</a>
+</li>
+<li>
+<a href='../../../tutorials/index.html'>tutorials</a>
+</li>
+<!--
+<li>
+<a href='/docs/plugins/'>plugins</a>
+</li>
+-->
+</ul>
+<div id='version'>
+Current Version:
+<a class='number' href='../../../CHANGELOG/index.html'>0.10.6.</a>
+</div>
+<div id='search-docs'>
+<form action='/docs/search/' method='GET'>
+<p>
+<label for='search'>search</label>
+<input id='search' name='q' type='text' value='' />
+</p>
+</form>
+</div>
+</div>
+</nav>
+<nav id='module-nav'><ul><ul><li>
+<a href='../support/index.html'>Browser Support</a>
+</li>
+<li>
+<a href='../css3/index.html'>CSS3</a>
+</li>
+<li>
+<a href='../helpers/index.html'>Helpers</a>
+</li>
+<li>
+<a href='../layout/index.html'>Layout</a>
+</li>
+<li>
+<a href='../reset/index.html'>Reset</a>
+</li>
+<li class='selected'>
+<a class='selected' href='index.html'>Utilities</a>
+</li>
+</ul>
+</ul>
+</nav>
+<div id='page'><aside role='sidebar'><nav id='local-nav'>
+<ul><li>
+<h2>
+<a href='general/index.html'>General</a>
+</h2>
+</li>
+<ul><li>
+<a href='general/clearfix/index.html'>Clearfix</a>
+</li>
+<li>
+<a href='general/float/index.html'>Float</a>
+</li>
+<li>
+<a href='general/hacks/index.html'>Hacks</a>
+</li>
+<li>
+<a href='general/min/index.html'>Minimums</a>
+</li>
+<li>
+<a href='general/reset/index.html'>Reset</a>
+</li>
+<li>
+<a href='general/tag_cloud/index.html'>Tag Cloud</a>
+</li>
+</ul>
+<li>
+<h2>
+<a href='links/index.html'>Links</a>
+</h2>
+</li>
+<ul><li>
+<a href='links/hover_link/index.html'>Hover Link</a>
+</li>
+<li>
+<a href='links/link_colors/index.html'>Link Colors</a>
+</li>
+<li>
+<a href='links/unstyled_link/index.html'>Unstyled Link</a>
+</li>
+</ul>
+<li>
+<h2>
+<a href='lists/index.html'>Lists</a>
+</h2>
+</li>
+<ul><li>
+<a href='lists/bullets/index.html'>Bullets</a>
+</li>
+<li>
+<a href='lists/horizontal_list/index.html'>Horizontal List</a>
+</li>
+<li>
+<a href='lists/inline_list/index.html'>Inline List</a>
+</li>
+<li>
+<a href='lists/inline-block-list/index.html'>Inline-Block List</a>
+</li>
+</ul>
+<li>
+<h2>
+<a href='print/index.html'>Print</a>
+</h2>
+</li>
+<li>
+<h2>
+<a href='sprites/index.html'>Sprites</a>
+</h2>
+</li>
+<ul><li>
+<a href='sprites/sprite_img/index.html'>Sprite Image</a>
+</li>
+</ul>
+<li>
+<h2>
+<a href='tables/index.html'>Tables</a>
+</h2>
+</li>
+<ul><li>
+<a href='tables/borders/index.html'>Table Borders</a>
+</li>
+<li>
+<a href='tables/scaffolding/index.html'>Table Scaffolding</a>
+</li>
+<li>
+<a href='tables/alternating_rows_and_columns/index.html'>Table Striping</a>
+</li>
+</ul>
+<li>
+<h2>
+<a href='text/index.html'>Text</a>
+</h2>
+</li>
+<ul><li>
+<a href='text/ellipsis/index.html'>Ellipsis</a>
+</li>
+<li>
+<a href='text/nowrap/index.html'>No Wrap</a>
+</li>
+<li>
+<a href='text/replacement/index.html'>Text Replacement</a>
+</li>
+</ul>
+</ul>
+
+</nav>
+</aside>
+<article><h1>Compass Utilities</h1>
+<p>
+The Compass Utilities module provides some basic mixins
+for common styling patterns.
+</p>
+
+<p>
+This file can be imported using:
+<code>@import "compass/utilities"</code>
+</p>
+<p>
+View the
+<a href="http://github.com/chriseppstein/compass/blob/stable/frameworks/compass/stylesheets/compass/_utilities.scss">Source for this module on Github.</a>
+</p>
+
+<h2>Imports</h2>
+<p>
+The following sass files are automatically imported when you import this file:
+</p>
+<ol>
+<li>
+<a href="general/index.html" title="@import utilities/general">General</a>
+– Generally useful utilities that don't fit elsewhere.
+</li>
+
+<li>
+<a href="links/index.html" title="@import utilities/links">Links</a>
+– Tools for styling anchor links.
+</li>
+
+<li>
+<a href="lists/index.html" title="@import utilities/lists">Lists</a>
+– Tools for styling lists.
+</li>
+
+<li>
+<a href="sprites/index.html" title="@import utilities/sprites">Sprites</a>
+– Sprite mixins.
+</li>
+
+<li>
+<a href="tables/index.html" title="@import utilities/tables">Tables</a>
+– Style helpers for your tables.
+</li>
+
+<li>
+<a href="text/index.html" title="@import utilities/text">Text</a>
+– Style helpers for your text.
+</li>
+
+</ol></article>
+</div>
+<div id='wrap-footer'></div>
+</div>
+<footer role='contentinfo'><div class='legalese'>
+<p>
+<a rel="license" href="../../../copyright/index.html"
+   id="cc-logo"><img alt="Creative Commons License" style="border-width:0"
+   src="http://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png" /></a>
+<br />
+by Christopher M. Eppstein.
+</p>
+</div>
+<div class='links'>
+<ul>
+<li>
+<a href='../../../../index.html' rel='home'>Compass Homepage</a>
+</li>
+<li>
+Compass is Charityware -
+<a href='http://umdf.org/compass'>Donate Now!</a>
+</li>
+<li>
+Compass is Open Source -
+<a href='http://github.com/chriseppstein/compass'>Contribute</a>
+</li>
+</ul>
+</div>
+</footer>
+<script src='../../../javascripts/jquery-1.3.2.min.js'></script>
+<script deferred='deferred' src='../../../javascripts/fixups.js'></script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6779438-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>
+
+<!-- Localized -->

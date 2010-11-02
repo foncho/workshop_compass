@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html class='no-js' dir='ltr' lang='en'>
+<head>
+<meta charset='utf-8' />
+<meta content='chrome=1' http-equiv='X-UA-Compatible' />
+<link href='../../../../images/compass_icon.png' rel='shortcut icon' type='image/png' />
+<title>
+Compass Background Clip | Compass Documentation
+</title>
+<!--[if !IE 6]><!-->
+<link charset='utf-8' href='../../../../stylesheets/screen.css' rel='stylesheet' type='text/css' />
+<!--<![endif]-->
+<!--[if gte IE 7]>
+<link charset='utf-8' href='../../../../stylesheets/ie.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+<!--[if IE 6]>
+<link charset='utf-8' href='http://universal-ie6-css.googlecode.com/files/ie6.0.3.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+</head>
+<body class='docs reference core css3' id='reference-compass-css3-background-clip'><div id='wrap'>
+<nav id='skip-links'>
+<a href='#content'>skip to content</a>
+</nav>
+<header id='banner' role='banner'>
+<div>
+<h1 class='vcard'>
+<a class='fn org url uid' href='../../../../../index.html' rel='home'>Compass</a>
+</h1>
+</div>
+</header>
+<nav id='docs-nav' role='navigation'>
+<div class='container'>
+<ul>
+<li>
+<a href='../../../../index.html'>introduction</a>
+</li>
+<li>
+<a href='../../index.html'>core</a>
+</li>
+<li>
+<a href='../../../blueprint/index.html'>blueprint</a>
+</li>
+<li>
+<a href='../../../../tutorials/index.html'>tutorials</a>
+</li>
+<!--
+<li>
+<a href='/docs/plugins/'>plugins</a>
+</li>
+-->
+</ul>
+<div id='version'>
+Current Version:
+<a class='number' href='../../../../CHANGELOG/index.html'>0.10.6.</a>
+</div>
+<div id='search-docs'>
+<form action='/docs/search/' method='GET'>
+<p>
+<label for='search'>search</label>
+<input id='search' name='q' type='text' value='' />
+</p>
+</form>
+</div>
+</div>
+</nav>
+<nav id='module-nav'><ul><ul><li>
+<a href='../../support/index.html'>Browser Support</a>
+</li>
+<li>
+<a href='../index.html'>CSS3</a>
+</li>
+<li>
+<a href='../../helpers/index.html'>Helpers</a>
+</li>
+<li>
+<a href='../../layout/index.html'>Layout</a>
+</li>
+<li>
+<a href='../../reset/index.html'>Reset</a>
+</li>
+<li>
+<a href='../../utilities/index.html'>Utilities</a>
+</li>
+</ul>
+</ul>
+</nav>
+<div id='page'><aside role='sidebar'><nav id='local-nav'>
+<ul><li>
+<h2>
+<a href='../../support/index.html'>Browser Support</a>
+</h2>
+</li>
+<li>
+<h2>
+<a href='../index.html'>CSS3</a>
+</h2>
+</li>
+<ul><li class='selected'>
+<a class='selected' href='index.html'>Background Clip</a>
+</li>
+<li>
+<a href='../background_origin/index.html'>Background Origin</a>
+</li>
+<li>
+<a href='../background_size/index.html'>Background Size</a>
+</li>
+<li>
+<a href='../border_radius/index.html'>Border Radius</a>
+</li>
+<li>
+<a href='../box/index.html'>Box</a>
+</li>
+<li>
+<a href='../box_shadow/index.html'>Box Shadow</a>
+</li>
+<li>
+<a href='../box_sizing/index.html'>Box Sizing</a>
+</li>
+<li>
+<a href='../shared/index.html'>CSS3 Utilities</a>
+</li>
+<li>
+<a href='../columns/index.html'>Columns</a>
+</li>
+<li>
+<a href='../font_face/index.html'>Font Face</a>
+</li>
+<li>
+<a href='../gradient/index.html'>Gradient</a>
+</li>
+<li>
+<a href='../inline_block/index.html'>Inline Block</a>
+</li>
+<li>
+<a href='../opacity/index.html'>Opacity</a>
+</li>
+<li>
+<a href='../text_shadow/index.html'>Text Shadow</a>
+</li>
+<li>
+<a href='../transform/index.html'>Transform</a>
+</li>
+<li>
+<a href='../transition/index.html'>Transition</a>
+</li>
+</ul>
+<li>
+<h2>
+<a href='../../helpers/index.html'>Helpers</a>
+</h2>
+</li>
+<ul><li>
+<a href='../../helpers/color-stops/index.html'>Color Stops</a>
+</li>
+<li>
+<a href='../../helpers/constants/index.html'>Constants</a>
+</li>
+<li>
+<a href='../../helpers/display/index.html'>Display Helpers</a>
+</li>
+<li>
+<a href='../../helpers/font-files/index.html'>Font Files</a>
+</li>
+<li>
+<a href='../../helpers/image-dimensions/index.html'>Image Dimensions</a>
+</li>
+<li>
+<a href='../../helpers/inline-data/index.html'>Inline Data</a>
+</li>
+<li>
+<a href='../../helpers/selectors/index.html'>Selectors</a>
+</li>
+<li>
+<a href='../../helpers/urls/index.html'>URLs</a>
+</li>
+</ul>
+<li>
+<h2>
+<a href='../../layout/index.html'>Layout</a>
+</h2>
+</li>
+<ul><li>
+<a href='../../layout/sticky_footer/index.html'>Sticky Footer</a>
+</li>
+</ul>
+<li>
+<h2>
+<a href='../../reset/index.html'>Reset</a>
+</h2>
+</li>
+<ul><li>
+<a href='../../reset/utilities/index.html'>Reset Utilities</a>
+</li>
+</ul>
+<li>
+<h2>
+<a href='../../utilities/index.html'>Utilities</a>
+</h2>
+</li>
+<ul><li>
+<a href='../../utilities/general/index.html'>General</a>
+</li>
+<li>
+<a href='../../utilities/links/index.html'>Links</a>
+</li>
+<li>
+<a href='../../utilities/lists/index.html'>Lists</a>
+</li>
+<li>
+<a href='../../utilities/print/index.html'>Print</a>
+</li>
+<li>
+<a href='../../utilities/sprites/index.html'>Sprites</a>
+</li>
+<li>
+<a href='../../utilities/tables/index.html'>Tables</a>
+</li>
+<li>
+<a href='../../utilities/text/index.html'>Text</a>
+</li>
+</ul>
+</ul>
+
+</nav>
+</aside>
+<article><h1>Compass Background Clip</h1>
+<p>
+Provides a mixin for <code>background-clip</code>. See <a href="http://www.w3.org/TR/2009/CR-css3-background-20091217/#background-clip">CSS3 spec: background-clip</a>.
+</p>
+
+<p>
+This file can be imported using:
+<code>@import "compass/css3/background-clip"</code>
+</p>
+<p>
+View the
+<a href="http://github.com/chriseppstein/compass/blob/stable/frameworks/compass/stylesheets/compass/css3/_background-clip.scss">Source for this module on Github.</a>
+</p>
+<h2>Examples</h2>
+<dl class="examples">
+<dt><a href="../../../../examples/compass/css3/background-clip/index.html">Background Clip</a></dt>
+<dd>See background-clip in action.</dd>
+</dl><h2>Imports</h2>
+<p>
+The following sass files are automatically imported when you import this file:
+</p>
+<ol>
+<li>
+<a href="../shared/index.html" title="@import shared">CSS3 Utilities</a>
+</li>
+
+</ol><h2>
+Configurable Variables
+<a class="help" href="../../../../tutorials/configurable-variables/index.html">help</a>
+</h2>
+<h3 class="constant" id="const-default-background-clip">
+<a class="permalink" href="#const-default-background-clip">$default-background-clip</a>
+</h3>
+<dl class="constant-details source-documentation">
+<dt>Value</dt>
+<dd>
+<code>padding-box</code>
+</dd>
+<dt>Description</dt>
+<dd>
+<p>The default value is <code>padding-box</code> -- the box model used by modern browsers.</p>
+
+<p>If you wish to do so, you can override the default constant with <code>border-box</code></p>
+
+<p>To override to the default border-box model, use this code:</p>
+
+<pre><code>$default-background-clip = border-box
+</code></pre>
+</dd>
+</dl><h2>Mixins</h2>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-background-clip-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-background-clip-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-background-clip">
+<a class="permalink" href="#mixin-background-clip">background-clip(<span class="arg" data-default-value="$default-background-clip">$clip</span>)</a>
+</h3>
+<div class="mixin-source" id="mixin-background-clip-source">
+<div class="highlight source-code sass elided-code" id="mixin-background-clip-sass"><pre><span class="nf">=background-clip</span><span class="o">(</span><span class="n">$clip:</span> <span class="n">$default-background-clip</span><span class="o">)</span>
+  <span class="c1">// webkit and mozilla use the deprecated short [border | padding]</span>
+  <span class="na">$clip:</span> <span class="n">unquote</span><span class="p">(</span><span class="err">$</span><span class="no">clip</span><span class="p">)</span>
+  <span class="na">$deprecated:</span> <span class="err">$</span><span class="no">clip</span>
+  <span class="k">@if</span> <span class="n">$clip</span> <span class="o">==</span> <span class="n">padding-box</span>
+    <span class="na">$deprecated:</span> <span class="no">padding</span>
+  <span class="k">@if</span> <span class="n">$clip</span> <span class="o">==</span> <span class="n">border-box</span>
+    <span class="na">$deprecated:</span> <span class="no">border</span>
+  <span class="c1">// Support for webkit and mozilla's use of the deprecated short form</span>
+  <span class="nd">+experimental</span><span class="o">(</span><span class="n">background-clip</span><span class="o">,</span> <span class="n">$deprecated</span><span class="o">,</span> <span class="o">-</span><span class="n">moz</span><span class="o">,</span> <span class="o">-</span><span class="n">webkit</span><span class="o">,</span> <span class="ow">not</span> <span class="o">-</span><span class="n">o</span><span class="o">,</span> <span class="ow">not</span> <span class="o">-</span><span class="n">ms</span><span class="o">,</span> <span class="ow">not</span> <span class="o">-</span><span class="n">khtml</span><span class="o">,</span> <span class="ow">not</span> <span class="n">official</span><span class="o">)</span>
+  <span class="nd">+experimental</span><span class="o">(</span><span class="n">background-clip</span><span class="o">,</span> <span class="n">$clip</span><span class="o">,</span> <span class="ow">not</span> <span class="o">-</span><span class="n">moz</span><span class="o">,</span> <span class="ow">not</span> <span class="o">-</span><span class="n">webkit</span><span class="o">,</span> <span class="o">-</span><span class="n">o</span><span class="o">,</span> <span class="o">-</span><span class="n">ms</span><span class="o">,</span> <span class="o">-</span><span class="n">khtml</span><span class="o">,</span> <span class="n">official</span><span class="o">)</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-background-clip-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="er">b</span><span class="er">a</span><span class="er">c</span><span class="er">k</span><span class="er">g</span><span class="er">r</span><span class="er">o</span><span class="er">u</span><span class="er">n</span><span class="er">d</span><span class="er">-</span><span class="er">c</span><span class="er">l</span><span class="er">i</span><span class="er">p</span>(<span class="er">$</span><span class="ty">clip</span>: <span class="er">$</span><span class="ty">default-background-clip</span>) {
+  // <span class="ke">webkit</span> <span class="ke">and</span> <span class="ke">mozilla</span> <span class="ke">use</span> <span class="ke">the</span> <span class="ke">deprecated</span> <span class="ke">short</span> <span class="er">[</span><span class="ke">border</span> <span class="er">|</span> <span class="ke">padding</span><span class="er">]</span>
+  <span class="er">$</span><span class="ke">clip</span>: <span class="er">u</span><span class="er">n</span><span class="er">q</span><span class="er">u</span><span class="er">o</span><span class="er">t</span><span class="er">e</span>(<span class="er">$</span><span class="vl">clip</span>);
+  <span class="er">$</span><span class="ke">deprecated</span>: <span class="er">$</span><span class="vl">clip</span>;
+  <span class="di">@if</span> <span class="er">$</span><span class="ke">clip</span> == <span class="ke">padding-box</span> {
+    <span class="er">$</span><span class="ke">deprecated</span>: <span class="vl">padding</span>; }
+  <span class="di">@if</span> <span class="er">$</span><span class="ke">clip</span> == <span class="ke">border-box</span> {
+    <span class="er">$</span><span class="ke">deprecated</span>: <span class="vl">border</span>; }
+  // <span class="ke">Support</span> <span class="ke">for</span> <span class="ke">webkit</span> <span class="ke">and</span> <span class="ke">mozilla</span><span class="s"><span class="dl">'</span><span class="k">s use of the deprecated short for</span><span class="dl">m</span></span>
+  <span class="di">@include</span> <span class="er">e</span><span class="er">x</span><span class="er">p</span><span class="er">e</span><span class="er">r</span><span class="er">i</span><span class="er">m</span><span class="er">e</span><span class="er">n</span><span class="er">t</span><span class="er">a</span><span class="er">l</span>(<span class="ke">background-clip</span>, <span class="er">$</span><span class="ke">deprecated</span>, <span class="ke">-moz</span>, <span class="ke">-webkit</span>, <span class="ke">not</span> <span class="ke">-o</span>, <span class="ke">not</span> <span class="ke">-ms</span>, <span class="ke">not</span> <span class="ke">-khtml</span>, <span class="ke">not</span> <span class="ke">official</span>);
+  <span class="di">@include</span> <span class="er">e</span><span class="er">x</span><span class="er">p</span><span class="er">e</span><span class="er">r</span><span class="er">i</span><span class="er">m</span><span class="er">e</span><span class="er">n</span><span class="er">t</span><span class="er">a</span><span class="er">l</span>(<span class="ke">background-clip</span>, <span class="er">$</span><span class="ke">clip</span>, <span class="ke">not</span> <span class="ke">-moz</span>, <span class="ke">not</span> <span class="ke">-webkit</span>, <span class="ke">-o</span>, <span class="ke">-ms</span>, <span class="ke">-khtml</span>, <span class="ke">official</span>); }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>Clip the background (image and color) at the edge of the padding or border.</p>
+
+<p>Legal Values:</p>
+
+<ul>
+<li>padding-box</li>
+<li>border-box</li>
+<li>text</li>
+</ul>
+</div></article>
+</div>
+<div id='wrap-footer'></div>
+</div>
+<footer role='contentinfo'><div class='legalese'>
+<p>
+<a rel="license" href="../../../../copyright/index.html"
+   id="cc-logo"><img alt="Creative Commons License" style="border-width:0"
+   src="http://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png" /></a>
+<br />
+by Christopher M. Eppstein.
+</p>
+</div>
+<div class='links'>
+<ul>
+<li>
+<a href='../../../../../index.html' rel='home'>Compass Homepage</a>
+</li>
+<li>
+Compass is Charityware -
+<a href='http://umdf.org/compass'>Donate Now!</a>
+</li>
+<li>
+Compass is Open Source -
+<a href='http://github.com/chriseppstein/compass'>Contribute</a>
+</li>
+</ul>
+</div>
+</footer>
+<script src='../../../../javascripts/jquery-1.3.2.min.js'></script>
+<script deferred='deferred' src='../../../../javascripts/fixups.js'></script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6779438-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>
+
+<!-- Localized -->

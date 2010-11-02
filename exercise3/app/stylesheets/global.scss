@@ -1,0 +1,155 @@
+/* 960 Grid System ~ Core CSS.
+ * Learn more ~ http://960.gs/
+ * *
+ * Licensed under GPL and MIT. */
+
+@import "compass/reset";
+
+@include global-reset;
+
+@import "960/grid";
+@import "compass/utilities";
+@import "text";
+
+
+
+$ninesixty-columns: 16;
+
+
+// Replace the following code with the link mixin
+a:link, a:visited {
+  text-decoration: none;
+  color: #6299c5;
+}
+
+a:hover, a:active { color: #693; }
+
+
+
+
+/* =GRID */
+
+#gutter{
+  @include clearfix;
+  padding-bottom: 20px;
+   padding-top: 20px;
+  //replace the following color with a variable
+  background-color: #191919;}
+
+.gutter-container {
+  @include grid-container;
+  @include clearfix;}
+
+  .logo {
+    @include grid(3);
+    display: block;}
+
+  .sign-in {
+    @include grid(11);
+    text-align: right;}
+
+  .buttons {
+    @include grid(2); }
+
+
+
+#navigation{
+  @include clearfix;
+  //replace the following color with a variable
+  background-color: #4B9376;}
+
+.menu-container {
+  @include grid-container;
+  @include clearfix;}
+
+.menu {
+  @include grid(13);
+  @include alpha;}
+
+
+#banner{
+  @include clearfix;
+   padding-top: 20px;
+   //replace the following color with a variable
+   background-color: #86c23c;
+   //Include the gradient mixin from #5db585 to #86c23c (replace with the variables)
+
+  .workspaces {
+     @include grid-container;
+     @include clearfix;
+
+    .hero {
+    @include grid(8);
+    }
+
+    .text-workspaces {
+    @include grid(8);
+    padding-bottom: 20px;
+    padding-top:20px;}
+
+    .text-workspaces h1 {
+    padding-bottom: 20px;
+    padding-top:20px;}
+
+   .workspace-title {
+     color: #fff;
+     font-size: 38px;
+     font-weight: bold;
+   }
+  }
+  h1{
+  //replace the following color with a variable
+  color: #304812;
+  font-size: 26px;
+  font-weight: normal;
+  margin: 0px 0px 20px;}
+}
+
+
+.bg_footer{
+  @include clearfix;
+  padding-bottom: 20px;
+   padding-top: 20px;
+   //replace the following color with a variable
+   background-color: #191919;
+ }
+
+  .footer{
+    @include grid-container;
+    @include clearfix;
+  }
+
+  .column-footer {
+    @include grid(4);
+    padding-bottom:20px;
+     padding-top:20px;}
+
+  .column-footer li{
+    list-style-type:none;}
+
+  .runner {
+  @include grid(16);
+  //replace the following color with a variable
+   border-top: 1px solid #333;
+  padding-bottom:20px;
+  padding-top:20px;}
+
+  .logo {
+    @include grid(2);
+    @include alpha;}
+
+   .copyright {
+    @include grid(5);}
+
+   .pitch-runner {
+    @include grid(9);
+    @include omega;
+    text-align: right;}
+
+
+    .footer .suggestions {
+      //replace the following color with a variable
+      border-top: 1px solid #333;
+      margin-top: 10px;
+      padding-top: 9px;
+    }

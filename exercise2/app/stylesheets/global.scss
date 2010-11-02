@@ -1,0 +1,73 @@
+/* 960 Grid System ~ Core CSS.
+ * Learn more ~ http://960.gs/
+ * *
+ * Licensed under GPL and MIT. */
+
+@import "960/grid";
+
+
+
+// Place the definition of the grid columns here
+
+/* =GRID */
+
+#gutter{
+  @include clearfix;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: #bbb;
+
+  .gutter-container {
+    //include code here
+    @include clearfix;
+    .logo {
+      //include code here;
+      }
+    .sign-in {
+      //include code here;
+      text-align: right;}
+    .buttons {
+      //include code here
+      }
+    }
+
+}
+
+
+
+#navigation{
+  @include clearfix;
+  background-color: #4B9376;}
+
+
+
+
+#banner{
+  @include clearfix;
+  background-color:white;
+
+  .workspaces {
+     //include code here
+     @include clearfix;
+
+    .hero {
+    //include code here
+    }
+
+    .text-workspaces {
+    //include code here
+    }
+  }
+}
+
+
+
+.bg_footer{
+  @include clearfix;
+  padding-bottom: 20px;
+   padding-top: 20px;
+   background-color: #191919;
+
+   //include code here
+ }
+

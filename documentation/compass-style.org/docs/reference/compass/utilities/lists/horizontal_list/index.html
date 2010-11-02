@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html class='no-js' dir='ltr' lang='en'>
+<head>
+<meta charset='utf-8' />
+<meta content='chrome=1' http-equiv='X-UA-Compatible' />
+<link href='../../../../../images/compass_icon.png' rel='shortcut icon' type='image/png' />
+<title>
+Compass Horizontal List | Compass Documentation
+</title>
+<!--[if !IE 6]><!-->
+<link charset='utf-8' href='../../../../../stylesheets/screen.css' rel='stylesheet' type='text/css' />
+<!--<![endif]-->
+<!--[if gte IE 7]>
+<link charset='utf-8' href='../../../../../stylesheets/ie.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+<!--[if IE 6]>
+<link charset='utf-8' href='http://universal-ie6-css.googlecode.com/files/ie6.0.3.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+</head>
+<body class='docs reference core utilities' id='reference-compass-utilities-lists-horizontal-list'><div id='wrap'>
+<nav id='skip-links'>
+<a href='#content'>skip to content</a>
+</nav>
+<header id='banner' role='banner'>
+<div>
+<h1 class='vcard'>
+<a class='fn org url uid' href='../../../../../../index.html' rel='home'>Compass</a>
+</h1>
+</div>
+</header>
+<nav id='docs-nav' role='navigation'>
+<div class='container'>
+<ul>
+<li>
+<a href='../../../../../index.html'>introduction</a>
+</li>
+<li>
+<a href='../../../index.html'>core</a>
+</li>
+<li>
+<a href='../../../../blueprint/index.html'>blueprint</a>
+</li>
+<li>
+<a href='../../../../../tutorials/index.html'>tutorials</a>
+</li>
+<!--
+<li>
+<a href='/docs/plugins/'>plugins</a>
+</li>
+-->
+</ul>
+<div id='version'>
+Current Version:
+<a class='number' href='../../../../../CHANGELOG/index.html'>0.10.6.</a>
+</div>
+<div id='search-docs'>
+<form action='/docs/search/' method='GET'>
+<p>
+<label for='search'>search</label>
+<input id='search' name='q' type='text' value='' />
+</p>
+</form>
+</div>
+</div>
+</nav>
+<nav id='module-nav'><ul><ul><li>
+<a href='../../../support/index.html'>Browser Support</a>
+</li>
+<li>
+<a href='../../../css3/index.html'>CSS3</a>
+</li>
+<li>
+<a href='../../../helpers/index.html'>Helpers</a>
+</li>
+<li>
+<a href='../../../layout/index.html'>Layout</a>
+</li>
+<li>
+<a href='../../../reset/index.html'>Reset</a>
+</li>
+<li>
+<a href='../../index.html'>Utilities</a>
+</li>
+</ul>
+</ul>
+</nav>
+<div id='page'><aside role='sidebar'><nav id='local-nav'>
+<ul><li>
+<h2>
+<a href='../../general/index.html'>General</a>
+</h2>
+</li>
+<ul><li>
+<a href='../../general/clearfix/index.html'>Clearfix</a>
+</li>
+<li>
+<a href='../../general/float/index.html'>Float</a>
+</li>
+<li>
+<a href='../../general/hacks/index.html'>Hacks</a>
+</li>
+<li>
+<a href='../../general/min/index.html'>Minimums</a>
+</li>
+<li>
+<a href='../../general/reset/index.html'>Reset</a>
+</li>
+<li>
+<a href='../../general/tag_cloud/index.html'>Tag Cloud</a>
+</li>
+</ul>
+<li>
+<h2>
+<a href='../../links/index.html'>Links</a>
+</h2>
+</li>
+<ul><li>
+<a href='../../links/hover_link/index.html'>Hover Link</a>
+</li>
+<li>
+<a href='../../links/link_colors/index.html'>Link Colors</a>
+</li>
+<li>
+<a href='../../links/unstyled_link/index.html'>Unstyled Link</a>
+</li>
+</ul>
+<li>
+<h2>
+<a href='../index.html'>Lists</a>
+</h2>
+</li>
+<ul><li>
+<a href='../bullets/index.html'>Bullets</a>
+</li>
+<li class='selected'>
+<a class='selected' href='index.html'>Horizontal List</a>
+</li>
+<li>
+<a href='../inline_list/index.html'>Inline List</a>
+</li>
+<li>
+<a href='../inline-block-list/index.html'>Inline-Block List</a>
+</li>
+</ul>
+<li>
+<h2>
+<a href='../../print/index.html'>Print</a>
+</h2>
+</li>
+<li>
+<h2>
+<a href='../../sprites/index.html'>Sprites</a>
+</h2>
+</li>
+<ul><li>
+<a href='../../sprites/sprite_img/index.html'>Sprite Image</a>
+</li>
+</ul>
+<li>
+<h2>
+<a href='../../tables/index.html'>Tables</a>
+</h2>
+</li>
+<ul><li>
+<a href='../../tables/borders/index.html'>Table Borders</a>
+</li>
+<li>
+<a href='../../tables/scaffolding/index.html'>Table Scaffolding</a>
+</li>
+<li>
+<a href='../../tables/alternating_rows_and_columns/index.html'>Table Striping</a>
+</li>
+</ul>
+<li>
+<h2>
+<a href='../../text/index.html'>Text</a>
+</h2>
+</li>
+<ul><li>
+<a href='../../text/ellipsis/index.html'>Ellipsis</a>
+</li>
+<li>
+<a href='../../text/nowrap/index.html'>No Wrap</a>
+</li>
+<li>
+<a href='../../text/replacement/index.html'>Text Replacement</a>
+</li>
+</ul>
+</ul>
+
+</nav>
+</aside>
+<article><h1>Compass Horizontal List</h1>
+<p>Easy mode using simple descendant li selectors:</p>
+
+<pre><code>ul.nav
+  +horizontal-list
+</code></pre>
+
+<p>Advanced mode:
+If you need to target the list items using a different selector then use
++horizontal-list-container on your ul/ol and +horizontal-list-item on your li.
+This may help when working on layouts involving nested lists. For example:</p>
+
+<pre><code>ul.nav
+  +horizontal-list-container
+  &gt; li
+    +horizontal-list-item
+</code></pre>
+
+<p>
+This file can be imported using:
+<code>@import "compass/utilities/lists/horizontal-list"</code>
+</p>
+<p>
+View the
+<a href="http://github.com/chriseppstein/compass/blob/stable/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss">Source for this module on Github.</a>
+</p>
+
+<h2>Imports</h2>
+<p>
+The following sass files are automatically imported when you import this file:
+</p>
+<ol>
+<li>
+<a href="../bullets/index.html" title="@import bullets">Bullets</a>
+– Mixins for managing list bullets.
+</li>
+
+<li>
+<a href="../../general/clearfix/index.html" title="@import compass/utilities/general/clearfix">Clearfix</a>
+– Mixins for clearfixing.
+</li>
+
+<li>
+<a href="../../general/float/index.html" title="@import compass/utilities/general/float">Float</a>
+– Mixins for cross-browser floats.
+</li>
+
+<li>
+<a href="../../general/reset/index.html" title="@import compass/utilities/general/reset">Reset</a>
+– Mixins for resetting elements (old import).
+</li>
+
+</ol><h2>Mixins</h2>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-horizontal-list-container-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-horizontal-list-container-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-horizontal-list-container">
+<a class="permalink" href="#mixin-horizontal-list-container">horizontal-list-container</a>
+</h3>
+<div class="mixin-source" id="mixin-horizontal-list-container-source">
+<div class="highlight source-code sass elided-code" id="mixin-horizontal-list-container-sass"><pre><span class="nf">=horizontal-list-container</span>
+  <span class="nd">+reset-box-model</span>
+  <span class="nd">+clearfix</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-horizontal-list-container-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="ty">horizontal-list-container</span> {
+  <span class="di">@include</span> <span class="ke">reset-box-model</span>;
+  <span class="di">@include</span> <span class="ke">clearfix</span>; }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>Can be mixed into any selector that target a ul or ol that is meant
+to have a horizontal layout. Used to implement +horizontal-list.</p>
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-horizontal-list-item-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-horizontal-list-item-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-horizontal-list-item">
+<a class="permalink" href="#mixin-horizontal-list-item">horizontal-list-item(<span class="arg" data-default-value="4px">$padding</span>, <span class="arg" data-default-value="left">$direction</span>)</a>
+</h3>
+<div class="mixin-source" id="mixin-horizontal-list-item-source">
+<div class="highlight source-code sass elided-code" id="mixin-horizontal-list-item-sass"><pre><span class="nf">=horizontal-list-item</span><span class="o">(</span><span class="n">$padding:</span> <span class="mi">4</span><span class="kt">px</span><span class="o">,</span> <span class="n">$direction:</span> <span class="n">left</span><span class="o">)</span>
+  <span class="nd">+no-bullet</span>
+  <span class="na">white-space:</span> <span class="no">nowrap</span>
+  <span class="nd">+float</span><span class="o">(</span><span class="n">$direction</span><span class="o">)</span>
+  <span class="k">@if</span> <span class="n">$padding</span>
+    <span class="nt">padding</span><span class="nd">:</span>
+      <span class="na">left:</span> <span class="err">$</span><span class="no">padding</span>
+      <span class="na">right:</span> <span class="err">$</span><span class="no">padding</span>
+    <span class="k">&amp;</span><span class="nd">:first-child</span><span class="o">,</span> <span class="k">&amp;</span><span class="nc">.first</span>
+      <span class="na">padding-#{$direction}:</span> <span class="mi">0</span>
+    <span class="k">&amp;</span><span class="nd">:last-child</span>
+      <span class="na">padding-#{opposite-position($direction)}:</span> <span class="mi">0</span>
+    <span class="k">&amp;</span><span class="nc">.last</span>
+      <span class="na">padding-#{opposite-position($direction)}:</span> <span class="mi">0</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-horizontal-list-item-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="er">h</span><span class="er">o</span><span class="er">r</span><span class="er">i</span><span class="er">z</span><span class="er">o</span><span class="er">n</span><span class="er">t</span><span class="er">a</span><span class="er">l</span><span class="er">-</span><span class="er">l</span><span class="er">i</span><span class="er">s</span><span class="er">t</span><span class="er">-</span><span class="er">i</span><span class="er">t</span><span class="er">e</span><span class="er">m</span>(<span class="er">$</span><span class="ty">padding</span>: <span class="fl">4px</span>, <span class="er">$</span><span class="ty">direction</span>: <span class="ty">left</span>) {
+  <span class="di">@include</span> <span class="ke">no-bullet</span>;
+  <span class="ke">white-space</span>: <span class="vl">nowrap</span>;
+  <span class="di">@include</span> <span class="er">f</span><span class="er">l</span><span class="er">o</span><span class="er">a</span><span class="er">t</span>(<span class="er">$</span><span class="ke">direction</span>);
+  <span class="di">@if</span> <span class="er">$</span><span class="ke">padding</span> {
+    <span class="ke">padding</span>: {
+      <span class="ke">left</span>: <span class="er">$</span><span class="vl">padding</span>;
+      <span class="ke">right</span>: <span class="er">$</span><span class="vl">padding</span>; };
+    <span class="er">&amp;</span>:<span class="vl">first-child</span>, <span class="er">&amp;</span>.<span class="vl">first</span> {
+      <span class="ke">padding-</span><span class="er">#</span>{<span class="er">$</span><span class="ke">direction</span>}: <span class="fl">0</span>; }
+    <span class="er">&amp;</span>:<span class="vl">last-child</span> {
+      <span class="ke">padding-</span><span class="er">#</span>{<span class="er">o</span><span class="er">p</span><span class="er">p</span><span class="er">o</span><span class="er">s</span><span class="er">i</span><span class="er">t</span><span class="er">e</span><span class="er">-</span><span class="er">p</span><span class="er">o</span><span class="er">s</span><span class="er">i</span><span class="er">t</span><span class="er">i</span><span class="er">o</span><span class="er">n</span>(<span class="er">$</span><span class="ke">direction</span>)}: <span class="fl">0</span>; }
+    <span class="er">&amp;</span>.<span class="ke">last</span> {
+      <span class="ke">padding-</span><span class="er">#</span>{<span class="er">o</span><span class="er">p</span><span class="er">p</span><span class="er">o</span><span class="er">s</span><span class="er">i</span><span class="er">t</span><span class="er">e</span><span class="er">-</span><span class="er">p</span><span class="er">o</span><span class="er">s</span><span class="er">i</span><span class="er">t</span><span class="er">i</span><span class="er">o</span><span class="er">n</span>(<span class="er">$</span><span class="ke">direction</span>)}: <span class="fl">0</span>; } } }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>Can be mixed into any li selector that is meant to participate in a horizontal layout.
+Used to implement +horizontal-list.</p>
+
+<p>:last-child is not fully supported
+see http://www.quirksmode.org/css/contents.html#t29 for the support matrix</p>
+
+<p>IE8 ignores rules that are included on the same line as :last-child
+see http://www.richardscarrott.co.uk/posts/view/ie8-last-child-bug for details</p>
+
+<p>Setting <code>$padding</code> to <code>false</code> disables the padding between list elements</p>
+
+</div>
+<span class="view-source">
+View Source:
+<a class="view-source" href="#mixin-horizontal-list-sass">Sass</a>
+|
+<a class="view-source" href="#mixin-horizontal-list-scss">SCSS</a>
+</span>
+<h3 class="mixin" id="mixin-horizontal-list">
+<a class="permalink" href="#mixin-horizontal-list">horizontal-list(<span class="arg" data-default-value="4px">$padding</span>, <span class="arg" data-default-value="left">$direction</span>)</a>
+</h3>
+<div class="mixin-source" id="mixin-horizontal-list-source">
+<div class="highlight source-code sass elided-code" id="mixin-horizontal-list-sass"><pre><span class="nf">=horizontal-list</span><span class="o">(</span><span class="n">$padding:</span> <span class="mi">4</span><span class="kt">px</span><span class="o">,</span> <span class="n">$direction:</span> <span class="n">left</span><span class="o">)</span>
+  <span class="nd">+horizontal-list-container</span>
+  <span class="nt">li</span>
+    <span class="nd">+horizontal-list-item</span><span class="o">(</span><span class="n">$padding</span><span class="o">,</span> <span class="n">$direction</span><span class="o">)</span>
+</pre></div>
+<div class="CodeRay source-code scss elided-code" id="mixin-horizontal-list-scss">
+  <div class="code"><pre><span class="di">@mixin</span> <span class="er">h</span><span class="er">o</span><span class="er">r</span><span class="er">i</span><span class="er">z</span><span class="er">o</span><span class="er">n</span><span class="er">t</span><span class="er">a</span><span class="er">l</span><span class="er">-</span><span class="er">l</span><span class="er">i</span><span class="er">s</span><span class="er">t</span>(<span class="er">$</span><span class="ty">padding</span>: <span class="fl">4px</span>, <span class="er">$</span><span class="ty">direction</span>: <span class="ty">left</span>) {
+  <span class="di">@include</span> <span class="ke">horizontal-list-container</span>;
+  <span class="ke">li</span> {
+    <span class="di">@include</span> <span class="er">h</span><span class="er">o</span><span class="er">r</span><span class="er">i</span><span class="er">z</span><span class="er">o</span><span class="er">n</span><span class="er">t</span><span class="er">a</span><span class="er">l</span><span class="er">-</span><span class="er">l</span><span class="er">i</span><span class="er">s</span><span class="er">t</span><span class="er">-</span><span class="er">i</span><span class="er">t</span><span class="er">e</span><span class="er">m</span>(<span class="er">$</span><span class="ke">padding</span>, <span class="er">$</span><span class="ke">direction</span>); } }
+</pre></div>
+</div>
+</div>
+<div class="source-documentation">
+<p>A list(ol,ul) that is layed out such that the elements are floated left and won't wrap.
+This is not an inline list.</p>
+
+<p>Setting <code>$padding</code> to <code>false</code> disables the padding between list elements</p>
+
+</div></article>
+</div>
+<div id='wrap-footer'></div>
+</div>
+<footer role='contentinfo'><div class='legalese'>
+<p>
+<a rel="license" href="../../../../../copyright/index.html"
+   id="cc-logo"><img alt="Creative Commons License" style="border-width:0"
+   src="http://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png" /></a>
+<br />
+by Christopher M. Eppstein.
+</p>
+</div>
+<div class='links'>
+<ul>
+<li>
+<a href='../../../../../../index.html' rel='home'>Compass Homepage</a>
+</li>
+<li>
+Compass is Charityware -
+<a href='http://umdf.org/compass'>Donate Now!</a>
+</li>
+<li>
+Compass is Open Source -
+<a href='http://github.com/chriseppstein/compass'>Contribute</a>
+</li>
+</ul>
+</div>
+</footer>
+<script src='../../../../../javascripts/jquery-1.3.2.min.js'></script>
+<script deferred='deferred' src='../../../../../javascripts/fixups.js'></script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6779438-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>
+
+<!-- Localized -->
