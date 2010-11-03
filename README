@@ -1,0 +1,75 @@
+General infos
+=============
+
+- There is a directory that we will use a base to solve each of the exercises. In this way, if you don't manage to solve an exercise you will be able to work on the next one.
+- Each of these directories is rails application with vendorized gems so you don't need to install the gems.
+
+Requirements
+============
+
+- You will need Ruby 1.8.7 or Ruby 1.9.2 and bundler version >= 1.0. We encourage the use of RVM.
+
+
+
+Exercise 1
+==========
+
+- Start a single-project with compass
+- Download the test rails app in exercise1
+
+
+Exercise 2
+==========
+
+1. Open the project located in /exercise2
+
+2. Start the rails application using "rails server" to make sure all dependencies are met and to start working.
+
+3. Define the size of the grid as 16 columns in global.scss using the appropiate variable
+
+4. Complete the code in the elements #banner and #gutter in global.scss to adjust them to the grid.
+
+HINT: "gutter-container" is a 16 grid wide container. Set the appropiate width in columns for the logo, sign-in and buttons elements.
+
+5. Complete the code for the footer.
+
+
+Exercise 3
+==========
+
+1. Open the project located in /exercise3
+
+2. Replace the colors in the global.scss for variables defined in a different file.
+HINT: Don´t forget to link the new file with @import
+
+3. Do the gradient in the middle frame with a compass mixin.
+HINT: Look in the documentation for linear-gradient
+
+4. Replace the link styles code marked in global.scss with a compass mixin so that the colors match with the design.
+HINT* Look in the documentation for links
+
+
+Exercise 4
+==========
+
+1. Open the project located in /exercise4
+
+2. Complete the menu.scss so that it matches with the menu in the design.
+Hint: Use horizontal-list
+Hint: Use border-radius
+
+Extra: Create a shadow effect on the #workspace title
+
+
+Exercise 5
+==========
+
+1. Open the project located in /exercise5
+
+2. Create the following buttons with the fancy-buttons library and try to match with the design:
+  - One matte button for the sign-in
+  - One with gradient for the Try-button
+
+HINT: Import the fancy-button library
+EXTRA compile the code for production
+

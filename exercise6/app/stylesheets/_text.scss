@@ -1,0 +1,65 @@
+/* =HEADINGS */
+
+body {
+  font: normal 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif; /* normalize font size across browsers */
+}
+
+em {
+  color: #828282;
+  font-size: 13px;
+  font-family: Cambria, Georgia, Times, 'Times New Roman', serif;
+  line-height: 40px;
+  text-align: right;
+}
+
+p {
+  color: #828282;
+
+}
+h1, h2 {
+  letter-spacing: -.05em;
+  line-height: 40px;
+}
+
+h1 {
+  color: #000;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+h2 {
+  color: #666;
+  font-size: 28px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+h3 {
+  color: #59892f;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+h3.section, .blog_post .copy h4, h4.section {
+  border-top: 1px solid #eee;
+  clear: both;
+  color: #888;
+  font-size: .75em;
+  margin: 0 0 20px 0;
+  padding: 9px 0 10px 0;
+  text-transform: uppercase;
+}
+
+h4, h5 {
+  color: #3f5c26;
+  font-size: 1em;
+}
+
+h3 span, h4 span, h5 span {
+  font-weight: normal;
+}
+
+strong, b {
+font-weight: bolder;
+}

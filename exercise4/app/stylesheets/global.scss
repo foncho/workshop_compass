@@ -45,6 +45,21 @@ a{
   }
 }
 
+/* NAVIGATION*/
+
+#navigation{
+  @include clearfix;
+  background-color: $menu_color;
+
+  .menu-container {
+    @include grid-container;
+    @include clearfix;}
+
+  .menu {
+    @include grid(13);
+     @include alpha;}
+}
+
 /* MIDDLE FRAME */
 
 #banner{
